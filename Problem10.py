@@ -1,11 +1,9 @@
 import math
 import time
 
-def sumPrimesBelow(limit):
+def ASieve(limit):
 	is_prime = list()
 	is_prime = [False] * (limit+1)
-
-	s = 0
 
 	for x in range(1, int(math.sqrt(limit))+1):
 		for y in range(1, int(math.sqrt(limit))+1):
@@ -27,11 +25,15 @@ def sumPrimesBelow(limit):
 			for k in range(n**2, limit+1, n**2):
 				is_prime[k] = False
 
+	return is_prime
+
+def sumPrimesBelow(limit):
+	s = 0
 	s += 2
 	s += 3
+	is_prime = ASieve(limit)
 	for n in range(5, limit):
 		if is_prime[n]: s += n
-
 	return s
 
 start = time.time()
