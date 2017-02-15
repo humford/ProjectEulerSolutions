@@ -1,8 +1,10 @@
+import math
+
 class Grid(object):
 	"""docstring for Grid"""
-	def __init__(self, length):
+	def __init__(self, length, height):
 		self.length = length
-		self.height = length
+		self.height = height
 
 	def createGrid(self):
 		grid = []
@@ -13,9 +15,14 @@ class Grid(object):
 		return grid
 
 def main():
-	searchGrid = Grid(20)
+	searchGrid = Grid(20, 20)
 	problemGrid = searchGrid.createGrid()
-	for x in 
+	return problemGrid
+
+def combinatoricsPaths(n):
+	return math.factorial(2 * n) / (math.factorial(n) ** 2)
+
+print combinatoricsPaths(20)
 
 
 
