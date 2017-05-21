@@ -4,7 +4,6 @@ def d(n):
         if n % x == 0: s += x
     return s
 
-
 def amicableNumbersUnder(m):
     amicableNumbers = []
     for x in range(1, m + 1):
