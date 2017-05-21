@@ -1,5 +1,8 @@
 #non-ideal solution
-from itertools import combinations
+from sympy.ntheory import divisor_sigma
+from time import time
+
+start = time()
 
 def sumDivisors(n):
 	sumdivisors = 0
@@ -10,7 +13,7 @@ def sumDivisors(n):
 
 abundant = []
 for i in range(2, 28123 + 1):
-	if sumDivisors(i) > i:
+	if divisor_sigma(i, 1) > 2*i:
 		abundant.append(i)
 
 canBeWrittenAsAbundant = {}
@@ -29,4 +32,4 @@ for i in range(1, 28123 + 1):
 	if not canBeWrittenAsAbundant[i]:
 		total += i
 
-print(total)
+print(total, time() - start)
