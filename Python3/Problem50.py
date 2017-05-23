@@ -1,4 +1,5 @@
 import math
+import time
 
 def ASieve(limit):
     is_prime = [False] * (limit + 1)
@@ -25,22 +26,40 @@ def ASieve(limit):
 
     return is_prime
 
-def prime_sum(primes):
-    sprimes = [0] * (len(primes))
-    for x in range(1, len(primes)):
-        sprimes[x] = sprimes[x - 1] + primes[x - 1]
-    return sprimes
+def sum_primes(n, primes):
+    return sum(primes[:n-1])
 
-def consecutive_prime_sum(limit, primes):
-    psum = prime_sum(primes)
-    for x in range(1, len(psum)):
-        if psum[x+1] > limit:
-            return psum[x]
+def generate_prime_sums(primes):
+    prime_sums = [0 for p in range(len(primes))]
+    for i in range(len(primes)-1):
+        prime_sums[i+1] = prime_sums[i] + primes[i]
+    return prime_sums
+
+def consecutive_prime_sum(limit, prime_sums):
+    largest_pindex = 0
+    largest_psum = 0
+    for j in range(len(primes)):
+        if j < largest_pindex:
+            break
+        for k in range(j-1-largest_pindex, -1,-1):
+            i = j-k
+            s = prime_sums[j] - prime_sums[k]
+            if s > limit:
+                break
+            if s in primes and i > largest_pindex:
+                largest_pindex = i
+                largest_psum = s
+    return largest_psum
 
 l = int(input("Largest Consecutive Prime Sum Below: "))
 primes = ASieve(l)
 primes = [2, 3] + [x for x in range(len(primes)) if primes[x]]
-print(consecutive_prime_sum(l, primes))
+
+start = time.time()
+answer = consecutive_prime_sum(l, generate_prime_sums(primes))
+elapsed = (time.time() - start)
+
+print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
 
 # const
 # int
