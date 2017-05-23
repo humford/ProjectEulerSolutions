@@ -1,6 +1,6 @@
 import math
-import collections
-
+import time
+from itertools import permutations, groupby
 
 def sum_digits3(n):
     r = 0
@@ -44,15 +44,28 @@ def find4digprimes():
     return result
 
 
-def findarith():
+def findArith():
     r = find4digprimes()
     possible = []
-    for x in r:
-        for i in range((x if x < 5000 else 5000), 0, -10):
-            if (((x + i) in r) and ((x + 2 * i) in r)) and (
-                            sum_digits3(x) == sum_digits3(x + i) == sum_digits3(x + 2 * i)):
-                possible.append([x, x + i, x + 2 * i])
-    return possible
+    for prime in r:
+        plist = []
+        for p in permutations(str(prime)):
+            t = int("".join(p)) in r
+            if int("".join(p)) in r:
+                plist.append(int("".join(p)))
+        if plist:
+            possible.append(sorted(list(set(plist))))
+    solutions = []
+    for p in possible:
+        gaps = []
+        for n in range(len(p)-1):
+            gaps.append(p[n+1] - p[n])
+        if any(sum(1 for _ in g) > 1 for _, g in groupby(gaps)):
+            solutions.append(p)
+    return solutions
 
+start = time.time()
+answer = findArith()
+elapsed = (time.time() - start)
 
-print(findarith())
+print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
