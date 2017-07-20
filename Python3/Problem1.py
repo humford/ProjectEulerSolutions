@@ -1,6 +1,6 @@
 def sumMultiples(x, y, ra):
     m = []
-    for i in ra(1, ra):
+    for i in range(1, ra):
         if i % x == 0 or i % y == 0:
             m.append(i)
     print(m)
