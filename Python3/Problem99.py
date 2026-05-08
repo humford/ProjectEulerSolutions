@@ -1,35 +1,36 @@
-import time
 import math
-import numpy as np
-
-nums = open("../Files/p099_base_exp.txt", "r")
-nums = nums.read()
-numlist = nums.split("\n")
-
-def compute_value(base_exp):
-	l = base_exp.split(",")
-	base = int(l[0])
-	exp = int(l[1])
-
-	return np.log(base) * exp
-
-def compare_exponentials(numlist):
-    i = 1
-    highest = 0
-    highest_line = 0
-
-    for base_exp in numlist:
-    	val = compute_value(base_exp)
-    	if highest < val:
-    		highest = val
-    		highest_line = i
-    	i += 1
-
-    return highest_line
+import time
+from pathlib import Path
 
 
-start = time.time()
-answer = compare_exponentials(numlist)
-elapsed = (time.time() - start)
+def readBaseExponents():
+    path = Path(__file__).resolve().parents[1] / "Files" / "p099_base_exp.txt"
+    return [
+        tuple(int(value) for value in line.split(","))
+        for line in path.read_text().strip().splitlines()
+    ]
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+
+def compareExponential(base_exp):
+    base, exponent = base_exp
+    return exponent * math.log(base)
+
+
+def largestExponentialLine(base_exponents):
+    return max(
+        range(1, len(base_exponents) + 1),
+        key=lambda line: compareExponential(base_exponents[line - 1]),
+    )
+
+
+def runTests():
+    assert largestExponentialLine([(2, 11), (3, 7)]) == 2
+
+
+if __name__ == "__main__":
+    runTests()
+    start = time.time()
+    answer = largestExponentialLine(readBaseExponents())
+    elapsed = time.time() - start
+
+    print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
