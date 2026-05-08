@@ -1,39 +1,66 @@
-import time
 import math
-import sys
-from scipy.optimize import minimize
+import time
 
-# x = math.sqrt(1.0 + D * y ** 2.0)
 
-def Dio_solution(y, D):
-    x = math.sqrt(1.0 + float(D) * float(y) ** 2.0)
-    if float(x).is_integer():
-        return int(x)
-    return -1
+def minimalPellSolution(D):
+    root = math.isqrt(D)
+    if root * root == D:
+        return None
 
-def find_min_Dio(D):
-    s = -1
-    y = 0
-    while s == -1:
-        y += 1
-        s = Dio_solution(y, D)
-        print(y, D, s)
-    return s
+    m = 0
+    d = 1
+    a = root
 
-def find_min_Dio_fast(D):
-    pass
+    numerator_previous = 1
+    numerator = a
+    denominator_previous = 0
+    denominator = 1
 
-def find_largest_min_Dio(limit):
-    largest = 0
-    for D in range(2, limit+1):
-        if not float(math.sqrt(D)).is_integer():
-            x = find_min_Dio(D)
-            if x > largest:
-                largest = x
-    return largest
+    while numerator * numerator - D * denominator * denominator != 1:
+        m = d * a - m
+        d = (D - m * m) // d
+        a = (root + m) // d
 
-start = time.time()
-answer = find_largest_min_Dio(100)
-elapsed = (time.time() - start)
+        numerator_previous, numerator = (
+            numerator,
+            a * numerator + numerator_previous,
+        )
+        denominator_previous, denominator = (
+            denominator,
+            a * denominator + denominator_previous,
+        )
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+    return numerator, denominator
+
+
+def largestMinimalX(limit):
+    best_D = None
+    best_x = 0
+
+    for D in range(2, limit + 1):
+        solution = minimalPellSolution(D)
+        if solution is None:
+            continue
+
+        x, _ = solution
+        if x > best_x:
+            best_x = x
+            best_D = D
+
+    return best_D
+
+
+def runTests():
+    assert minimalPellSolution(2) == (3, 2)
+    assert minimalPellSolution(5) == (9, 4)
+    assert minimalPellSolution(13) == (649, 180)
+    assert largestMinimalX(7) == 5
+
+
+if __name__ == "__main__":
+    runTests()
+    start = time.time()
+    answer = largestMinimalX(1000)
+    elapsed = time.time() - start
+
+    print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
