@@ -1,5 +1,3 @@
-import time
-
 import numpy as np
 
 
@@ -79,10 +77,10 @@ def runTests():
     assert divisibleCoefficientCount(20, 2) == bruteDivisibleCoefficientCount(20, 2)
 
 
+def solve():
+    return divisibleCoefficientCount(200000, 12)
+
+
 if __name__ == "__main__":
     runTests()
-    start = time.time()
-    answer = divisibleCoefficientCount(200000, 12)
-    elapsed = time.time() - start
-
-    print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+    print(solve())

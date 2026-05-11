@@ -1,41 +1,61 @@
-import time
-import math
-import itertools
+from collections import Counter
+from math import factorial
 
-def digits(n):
-    while n:
-        yield n % 10
-        n //= 10
 
-def square_digits(num):
-    # Squares the digits of a number, eg 44=4^2+4^2=32
-    total = 0
-    while num:
-        total += (num % 10) ** 2
-        num //= 10
-    return total
+def squareDigitSum(n):
+    return sum(int(digit) ** 2 for digit in str(n))
 
-def square_chain(i):
-    if i == 1 or i == 89:
-        return i
 
-    return square_chain(square_digits(i))
+def chainEnd(n, memo):
+    sequence = []
+    while n not in memo:
+        sequence.append(n)
+        n = squareDigitSum(n)
 
-def square_digit_chains(limit):
-    chains = 0
-    digits = range(10)
-    fact7 = math.factorial(7)
-    for num in itertools.combinations_with_replacement(digits, 7):
-        cur = sum(d**2 for d in num)
-        if cur > 0 and square_chain(cur) == 89:
-            count = fact7
-            for _, g in itertools.groupby(num):
-                count /= math.factorial(len(list(g)))
-            chains += count
-    return int(chains)
+    end = memo[n]
+    for value in sequence:
+        memo[value] = end
+    return end
 
-start = time.time()
-answer = square_digit_chains(10000000)
-elapsed = (time.time() - start)
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+def permutationCount(digits):
+    count = factorial(len(digits))
+    for repeated in Counter(digits).values():
+        count //= factorial(repeated)
+    return count
+
+
+def countChainsEndingAt89BelowTenPower(digits):
+    memo = {1: 1, 89: 89}
+    count = 0
+
+    def search(start_digit, remaining, chosen):
+        nonlocal count
+        if remaining == 0:
+            if all(digit == 0 for digit in chosen):
+                return
+            total = sum(digit * digit for digit in chosen)
+            if chainEnd(total, memo) == 89:
+                count += permutationCount(chosen)
+            return
+
+        for digit in range(start_digit, 10):
+            search(digit, remaining - 1, chosen + [digit])
+
+    search(0, digits, [])
+    return count
+
+
+def runTests():
+    memo = {1: 1, 89: 89}
+    assert chainEnd(44, memo) == 1
+    assert chainEnd(85, memo) == 89
+
+
+def solve():
+    return countChainsEndingAt89BelowTenPower(7)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

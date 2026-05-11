@@ -1,51 +1,40 @@
-import time
-import math
+def reverseNumber(n):
+    return int(str(n)[::-1])
 
-#how many reversible numbers are there under 1 billion
-#reversible(n) == [ n + reverse(n) ] all odd digits
-def reverse(n):
-    n = list(str(n))
-    reverse = ''
-    for d in reversed(n):
-        reverse += d
-    return int(reverse)
 
-def reverse1(n):
-    flag = n
-    rev = 0
-    while int(flag):
-        rem = int(flag % 10)
-        rev *= 10
-        rev += rem
-        flag /= 10
-    return int(rev)
-
-def reversible(n):
-    if len(str(n)) != len(str(reverse(n))):
+def isReversible(n):
+    if n % 10 == 0:
         return False
-    for i in str(n + reverse(n)):
-        if int(i) % 2 == 0:
-            return False
-    return True
+    return all(int(digit) % 2 == 1 for digit in str(n + reverseNumber(n)))
 
-def count_reversible(limit):
+
+def bruteReversibleCount(limit):
+    return sum(1 for n in range(1, limit) if isReversible(n))
+
+
+def reversibleCountBelowPowerOfTen(digits):
     count = 0
-    for n in range(1, limit+1, 2):
-        if reversible(n):
-            count += 2
+
+    for digit_count in range(1, digits + 1):
+        if digit_count % 2 == 0:
+            count += 20 * (30 ** (digit_count // 2 - 1))
+        elif digit_count % 4 == 3:
+            count += 100 * (500 ** (digit_count // 4))
+
     return count
 
-def count_reversible_fast(digits):
-    count = 0
-    for i in range(1, digits+1):
-        if i % 2 == 0:
-            count += 20 * pow(30, i // 2 - 1)
-        elif i % 4 == 3:
-            count += 100 * pow(500, i // 4)
-    return count
 
-start = time.time()
-answer = count_reversible_fast(9)
-elapsed = (time.time() - start)
+def runTests():
+    assert isReversible(36)
+    assert not isReversible(10)
+    assert bruteReversibleCount(1000) == 120
+    assert reversibleCountBelowPowerOfTen(3) == 120
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+
+def solve():
+    return reversibleCountBelowPowerOfTen(9)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

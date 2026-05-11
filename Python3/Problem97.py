@@ -1,12 +1,16 @@
-import time
-import math
+def nonMersennePrimeLastDigits(coefficient, exponent, addend, digits):
+    modulus = 10 ** digits
+    return (coefficient * pow(2, exponent, modulus) + addend) % modulus
 
-mod = 10000000000
-core = 2 ** 7830457
-core = 28433 * core + 1
 
-start = time.time()
-answer = core % mod
-elapsed = (time.time() - start)
+def runTests():
+    assert nonMersennePrimeLastDigits(1, 10, 0, 5) == 1024
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+
+def solve():
+    return nonMersennePrimeLastDigits(28433, 7830457, 1, 10)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(str(solve()).zfill(10))
