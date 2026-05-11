@@ -1,18 +1,43 @@
-def d(n):
-    s = 0
-    for x in range(1, n):
-        if n % x == 0: s += x
-    return s
+def properDivisorSum(n):
+    if n <= 1:
+        return 0
 
-def amicableNumbersUnder(m):
-    amicableNumbers = []
-    for x in range(1, m + 1):
-        if d(d(x)) == x and d(x) != x:
-            if x not in amicableNumbers:
-                amicableNumbers.append(x)
-                amicableNumbers.append(d(x))
-    print(amicableNumbers)
-    return amicableNumbers
+    total = 1
+    factor = 2
+    while factor * factor <= n:
+        if n % factor == 0:
+            total += factor
+            paired = n // factor
+            if paired != factor:
+                total += paired
+        factor += 1
+
+    return total
 
 
-print(sum(amicableNumbersUnder(10000)))
+def sumAmicableNumbersUnder(limit):
+    divisor_sums = {}
+    total = 0
+
+    for a in range(2, limit):
+        b = divisor_sums.setdefault(a, properDivisorSum(a))
+        if b != a and b > 0:
+            divisor_sums.setdefault(b, properDivisorSum(b))
+            if divisor_sums[b] == a:
+                total += a
+
+    return total
+
+
+def runTests():
+    assert properDivisorSum(220) == 284
+    assert properDivisorSum(284) == 220
+
+
+def solve():
+    return sumAmicableNumbersUnder(10000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

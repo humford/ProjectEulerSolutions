@@ -1,35 +1,37 @@
-#non-ideal solution
-from sympy.ntheory import divisor_sigma
-from time import time
+def properDivisorSums(limit):
+    sums = [0] * (limit + 1)
+    for divisor in range(1, limit // 2 + 1):
+        for multiple in range(divisor * 2, limit + 1, divisor):
+            sums[multiple] += divisor
+    return sums
 
-start = time()
 
-def sumDivisors(n):
-	sumdivisors = 0
-	for x in range(1, int((n/2)+1)):
-		if n % x == 0:
-			sumdivisors += x
-	return sumdivisors
+def sumNonAbundantSums(limit):
+    divisor_sums = properDivisorSums(limit)
+    abundant = [value for value in range(1, limit + 1) if divisor_sums[value] > value]
+    can_be_written = [False] * (limit + 1)
 
-abundant = []
-for i in range(2, 28123 + 1):
-	if divisor_sigma(i, 1) > 2*i:
-		abundant.append(i)
+    for first_index, first in enumerate(abundant):
+        for second in abundant[first_index:]:
+            total = first + second
+            if total > limit:
+                break
+            can_be_written[total] = True
 
-canBeWrittenAsAbundant = {}
-for i in range(1, 28123 + 1):
-	canBeWrittenAsAbundant[i] = False
+    return sum(value for value in range(1, limit + 1) if not can_be_written[value])
 
-for i in range(len(abundant)):
-	for j in range(i, len(abundant)):
-		if abundant[i] + abundant[j] <= 28123:
-			canBeWrittenAsAbundant[abundant[i] + abundant[j]] = True
-		else:
-			break
 
-total = 0
-for i in range(1, 28123 + 1):
-	if not canBeWrittenAsAbundant[i]:
-		total += i
+def runTests():
+    divisor_sums = properDivisorSums(28)
+    assert divisor_sums[12] > 12
+    assert divisor_sums[28] == 28
+    assert sumNonAbundantSums(24) == 276
 
-print(total, time() - start)
+
+def solve():
+    return sumNonAbundantSums(28123)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

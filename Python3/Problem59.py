@@ -41,7 +41,10 @@ def asciiSum(text):
 
 
 def runTests():
+    assert 65 ^ 42 == 107
+    assert 107 ^ 42 == 65
     assert decrypt([9, 7, 15], [ord("a")]) == "hfn"
+    assert decrypt([ord("h") ^ ord("a"), ord("i") ^ ord("b")], [ord("a"), ord("b")]) == "hi"
     assert asciiSum("ABC") == 198
 
 

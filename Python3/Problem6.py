@@ -1,19 +1,24 @@
 def sumOfSquares(n):
-    s = 0
-    for i in range(1, n + 1):
-        s += (i ** 2)
-    return s
+    return n * (n + 1) * (2 * n + 1) // 6
 
 
 def squareOfSum(n):
-    s = 0
-    for i in range(1, n + 1):
-        s += i
-    return s ** 2
+    total = n * (n + 1) // 2
+    return total ** 2
 
 
 def sumSquareDifference(n):
     return squareOfSum(n) - sumOfSquares(n)
 
 
-print(sumSquareDifference(100))
+def runTests():
+    assert sumSquareDifference(10) == 2640
+
+
+def solve():
+    return sumSquareDifference(100)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

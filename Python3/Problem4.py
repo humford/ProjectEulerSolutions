@@ -1,20 +1,36 @@
-def palidrome(n):
-    n = list(str(n))
-    for i, x in zip(n, reversed(n)):
-        if i != x:
-            return False
-    else:
-        return True
+def isPalindrome(n):
+    text = str(n)
+    return text == text[::-1]
 
 
-def largestPalindrome():
-    l = 0
-    for n1 in range(999, 99, -1):
-        for n2 in range(999, 99, -1):
-            if palidrome(n1 * n2):
-                if n1 * n2 > l:
-                    l = n1 * n2
-    return l
+def largestPalindromeProduct(digits):
+    high = 10 ** digits - 1
+    low = 10 ** (digits - 1)
+    largest = 0
+
+    for first in range(high, low - 1, -1):
+        if first * high < largest:
+            break
+        for second in range(first, low - 1, -1):
+            product = first * second
+            if product <= largest:
+                break
+            if isPalindrome(product):
+                largest = product
+
+    return largest
 
 
-print(largestPalindrome())
+def runTests():
+    assert isPalindrome(9009)
+    assert not isPalindrome(9010)
+    assert largestPalindromeProduct(2) == 9009
+
+
+def solve():
+    return largestPalindromeProduct(3)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

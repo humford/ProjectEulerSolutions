@@ -1,46 +1,30 @@
-import math
-import time
+def primeSieve(limit):
+    is_prime = [True] * limit
+    if limit > 0:
+        is_prime[0] = False
+    if limit > 1:
+        is_prime[1] = False
 
-
-def ASieve(limit):
-    is_prime = [False] * (limit + 1)
-
-    for x in range(1, int(math.sqrt(limit)) + 1):
-        for y in range(1, int(math.sqrt(limit)) + 1):
-
-            n = 4 * x ** 2 + y ** 2
-            if n <= limit and (n % 12 == 1 or n % 12 == 5):
-                is_prime[n] = not is_prime[n]
-
-            n = 3 * x ** 2 + y ** 2
-            if n <= limit and n % 12 == 7:
-                is_prime[n] = not is_prime[n]
-
-            n = 3 * x ** 2 - y ** 2
-            if x > y and n <= limit and n % 12 == 11:
-                is_prime[n] = not is_prime[n]
-
-    for n in range(5, int(math.sqrt(limit))):
-        if is_prime[n]:
-            for k in range(n ** 2, limit + 1, n ** 2):
-                is_prime[k] = False
+    for value in range(2, int(limit ** 0.5) + 1):
+        if is_prime[value]:
+            for multiple in range(value * value, limit, value):
+                is_prime[multiple] = False
 
     return is_prime
 
 
 def sumPrimesBelow(limit):
-    s = 0
-    s += 2
-    s += 3
-    is_prime = ASieve(limit)
-    for n in range(5, limit):
-        if is_prime[n]:
-            s += n
-    return s
+    return sum(value for value, prime in enumerate(primeSieve(limit)) if prime)
 
 
-start = time.time()
-prime = sumPrimesBelow(int(input("Number: ")))
-elapsed = (time.time() - start)
+def runTests():
+    assert sumPrimesBelow(10) == 17
 
-print("found %s in %s seconds" % (prime, elapsed))
+
+def solve():
+    return sumPrimesBelow(2000000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

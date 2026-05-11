@@ -1,77 +1,44 @@
-import time
-import math
-
-
-def ASieve(limit):
-    is_prime = [False] * (limit + 1)
-    for x in range(1, int(math.sqrt(limit)) + 1):
-        for y in range(1, int(math.sqrt(limit)) + 1):
-            n = 4 * x ** 2 + y ** 2
-            if n <= limit and (n % 12 == 1 or n % 12 == 5):
-                is_prime[n] = not is_prime[n]
-            n = 3 * x ** 2 + y ** 2
-            if n <= limit and n % 12 == 7:
-                is_prime[n] = not is_prime[n]
-            n = 3 * x ** 2 - y ** 2
-            if x > y and n <= limit and n % 12 == 11:
-                is_prime[n] = not is_prime[n]
-    for n in range(5, int(math.sqrt(limit))):
-        if is_prime[n]:
-            for k in range(n ** 2, limit + 1, n ** 2):
-                is_prime[k] = False
-    return is_prime
-
-
-def listPrimes(limit):
-    primes = [2, 3]
-    is_prime = ASieve(limit)
-    for n in range(5, limit):
-        if is_prime[n]:
-            primes.append(n)
-    return primes
-
-
 def numberOfDivisors(n):
-    nod = 0
-    sqrt = int(math.sqrt(n))
+    count = 1
+    factor = 2
 
-    for i in range(1, sqrt):
-        if n % i == 0:
-            nod += 2
-
-    if sqrt ** 2 == n:
-        nod -= 1
-
-    return nod
-
-
-def primeFactorisationNoD(n, primelist=listPrimes(75000)):
-    nod = 1
-    remain = n
-    for i in range(0, len(primelist)):
-        if primelist[i] * primelist[i] > n:
-            return nod * 2
-        exponent = 1
-        while remain % primelist[i] == 0:
+    while factor * factor <= n:
+        exponent = 0
+        while n % factor == 0:
             exponent += 1
-            remain /= primelist[i]
-        nod *= exponent
-        if remain == 1:
-            return nod
-    return nod
+            n //= factor
+        if exponent:
+            count *= exponent + 1
+        factor += 1 if factor == 2 else 2
+
+    if n > 1:
+        count *= 2
+
+    return count
 
 
-def triangleNumber(d=500):
-    n = 0
-    i = 1
-    while primeFactorisationNoD(n) < d:
-        n += i
-        i += 1
-    return n
+def triangleNumber(index):
+    return index * (index + 1) // 2
 
 
-start = time.time()
-trianglenum = triangleNumber(int(input("Number of Divisors: ")))
-elapsed = (time.time() - start)
+def firstTriangleWithDivisorsOver(limit):
+    index = 1
+    while True:
+        triangle = triangleNumber(index)
+        if numberOfDivisors(triangle) > limit:
+            return triangle
+        index += 1
 
-print("found %s in %s seconds" % (trianglenum, elapsed))
+
+def runTests():
+    assert numberOfDivisors(28) == 6
+    assert firstTriangleWithDivisorsOver(5) == 28
+
+
+def solve():
+    return firstTriangleWithDivisorsOver(500)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

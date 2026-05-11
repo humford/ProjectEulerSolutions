@@ -1,16 +1,24 @@
-import time
-import math
-
-def powerfuldigitcounts():
+def powerfulDigitCount():
     count = 0
-    for i in range(1, 10):
-        for e in range(1, 100):
-            if len(str(i ** e)) == e:
+    exponent = 1
+
+    while len(str(9 ** exponent)) >= exponent:
+        for base in range(1, 10):
+            if len(str(base ** exponent)) == exponent:
                 count += 1
+        exponent += 1
+
     return count
 
-start = time.time()
-answer = powerfuldigitcounts()
-elapsed = (time.time() - start)
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+def runTests():
+    assert len(str(7 ** 5)) == 5
+
+
+def solve():
+    return powerfulDigitCount()
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

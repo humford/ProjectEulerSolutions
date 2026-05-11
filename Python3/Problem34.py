@@ -1,17 +1,26 @@
-import math
+from math import factorial
+
+
+DIGIT_FACTORIALS = [factorial(digit) for digit in range(10)]
 
 
 def digitFactorialSum(n):
-    m = [math.factorial(int(x)) for x in str(n)]
-    return sum(m)
+    return sum(DIGIT_FACTORIALS[int(digit)] for digit in str(n))
 
 
-def findDFSUnder(max):
-    dfs = []
-    for x in range(3, max + 1):
-        if digitFactorialSum(x) == x:
-            dfs.append(x)
-    return dfs
+def sumDigitFactorials():
+    upper = 7 * DIGIT_FACTORIALS[9]
+    return sum(value for value in range(3, upper + 1) if digitFactorialSum(value) == value)
 
 
-print(sum(findDFSUnder(1000000)))
+def runTests():
+    assert digitFactorialSum(145) == 145
+
+
+def solve():
+    return sumDigitFactorials()
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

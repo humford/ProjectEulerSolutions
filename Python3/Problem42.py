@@ -1,33 +1,37 @@
-import time
-import math
+from math import isqrt
+from pathlib import Path
 
-def triangleNumber(n):
-    return n * (n + 1) / 2
 
-def testTriangular(n):
-    n = float(n)
-    n = (math.sqrt(8 * n + 1) - 1) / 2
-    return n.is_integer()
+WORDS_FILE = Path("Files/p042_words.txt")
+
+
+def loadWords(path=WORDS_FILE):
+    text = path.read_text().strip()
+    return [word.strip('"') for word in text.split(",")]
+
 
 def wordValue(word):
-	val = 0
-	for x in word:
-		val += ord(x) - 64
-	return val
+    return sum(ord(char) - ord("A") + 1 for char in word)
 
-def numberTriangleWords(words):
-	numTriangle = 0
-	for word in words:
-		if testTriangular(wordValue(word)):
-			numTriangle += 1
-	return numTriangle
 
-words = open("/Users/henrywilliams/Documents/p042_words.txt", "r")
-words = words.read()
-wordlist = sorted([x.replace("\"", "") for x in words.split(",")])
+def isTriangleNumber(value):
+    root = isqrt(8 * value + 1)
+    return root * root == 8 * value + 1 and (root - 1) % 2 == 0
 
-start = time.time()
-answer = numberTriangleWords(wordlist)
-elapsed = (time.time() - start)
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+def triangleWordCount(words):
+    return sum(1 for word in words if isTriangleNumber(wordValue(word)))
+
+
+def runTests():
+    assert wordValue("SKY") == 55
+    assert isTriangleNumber(55)
+
+
+def solve():
+    return triangleWordCount(loadWords())
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

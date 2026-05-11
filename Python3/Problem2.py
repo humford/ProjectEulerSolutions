@@ -1,20 +1,24 @@
-def fibonacci(maxVal):
-    fib = []
-    x = 1
-    y = 2
-    while y < maxVal:
-        fib.extend([x, y])
-    x += y
-    y += x
-    return fib
+def sumEvenFibonacci(maxVal):
+    total = 0
+    previous = 1
+    current = 2
+
+    while current <= maxVal:
+        if current % 2 == 0:
+            total += current
+        previous, current = current, previous + current
+
+    return total
 
 
-def evenFib(maxVal):
-    s = []
-    for i in fibonacci(maxVal):
-        if i % 2 == 0:
-            s.append(i)
-    print(sum(s))
+def runTests():
+    assert sumEvenFibonacci(89) == 44
 
 
-evenFib(4000000)
+def solve():
+    return sumEvenFibonacci(4000000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

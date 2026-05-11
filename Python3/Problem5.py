@@ -1,12 +1,25 @@
-def smallestMultiple(n):
-    i = n
-    while True:
-        for x in range(1, n + 1):
-            if i % x != 0:
-                break
-            elif x == n:
-                return i
-        i += 1
+from math import gcd
 
 
-print(smallestMultiple(20))
+def leastCommonMultiple(first, second):
+    return first * second // gcd(first, second)
+
+
+def smallestMultiple(limit):
+    result = 1
+    for value in range(2, limit + 1):
+        result = leastCommonMultiple(result, value)
+    return result
+
+
+def runTests():
+    assert smallestMultiple(10) == 2520
+
+
+def solve():
+    return smallestMultiple(20)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

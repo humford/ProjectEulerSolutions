@@ -1,17 +1,24 @@
-def fibonaccidig(digits):
-    x = 1
-    y = 2
-    fib = [1, x, y]
-    while True:
-        x += y
-        fib.append(x)
-        if x > digits:
-            return fib.index(x) + 1
-        y = y + x
-        fib.append(y)
-        if y > digits:
-            return fib.index(y) + 1
+def firstFibonacciTermWithDigits(digits):
+    previous = 1
+    current = 1
+    index = 2
+    threshold = 10 ** (digits - 1)
+
+    while current < threshold:
+        previous, current = current, previous + current
+        index += 1
+
+    return index
 
 
-num = 10 ** 999
-print(fibonaccidig(num))
+def runTests():
+    assert firstFibonacciTermWithDigits(3) == 12
+
+
+def solve():
+    return firstFibonacciTermWithDigits(1000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

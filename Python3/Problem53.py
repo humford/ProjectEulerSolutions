@@ -1,13 +1,24 @@
-import math
+from math import comb
 
-def nCr(n,r):
-    f = math.factorial
-    return f(n) / f(r) / f(n-r)
 
-count = 0
-for n in range(1, 101):
-    for r in range(1, n):
-        c = nCr(n,r)
-        if c > 1000000:
-            count += 1
-print(count)
+def countCombinationsGreaterThan(nLimit, threshold):
+    count = 0
+    for n in range(1, nLimit + 1):
+        for r in range(1, n):
+            if comb(n, r) > threshold:
+                count += 1
+    return count
+
+
+def runTests():
+    assert comb(23, 10) > 1000000
+    assert comb(22, 10) < 1000000
+
+
+def solve():
+    return countCombinationsGreaterThan(100, 1000000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

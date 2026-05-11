@@ -1,22 +1,39 @@
-import time
+from math import gcd
 
 
-def findPythTriplet(n):
-    for x in range(1, n + 1):
-        a = x
-        for y in range(a + 1, n + 1):
-            b = y
-            for z in range(b + 1, n + 1):
-                c = z
-                if a ** 2 + b ** 2 == c ** 2:
-                    if a + b + c == n:
-                        print(a, b, c)
-                        return a * b * c
-    pass
+def pythagoreanTripletWithSum(total):
+    for m in range(2, int(total ** 0.5) + 1):
+        for n in range(1, m):
+            if (m - n) % 2 == 0 or gcd(m, n) != 1:
+                continue
+
+            primitive_sum = 2 * m * (m + n)
+            if total % primitive_sum != 0:
+                continue
+
+            scale = total // primitive_sum
+            a = scale * (m * m - n * n)
+            b = scale * (2 * m * n)
+            c = scale * (m * m + n * n)
+            return tuple(sorted((a, b, c)))
+
+    raise ValueError("No Pythagorean triplet found for sum %s" % total)
 
 
-start = time.time()
-product = findPythTriplet(int(input("a + b + c = ")))
-elapsed = (time.time() - start)
+def tripletProductForSum(total):
+    a, b, c = pythagoreanTripletWithSum(total)
+    return a * b * c
 
-print("found %s in %s seconds" % (product, elapsed))
+
+def runTests():
+    assert pythagoreanTripletWithSum(12) == (3, 4, 5)
+    assert tripletProductForSum(12) == 60
+
+
+def solve():
+    return tripletProductForSum(1000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

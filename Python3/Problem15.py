@@ -1,30 +1,18 @@
-import math
+from math import comb
 
 
-class Grid(object):
-    """docstring for Grid"""
-
-    def __init__(self, length, height):
-        self.length = length
-        self.height = height
-
-    def createGrid(self):
-        grid = []
-        for r in range(0, self.length):
-            grid.append([])
-            for c in range(0, self.height):
-                grid[r].append(0)
-        return grid
+def latticePaths(gridSize):
+    return comb(2 * gridSize, gridSize)
 
 
-def main():
-    searchGrid = Grid(20, 20)
-    problemGrid = searchGrid.createGrid()
-    return problemGrid
+def runTests():
+    assert latticePaths(2) == 6
 
 
-def combinatoricsPaths(n):
-    return math.factorial(2 * n) / (math.factorial(n) ** 2)
+def solve():
+    return latticePaths(20)
 
 
-print(combinatoricsPaths(20))
+if __name__ == "__main__":
+    runTests()
+    print(solve())

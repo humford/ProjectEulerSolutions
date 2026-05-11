@@ -1,8 +1,7 @@
-import time
-from operator import mul
-from functools import reduce
+from math import prod
 
-grid = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
+
+GRID_TEXT = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
 52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91
@@ -24,54 +23,42 @@ grid = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
 
 
-def splitGrid(g):
-    g = g.split("\n", 20)
-    ng = []
-    for row in g:
-        row = row.split()
-        ng.append(row)
-    return ng
+def parseGrid(text):
+    return [[int(value) for value in row.split()] for row in text.splitlines()]
 
 
-def largestProduct(g=grid):
-    g = splitGrid(g)
-    l = 0
-    for row in g:
-        for digit in row:
-            adjlist = []
+def largestGridProduct(grid, adjacent):
+    rows = len(grid)
+    cols = len(grid[0])
+    directions = ((0, 1), (1, 0), (1, 1), (1, -1))
+    largest = 0
 
-            i = row.index(digit)
-            r = g.index(row)
-            if 16 >= r >= 3:
-                vup = [digit, g[r + 1][i], g[r + 2][i], g[r + 3][i]]
-                vdown = [digit, g[r - 1][i], g[r - 2][i], g[r - 3][i]]
-                adjlist.append(vup)
-                adjlist.append(vdown)
-            if 16 >= i >= 3:
-                vleft = row[i:i + 4]
-                vright = row[i - 4:i]
-                adjlist.append(vleft)
-                adjlist.append(vright)
-            if 16 >= r >= 3 and 16 >= i >= 3:
-                dur = [digit, g[r + 1][i + 1], g[r + 2][i + 2], g[r + 3][i + 3]]
-                dul = [digit, g[r + 1][i - 1], g[r + 2][i - 2], g[r + 3][i - 3]]
-                ddr = [digit, g[r - 1][i + 1], g[r - 2][i + 2], g[r - 3][i + 3]]
-                ddl = [digit, g[r - 1][i - 1], g[r - 2][i - 2], g[r - 3][i - 3]]
-                adjlist.append(dur)
-                adjlist.append(dul)
-                adjlist.append(ddr)
-                adjlist.append(ddl)
+    for row in range(rows):
+        for col in range(cols):
+            for row_step, col_step in directions:
+                end_row = row + (adjacent - 1) * row_step
+                end_col = col + (adjacent - 1) * col_step
+                if 0 <= end_row < rows and 0 <= end_col < cols:
+                    values = [
+                        grid[row + offset * row_step][col + offset * col_step]
+                        for offset in range(adjacent)
+                    ]
+                    largest = max(largest, prod(values))
 
-            for line in adjlist:
-                line = list(map(int, line))
-                prod = reduce(mul, line, 1)
-                if prod >= l:
-                    l = prod
-    return l
+    return largest
 
 
-start = time.time()
-product = largestProduct()
-elapsed = (time.time() - start)
+def solve():
+    return largestGridProduct(parseGrid(GRID_TEXT), 4)
 
-print("found %s in %s seconds" % (product, elapsed))
+
+def runTests():
+    grid = parseGrid("1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16")
+    assert len(parseGrid(GRID_TEXT)) == 20
+    assert all(len(row) == 20 for row in parseGrid(GRID_TEXT))
+    assert largestGridProduct(grid, 4) == 13 * 14 * 15 * 16
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

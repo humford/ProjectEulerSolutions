@@ -1,25 +1,30 @@
-import time
 from itertools import permutations
 
-def subStringDivisiblePandigital():
-	test = permutations("0123456789")
-	found = []
-	divisors = [0, 2, 3, 5, 7, 11, 13, 17]
-	for pandigital in test:
-		divisible = True
-		pd = "".join(pandigital)
-		for digit in range(1, 8):
-			sub = int(pd[digit:digit+3])
-			if not sub % divisors[digit] == 0:
-				divisible = False
-				break
-		if divisible:
-			found.append(int(pd))
-	return found
+
+DIVISORS = (2, 3, 5, 7, 11, 13, 17)
 
 
-start = time.time()
-answer = subStringDivisiblePandigital()
-elapsed = (time.time() - start)
+def hasSubStringDivisibility(digits):
+    text = "".join(digits)
+    return all(int(text[index:index + 3]) % divisor == 0 for index, divisor in enumerate(DIVISORS, start=1))
 
-print("Found " + str(sum(answer)) + " in " + str(elapsed) + " seconds.")
+
+def subStringDivisiblePandigitals():
+    return [
+        int("".join(permutation))
+        for permutation in permutations("0123456789")
+        if hasSubStringDivisibility(permutation)
+    ]
+
+
+def runTests():
+    assert hasSubStringDivisibility("1406357289")
+
+
+def solve():
+    return sum(subStringDivisiblePandigitals())
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

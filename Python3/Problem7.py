@@ -1,19 +1,37 @@
 import math
-import time
 
 
-def nth_prime(n):
-    lst = list(range(2, int(math.ceil(n * math.log(n * math.log(n))))))
-    primes = []
-    while len(primes) <= n:
-        p = lst[0]
-        primes.append(p)
-        lst = [i for i in lst if i % p != 0]
-    return primes[n - 1]
+def primeSieve(limit):
+    is_prime = [True] * (limit + 1)
+    is_prime[0] = False
+    is_prime[1] = False
+
+    for value in range(2, int(limit ** 0.5) + 1):
+        if is_prime[value]:
+            for multiple in range(value * value, limit + 1, value):
+                is_prime[multiple] = False
+
+    return [value for value, prime in enumerate(is_prime) if prime]
 
 
-start = time.time()
-prime = nth_prime(int(input("Number: ")))
-elapsed = (time.time() - start)
+def upperPrimeBound(n):
+    if n < 6:
+        return 15
+    return math.ceil(n * (math.log(n) + math.log(math.log(n))))
 
-print("found %s in %s seconds" % (prime, elapsed))
+
+def nthPrime(n):
+    return primeSieve(upperPrimeBound(n))[n - 1]
+
+
+def runTests():
+    assert nthPrime(6) == 13
+
+
+def solve():
+    return nthPrime(10001)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

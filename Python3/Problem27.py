@@ -1,64 +1,50 @@
-import math
+def isPrime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+
+    factor = 3
+    while factor * factor <= n:
+        if n % factor == 0:
+            return False
+        factor += 2
+
+    return True
 
 
-def ASieve(limit):
-    is_prime = [False] * (limit + 1)
-
-    for x in range(1, int(math.sqrt(limit)) + 1):
-        for y in range(1, int(math.sqrt(limit)) + 1):
-
-            n = 4 * x ** 2 + y ** 2
-            if n <= limit and (n % 12 == 1 or n % 12 == 5):
-                is_prime[n] = not is_prime[n]
-
-            n = 3 * x ** 2 + y ** 2
-            if n <= limit and n % 12 == 7:
-                is_prime[n] = not is_prime[n]
-
-            n = 3 * x ** 2 - y ** 2
-            if x > y and n <= limit and n % 12 == 11:
-                is_prime[n] = not is_prime[n]
-
-    for n in range(5, int(math.sqrt(limit))):
-        if is_prime[n]:
-            for k in range(n ** 2, limit + 1, n ** 2):
-                is_prime[k] = False
-
-    return is_prime
-
-
-primelist = ASieve(100000)
-
-
-def primeTest(p):
-    # if p % 2 == 0:
-    # 	return False
-    # elif p % 5 == 2 or p % 5 == -2:
-    # 	if (2 ** (p-1)) % p == 1 and fibonacci((p+1)) % p == 0:
-    # 		return True
-    # return False
-    return primelist[p]
-
-
-def testPrimeGenerator(a, b):
+def consecutivePrimeCount(a, b):
     n = 0
-    x = n ** 2 + a * n + b
-    while primeTest(x):
-        x = n ** 2 + a * n + b
+    while isPrime(n * n + a * n + b):
         n += 1
     return n
 
 
-def testGenerators(r):
-    top = 0
-    coef = []
-    for a in range(-r, r):
-        for b in range(-r, r):
-            test = testPrimeGenerator(a, b)
-            if test > top:
-                top = test
-                coef = [a, b]
-    return coef, top
+def bestQuadraticPrimeProduct(limit):
+    best_count = 0
+    best_product = 0
+
+    for a in range(-limit + 1, limit):
+        for b in range(-limit, limit + 1):
+            count = consecutivePrimeCount(a, b)
+            if count > best_count:
+                best_count = count
+                best_product = a * b
+
+    return best_product
 
 
-print(testGenerators(1000))
+def runTests():
+    assert consecutivePrimeCount(1, 41) == 40
+    assert consecutivePrimeCount(-79, 1601) == 80
+
+
+def solve():
+    return bestQuadraticPrimeProduct(1000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

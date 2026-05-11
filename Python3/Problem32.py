@@ -1,22 +1,28 @@
-import time
-from itertools import permutations
+def isPandigitalIdentity(multiplicand, multiplier, product):
+    digits = "%s%s%s" % (multiplicand, multiplier, product)
+    return len(digits) == 9 and set(digits) == set("123456789")
+
 
 def pandigitalProducts():
-	test = permutations("123456789")
-	pdproducts = []
-	for pandigital in test:
-		pd = "".join(pandigital)
-		for d1 in range(1, 4):
-			for d2 in range(d1+1, 6):
-				multiplicand = int(pd[:d1])
-				multiplier = int(pd[d1:d2])
-				product = int(pd[d2:])
-				if multiplicand * multiplier == product:
-					pdproducts.append(product)
-	return list(set(pdproducts))
+    products = set()
 
-start = time.time()
-answer = pandigitalProducts()
-elapsed = (time.time() - start)
+    for multiplicand in range(2, 100):
+        for multiplier in range(123, 10000 // multiplicand + 1):
+            product = multiplicand * multiplier
+            if isPandigitalIdentity(multiplicand, multiplier, product):
+                products.add(product)
 
-print("Found " + str(sum(answer)) + " in " + str(elapsed) + " seconds.")
+    return products
+
+
+def runTests():
+    assert isPandigitalIdentity(39, 186, 7254)
+
+
+def solve():
+    return sum(pandigitalProducts())
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

@@ -1,21 +1,35 @@
-import time
+def champernowneDigit(position):
+    digits = 1
+    count = 9
+    start = 1
 
-def champernownesConstant(digit):
-	champernowne = ""
-	count = 1
-	while len(champernowne) < digit:
-		champernowne += str(count)
-		count += 1
-	return champernowne
+    while position > digits * count:
+        position -= digits * count
+        digits += 1
+        count *= 10
+        start *= 10
 
-def evalExpression():
-	c = champernownesConstant(1000000)
-	c = [int(d) for d in c]
-	return c[0] * c[9] * c[99] * c[999] * c[9999] * c[99999] * c[999999]
+    number = start + (position - 1) // digits
+    digit_index = (position - 1) % digits
+    return int(str(number)[digit_index])
 
 
-start = time.time()
-answer = evalExpression()
-elapsed = (time.time() - start)
+def champernowneExpression():
+    product = 1
+    for position in (1, 10, 100, 1000, 10000, 100000, 1000000):
+        product *= champernowneDigit(position)
+    return product
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+
+def runTests():
+    assert champernowneDigit(1) == 1
+    assert champernowneDigit(12) == 1
+
+
+def solve():
+    return champernowneExpression()
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

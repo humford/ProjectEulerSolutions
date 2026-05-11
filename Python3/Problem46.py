@@ -1,61 +1,46 @@
-import math
-import time
+from math import isqrt
 
 
-def ASieve(limit):
-    is_prime = [False] * (limit + 1)
+def primeSieve(limit):
+    is_prime = [True] * (limit + 1)
+    is_prime[0] = False
+    is_prime[1] = False
 
-    for x in range(1, int(math.sqrt(limit)) + 1):
-        for y in range(1, int(math.sqrt(limit)) + 1):
-
-            n =  4 * x ** 2 + y ** 2
-            if n <= limit and (n % 12 == 1 or n % 12 == 5):
-                is_prime[n] = not is_prime[n]
-
-            n = 3 * x ** 2 + y ** 2
-            if n <= limit and n % 12 == 7:
-                is_prime[n] = not is_prime[n]
-
-            n = 3 * x ** 2 - y ** 2
-            if x > y and n <= limit and n % 12 == 11:
-                is_prime[n] = not is_prime[n]
-
-    for n in range(5, int(math.sqrt(limit))):
-        if is_prime[n]:
-            for k in range(n ** 2, limit + 1, n ** 2):
-                is_prime[k] = False
-
-    if len(is_prime) > 4:
-        is_prime[2] = True
-        is_prime[3] = True
+    for value in range(2, isqrt(limit) + 1):
+        if is_prime[value]:
+            for multiple in range(value * value, limit + 1, value):
+                is_prime[multiple] = False
 
     return is_prime
 
-def isGoldbach(n, primes):
-    goldbach = None;
-    for prime in range(0, len(primes)):
-        if primes[prime] and n - prime > 0:
-            nonprimepart = n - prime
-            square = nonprimepart / 2.0
-            if (math.sqrt(square)).is_integer():
-                print(str(n) + " = " + str(prime) + " + 2x" + str(int(math.sqrt(square))) + "^2")
-                goldbach = True
-            elif goldbach != True:
-                goldbach = False
-        elif n - prime < 0:
-            break
-    return goldbach
 
-def findSmallestNonGoldbach(limit):
-    primes = ASieve(limit)
-    for composite in range(5, len(primes)):
-        if not primes[composite] and not composite % 2 == 0:
-            if not isGoldbach(composite, primes):
-                return composite
-    return "Non-Goldbach not found"
+def fitsGoldbachOtherConjecture(n, primes):
+    for prime, is_prime in enumerate(primes[:n]):
+        if is_prime:
+            square = (n - prime) // 2
+            root = isqrt(square)
+            if prime + 2 * root * root == n:
+                return True
+    return False
 
-start = time.time()
-answer = findSmallestNonGoldbach(10000)
-elapsed = (time.time() - start)
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+def smallestOddCompositeFailure(limit):
+    primes = primeSieve(limit)
+    for value in range(9, limit + 1, 2):
+        if not primes[value] and not fitsGoldbachOtherConjecture(value, primes):
+            return value
+    raise ValueError("No failure found below %s" % limit)
+
+
+def runTests():
+    primes = primeSieve(100)
+    assert fitsGoldbachOtherConjecture(33, primes)
+
+
+def solve():
+    return smallestOddCompositeFailure(10000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

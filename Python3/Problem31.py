@@ -1,12 +1,22 @@
-coins = [200, 100, 50, 20, 10, 5, 2, 1]
+def coinSums(total, coins):
+    ways = [0] * (total + 1)
+    ways[0] = 1
 
-def coinSum(n, coin):
-	ways = 0
-	for x in range(n, -1, -coins[coin]):
-		if coins[coin] == 2:
-			ways += 1
-		else:
-			ways += coinSum(x, coin+1)
-	return ways
+    for coin in coins:
+        for value in range(coin, total + 1):
+            ways[value] += ways[value - coin]
 
-print(coinSum(200, 0))
+    return ways[total]
+
+
+def runTests():
+    assert coinSums(5, [1, 2, 5]) == 4
+
+
+def solve():
+    return coinSums(200, [1, 2, 5, 10, 20, 50, 100, 200])
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

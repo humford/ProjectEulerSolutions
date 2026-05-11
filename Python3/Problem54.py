@@ -1,120 +1,77 @@
-import time
-import math
-import numpy as np
-import collections
+from collections import Counter
+from pathlib import Path
 
-hands = open("../Files/p054_poker.txt", "r")
-hands = hands.read()
-handlist = hands.split("\n")
 
-cardvals = {"1":1, "2":2, "3":3, "4":4, "5":5, "6":6, "7":7, "8":8, "9":9, "T":10, "J":11, "Q":12, "K":13, "A":14}
-handvals = {"HC":1, "OP":2, "TP":3, "TK":4, "ST":5, "FL":6, "FH":7, "FK":8, "SF":9, "RF":10}
-# Spades, Clubs, Diamonds, Hearts
+HANDS_FILE = Path("Files/p054_poker.txt")
+CARD_VALUES = {str(value): value for value in range(2, 10)}
+CARD_VALUES.update({"T": 10, "J": 11, "Q": 12, "K": 13, "A": 14})
 
-def is_straight(player_card_values):
-	return (sum(np.diff(sorted(player_card_values)) == 1) >= 4)
 
-def is_flush(player_hand):
-	suit = player_hand[0][1]
-	return len(player_hand) == len([card for card in player_hand if suit in card])
+def straightHighCard(values):
+    unique = sorted(set(values), reverse=True)
+    if unique == [14, 5, 4, 3, 2]:
+        return 5
+    if len(unique) == 5 and unique[0] - unique[-1] == 4:
+        return unique[0]
+    return None
 
-def hand_value(player_hand):
-	handval = "HC"
-	rankval = 0
-	card_values = []
-	for i in range(5):
-		card_values.append(cardvals[player_hand[i][0]])
-	card_values = sorted(card_values, reverse = True)
 
-	# Count instances of all cards
-	cnt = dict(collections.Counter(card_values))
-	sorted_cnt = {k: v for k, v in sorted(cnt.items(), key=lambda item: item[1], reverse = True)}
-	
-	# One Pair
-	if max(cnt.values()) == 2:
-		# Two Pairs
-		if sorted(cnt.values(), reverse = True)[1] == 2:
-			handval = "TP"
-			rankval = next(iter(sorted_cnt))
-		else:
-			handval = "OP"
-			rankval = next(iter(sorted_cnt))
+def handRank(hand):
+    values = sorted((CARD_VALUES[card[0]] for card in hand), reverse=True)
+    suits = [card[1] for card in hand]
+    counts = Counter(values)
+    count_groups = sorted(counts.items(), key=lambda item: (item[1], item[0]), reverse=True)
+    straight_high = straightHighCard(values)
+    is_flush = len(set(suits)) == 1
 
-	# Three of a Kind
-	if max(cnt.values()) == 3:
-		handval = "TK"
-		rankval = next(iter(sorted_cnt))
+    if straight_high and is_flush:
+        return 8, [straight_high]
+    if count_groups[0][1] == 4:
+        quad = count_groups[0][0]
+        kicker = max(value for value in values if value != quad)
+        return 7, [quad, kicker]
+    if count_groups[0][1] == 3 and count_groups[1][1] == 2:
+        return 6, [count_groups[0][0], count_groups[1][0]]
+    if is_flush:
+        return 5, values
+    if straight_high:
+        return 4, [straight_high]
+    if count_groups[0][1] == 3:
+        trip = count_groups[0][0]
+        kickers = sorted((value for value in values if value != trip), reverse=True)
+        return 3, [trip] + kickers
+    if count_groups[0][1] == 2 and count_groups[1][1] == 2:
+        pairs = sorted([count_groups[0][0], count_groups[1][0]], reverse=True)
+        kicker = max(value for value in values if value not in pairs)
+        return 2, pairs + [kicker]
+    if count_groups[0][1] == 2:
+        pair = count_groups[0][0]
+        kickers = sorted((value for value in values if value != pair), reverse=True)
+        return 1, [pair] + kickers
+    return 0, values
 
-	# Straight
-	if is_straight(card_values):
-		handval = "ST"
-		rankval = max(card_values)
 
-	# Flush
-	if is_flush(player_hand):
-		# Straight Flush
-		if handval == "ST":
-			handval = "SF"
-			rankval = max(card_values)
-		else:
-			handval = "FL"
-			rankval = max(card_values)
+def playerOneWins(line):
+    cards = line.split()
+    return handRank(cards[:5]) > handRank(cards[5:])
 
-	# Full House
-	if max(cnt.values()) == 3:
-		if sorted(cnt.values(), reverse = True)[1] == 2:
-			handval = "FH"
-			rankval = next(iter(sorted_cnt))
 
-	# Four of a Kind
-	if max(cnt.values()) == 4:
-		handval = "FK"
-		rankval = next(iter(sorted_cnt))
+def countPlayerOneWins(path=HANDS_FILE):
+    return sum(1 for line in path.read_text().splitlines() if line and playerOneWins(line))
 
-	# Royal Flush
-	if handval == "SF":
-		if max(card_values) == 14:
-			handval = "RF"
-			rankval = 14
 
-	return handval, card_values, rankval
+def runTests():
+    assert not playerOneWins("5H 5C 6S 7S KD 2C 3S 8S 8D TD")
+    assert playerOneWins("5D 8C 9S JS AC 2C 5C 7D 8S QH")
+    assert not playerOneWins("2D 9C AS AH AC 3D 6D 7D TD QD")
+    assert playerOneWins("4D 6S 9H QH QC 3D 6D 7H QD QS")
+    assert playerOneWins("2H 2D 4C 4D 4S 3C 3D 3S 9S 9D")
 
-def find_winner(player1, player2):
-	hand_player1, card_values_player1, rankval_player1 = hand_value(player1)
-	hand_player2, card_values_player2, rankval_player2 = hand_value(player2)
 
-	if handvals[hand_player1] > handvals[hand_player2]:
-		return 1
-	elif handvals[hand_player1] < handvals[hand_player2]:
-		return 2
-	else:
-		if rankval_player1 > rankval_player2:
-			return 1
-		elif rankval_player1 < rankval_player2:
-			return 2
-		else:
-			if max(card_values_player1) > max(card_values_player2):
-				return 1
-			elif max(card_values_player1) < max(card_values_player2):
-				return 2
+def solve():
+    return countPlayerOneWins()
 
-def count_wins(handlist):
-	one_wins = 0
-	two_wins = 0
 
-	for hand in handlist:
-		cards = hand.split(" ")
-		player1 = cards[:5]
-		player2 = cards[5:]
-
-		if find_winner(player1, player2) == 1:
-			one_wins += 1
-		else:
-			two_wins += 1
-	return one_wins, two_wins
-
-start = time.time()
-wins = count_wins(handlist)
-elapsed = (time.time() - start)
-
-print("Player_1 won " + str(wins[0]) + " games and Player_2 won " + str(wins[1]) + " games in " + str(elapsed) + " seconds.")
+if __name__ == "__main__":
+    runTests()
+    print(solve())

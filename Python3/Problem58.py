@@ -1,69 +1,60 @@
-import math
-import time
+def isPrime(n):
+    if n < 2:
+        return False
+    small_primes = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
+    if n in small_primes:
+        return True
+    if any(n % prime == 0 for prime in small_primes):
+        return False
 
-def isPseudoPrime(n):
-    if n <= 1:
-        return False
-    elif n == 2:
-        return True
-    elif n % 2 == 0:
-        return False
-    elif n < 9:
-        return True
-    elif n % 3 == 0:
-        return False
-    elif n % 5 == 0:
-        return False
-    ar = [2,3]
-    for i in range(len(ar)):
-        if witness(ar[i], n):
+    d = n - 1
+    shifts = 0
+    while d % 2 == 0:
+        shifts += 1
+        d //= 2
+
+    for base in (2, 3, 5, 7, 11):
+        if base >= n:
+            continue
+        value = pow(base, d, n)
+        if value in (1, n - 1):
+            continue
+        for _ in range(shifts - 1):
+            value = pow(value, 2, n)
+            if value == n - 1:
+                break
+        else:
             return False
+
     return True
 
-def witness(a, n):
-    t = 0
-    u = n - 1
-    while (u & 1) == 0:
-        t += 1
-        u >>= 1
 
-    xi1 = modularExp(a, u, n)
-    xi2 = 0
+def spiralSideLengthBelowRatio(threshold):
+    prime_count = 0
+    diagonal_count = 1
+    side_length = 1
+    value = 1
 
-    for i in range(t):
-        xi2 = xi1 * xi1 % n
-        if (xi2 == 1) and (xi1 != 1) and (xi1 != (n - 1)):
-            return True
-        xi1 = xi2
-
-    return xi1 != 1
-
-def modularExp(a, b, n):
-    d = 1
-    k = 0
-    while ((b >> k) > 0):
-        k += 1
-    for i in range(k-1, -1, -1):
-        d = d * d % n
-        if ((b >> i) & 1) > 0:
-            d = d * a % n
-    return d
-
-def spiralprimes(prob):
-    prime_count = 3
-    sl = 2
-    c = 9
-    while prime_count / (2*sl+1) > prob:
-        sl += 2
-        for i in range(3):
-            c += sl
-            if isPseudoPrime(c):
+    while True:
+        side_length += 2
+        step = side_length - 1
+        for _ in range(4):
+            value += step
+            if isPrime(value):
                 prime_count += 1
-        c += sl
-    return sl + 1
+        diagonal_count += 4
+        if prime_count / diagonal_count < threshold:
+            return side_length
 
-start = time.time()
-answer = spiralprimes(0.10)
-elapsed = (time.time() - start)
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+def runTests():
+    assert spiralSideLengthBelowRatio(0.56) == 5
+
+
+def solve():
+    return spiralSideLengthBelowRatio(0.10)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

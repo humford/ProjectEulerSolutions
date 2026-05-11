@@ -1,26 +1,25 @@
-import time
-import math
+def rightTriangleSolutionCount(perimeter):
+    count = 0
+    for a in range(1, perimeter // 3):
+        numerator = perimeter * (perimeter - 2 * a)
+        denominator = 2 * (perimeter - a)
+        if numerator % denominator == 0:
+            count += 1
+    return count
 
-#b = (p^2 - 2pa) / (2p - 2a)
-#b is an integer for all solutions
-def numSolutionsRightTriangle(p):
-	solutions = 0
-	for a in range(1, int(p/3)):
-		if p * (p - 2 * a) % (2 * (p - a)) == 0:
-			solutions += 1
-	return solutions
 
-def maxSolutionsPerimeter():
-	pMax = 0
-	maxSolutions = 0
-	for p in range(2, 1000, 2):
-		if numSolutionsRightTriangle(p) > maxSolutions:
-			maxSolutions = numSolutionsRightTriangle(p)
-			pMax = p
-	return pMax
+def perimeterWithMostSolutions(limit):
+    return max(range(2, limit + 1, 2), key=rightTriangleSolutionCount)
 
-start = time.time()
-answer = maxSolutionsPerimeter()
-elapsed = (time.time() - start)
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+def runTests():
+    assert rightTriangleSolutionCount(120) == 3
+
+
+def solve():
+    return perimeterWithMostSolutions(1000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

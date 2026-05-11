@@ -1,22 +1,24 @@
-import time
+def isPalindrome(text):
+    return text == text[::-1]
 
-def isPalindromic(n):
-    n = list(str(n))
-    for i, x in zip(n, reversed(n)):
-        if i != x:
-            return False
-    else:
-        return True
 
-def doubleBasePalindromes(limit):
-	palindromes = []
-	for n in range(0, limit):
-		if isPalindromic(n) and isPalindromic(int(bin(n)[2:])):
-			palindromes.append(n)
-	return palindromes
+def isDoubleBasePalindrome(n):
+    return isPalindrome(str(n)) and isPalindrome(bin(n)[2:])
 
-start = time.time()
-answer = doubleBasePalindromes(1000000)
-elapsed = (time.time() - start)
 
-print("Found " + str(sum(answer)) + " in " + str(elapsed) + " seconds.")
+def sumDoubleBasePalindromes(limit):
+    return sum(value for value in range(1, limit) if isDoubleBasePalindrome(value))
+
+
+def runTests():
+    assert isDoubleBasePalindrome(585)
+    assert sumDoubleBasePalindromes(1000) == 1772
+
+
+def solve():
+    return sumDoubleBasePalindromes(1000000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

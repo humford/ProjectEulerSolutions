@@ -1,6 +1,4 @@
-import time
-
-bloc = """37107287533902102798797998220837590246510135740250
+NUMBER_TEXT = """37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
 74324986199524741059474233309513058123726617309629
 91942213363574161572522430563301811072406154908250
@@ -102,20 +100,23 @@ bloc = """37107287533902102798797998220837590246510135740250
 53503534226472524250874054075591789781264330331690"""
 
 
-def splitBloc(b=bloc):
-    return list(map(int, b.split("\n")))
+def parseNumbers(text):
+    return [int(line) for line in text.splitlines()]
 
 
-def sumToDigits(d, b=bloc):
-    b = [int(i) for i in str(sum(splitBloc(b)))]
-    out = ""
-    for x in b[0:d + 1]:
-        out += str(x)
-    return out
+def firstDigitsOfSum(numbers, digits):
+    return str(sum(numbers))[:digits]
 
 
-start = time.time()
-digsum = sumToDigits(int(input("Number of Digits of Sum: ")))
-elapsed = (time.time() - start)
+def runTests():
+    assert firstDigitsOfSum([123, 877], 2) == "10"
+    assert len(parseNumbers(NUMBER_TEXT)) == 100
 
-print("found %s in %s seconds" % (digsum, elapsed))
+
+def solve():
+    return firstDigitsOfSum(parseNumbers(NUMBER_TEXT), 10)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

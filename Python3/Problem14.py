@@ -1,31 +1,45 @@
-import time
+def collatzLength(n, cache):
+    original = n
+    seen = []
 
-
-def collatzsequence(n):
-    sequence = [n]
-    while n != 1:
+    while n not in cache:
+        seen.append(n)
         if n % 2 == 0:
-            n /= 2
+            n //= 2
         else:
             n = 3 * n + 1
-        sequence.append(n)
-    return sequence
+
+    length = cache[n]
+    for value in reversed(seen):
+        length += 1
+        cache[value] = length
+
+    return cache[original]
 
 
-def findlongest(max):
-    l = 0
-    start = 0
-    for x in range(max, 1, -1):
-        seqlen = len(collatzsequence(x))
-        if seqlen > l:
-            l = seqlen
-            start = x
-            print(start, l)
-    return start
+def longestCollatzStartBelow(limit):
+    cache = {1: 1}
+    best_start = 1
+    best_length = 1
+
+    for start in range(2, limit):
+        length = collatzLength(start, cache)
+        if length > best_length:
+            best_start = start
+            best_length = length
+
+    return best_start
 
 
-start = time.time()
-startingnumber = findlongest(int(input("Under: ")))
-elapsed = (time.time() - start)
+def runTests():
+    cache = {1: 1}
+    assert collatzLength(13, cache) == 10
 
-print("found %s in %s seconds" % (startingnumber, elapsed))
+
+def solve():
+    return longestCollatzStartBelow(1000000)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

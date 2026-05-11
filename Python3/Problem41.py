@@ -1,46 +1,46 @@
-import time
 from itertools import permutations
 
-#AKS Primality Test
-#https://en.wikipedia.org/wiki/AKS_primality_test
-#Python implementation from: https://stackoverflow.com/questions/1801391/what-is-the-best-algorithm-for-checking-if-a-number-is-prime
-def isprime(n):
-    """Returns True if n is prime."""
-    if n == 2:
-        return True
-    if n == 3:
-        return True
-    if n % 2 == 0:
+
+def isPrime(n):
+    if n < 2:
         return False
-    if n % 3 == 0:
+    if n in (2, 3):
+        return True
+    if n % 2 == 0 or n % 3 == 0:
         return False
 
-    i = 5
-    w = 2
-
-    while i * i <= n:
-        if n % i == 0:
+    factor = 5
+    step = 2
+    while factor * factor <= n:
+        if n % factor == 0:
             return False
-
-        i += w
-        w = 6 - w
+        factor += step
+        step = 6 - step
 
     return True
 
-def largestPandigitalPrime():
- 	largestpd = 0
- 	for m in range(4, 10):
- 		test = permutations("".join([str(d) for d in range(1, m+1)]))
- 		for pandigital in test:
- 			pd = int("".join(pandigital))
- 			if pd > largestpd:
- 				if isprime(pd):
- 					largestpd = pd
- 	return largestpd
+
+def largestPandigitalPrime(maxDigits=9):
+    for digits in range(maxDigits, 0, -1):
+        if sum(range(1, digits + 1)) % 3 == 0:
+            continue
+        characters = "".join(str(value) for value in range(digits, 0, -1))
+        for permutation in permutations(characters):
+            candidate = int("".join(permutation))
+            if isPrime(candidate):
+                return candidate
+    return None
 
 
-start = time.time()
-answer = largestPandigitalPrime()
-elapsed = (time.time() - start)
+def runTests():
+    assert isPrime(2143)
+    assert largestPandigitalPrime(4) == 4231
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+
+def solve():
+    return largestPandigitalPrime()
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

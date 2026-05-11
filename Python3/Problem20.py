@@ -1,7 +1,18 @@
-import math
+from math import factorial
 
 
-def factorialDigitSum(n): return sum([int(x) for x in str(math.factorial(n))])
+def factorialDigitSum(n):
+    return sum(int(digit) for digit in str(factorial(n)))
 
 
-print(factorialDigitSum(100))
+def runTests():
+    assert factorialDigitSum(10) == 27
+
+
+def solve():
+    return factorialDigitSum(100)
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())

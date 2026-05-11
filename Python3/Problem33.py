@@ -1,36 +1,54 @@
-import time
-from itertools import permutations
-from fractions import gcd
+from math import gcd
 
-# bad idea:
-# def digitCancellingFractions():
-# 	test_numerator = [x for x in range(10, 100)]
-# 	test_denominator = [x for x in range(10, 100)]
-# 	for n in test_numerator:
-# 		for d in test_denominator:
-# 			overlaps = [int(x) for x in list(set(str(n)) & set(str(d)))]
-# 			if 0 in overlaps:
-# 				overlaps = overlaps.remove(0)
-# 			if overlaps and len(overlaps) > 1:
-# 				f = (n / d).as_integer_ratio()
-# 				if f[0] in [2,3,4,5,6,7,8,9] and f[1] in [2,3,4,5,6,7,8,9]:
-# 					print(n, d, overlaps, f)
-# 	return 0
+
+def cancelDigit(numerator, denominator, digit):
+    numerator_text = str(numerator).replace(digit, "", 1)
+    denominator_text = str(denominator).replace(digit, "", 1)
+    if not numerator_text or not denominator_text:
+        return None
+    cancelled_denominator = int(denominator_text)
+    if cancelled_denominator == 0:
+        return None
+    return int(numerator_text), cancelled_denominator
+
 
 def digitCancellingFractions():
-	denproduct = 1
-	nomproduct = 1
-	for i in range(1, 10):
-		for den in range(1, i):
-			for nom in range(1, den):
-				if (nom * 10 + i) * den == nom * (i * 10 + den):
-					denproduct *= den
-					nomproduct *= nom
-	denproduct /= gcd(nomproduct, denproduct)
-	return int(denproduct)
+    fractions = []
 
-start = time.time()
-answer = digitCancellingFractions()
-elapsed = (time.time() - start)
+    for numerator in range(10, 100):
+        for denominator in range(numerator + 1, 100):
+            if numerator % 10 == 0 and denominator % 10 == 0:
+                continue
+            for digit in set(str(numerator)) & set(str(denominator)) - {"0"}:
+                cancelled = cancelDigit(numerator, denominator, digit)
+                if cancelled is None:
+                    continue
+                reduced_numerator, reduced_denominator = cancelled
+                if numerator * reduced_denominator == denominator * reduced_numerator:
+                    fractions.append((numerator, denominator))
 
-print("Found " + str(answer) + " in " + str(elapsed) + " seconds.")
+    return fractions
+
+
+def productDenominator(fractions):
+    numerator_product = 1
+    denominator_product = 1
+
+    for numerator, denominator in fractions:
+        numerator_product *= numerator
+        denominator_product *= denominator
+
+    return denominator_product // gcd(numerator_product, denominator_product)
+
+
+def runTests():
+    assert (49, 98) in digitCancellingFractions()
+
+
+def solve():
+    return productDenominator(digitCancellingFractions())
+
+
+if __name__ == "__main__":
+    runTests()
+    print(solve())
