@@ -1,0 +1,3558 @@
+# Project Euler Audit Progress
+
+Updated: 2026-05-13
+
+## Current Manifest State
+
+- `answers.csv` contains verified rows for Problems 1-974.
+- Every `answers.csv` row has a corresponding `Python3/Problem<N>.py` file.
+- There are no intentional gaps in the verified rows through Problem 974.
+- The current Python3 script set runs through Problem 975.
+- Problems 1-974 are classified as verified/current, solved/current, or rewritten/current and are recorded in `answers.csv`.
+- `Python3/Problem975.py` is present as in-progress handoff work; it has not had its target answer recorded in `answers.csv`.
+- Live Project Euler recent page checked on 2026-05-13: newest problem is 996, so Problems 976-996 remain missing.
+
+## Audited In This Pass
+
+- `verified + run`: Problem 931.
+- `solved + run`: Problem 932.
+- `solved + run`: Problem 933.
+- `solved + run`: Problem 934.
+- `solved + run`: Problem 935.
+- `solved + run`: Problem 936.
+- `solved + run`: Problem 937.
+- `solved + run`: Problem 938.
+- `solved + run`: Problem 939.
+- `solved + run`: Problem 940.
+- `in-progress handoff`: Problem 975.
+- `rewritten + run`: Problems 1-43, 45-50, 52-58, 62-63.
+- `rewritten + run`: Problem 69.
+- `rewritten + run`: Problems 92, 97.
+- `rewritten + run`: Problem 145.
+- `rewritten + run`: Problem 154.
+- `rewritten + run`: Problem 210.
+- `rewritten + run`: Problem 218.
+- `rewritten + run`: Problem 245.
+- `rewritten + run`: Problem 311.
+- `rewritten + run`: Problem 331.
+- `rewritten + run`: Problem 338.
+- `rewritten + run`: Problem 353.
+- `rewritten + run`: Problem 354.
+- `rewritten + run`: Problem 355.
+- `rewritten + run`: Problem 360.
+- `rewritten + run`: Problem 361.
+- `rewritten + run`: Problem 362.
+- `rewritten + run`: Problem 364.
+- `rewritten + run`: Problem 368.
+- `rewritten + run`: Problem 370.
+- `rewritten + run`: Problem 372.
+- `rewritten + run`: Problem 373.
+- `rewritten + run`: Problem 374.
+- `rewritten + run`: Problem 375.
+- `rewritten + run`: Problem 376.
+- `rewritten + run`: Problem 378.
+- `rewritten + run`: Problem 379.
+- `rewritten + run`: Problem 382.
+- `rewritten + run`: Problem 383.
+- `rewritten + run`: Problem 384.
+- `rewritten + run`: Problem 385.
+- `rewritten + run`: Problem 386.
+- `rewritten + run`: Problem 391.
+- `rewritten + run`: Problem 397.
+- `rewritten + run`: Problem 399.
+- `rewritten + run`: Problem 401.
+- `rewritten + run`: Problem 402.
+- `rewritten + run`: Problem 403.
+- `rewritten + run`: Problem 404.
+- `rewritten + run`: Problem 405.
+- `rewritten + run`: Problem 410.
+- `rewritten + run`: Problem 411.
+- `rewritten + run`: Problem 413.
+- `rewritten + run`: Problem 414.
+- `rewritten + run`: Problem 415.
+- `rewritten + run`: Problem 417.
+- `rewritten + run`: Problem 418.
+- `rewritten + run`: Problem 419.
+- `rewritten + run`: Problem 420.
+- `rewritten + run`: Problem 421.
+- `rewritten + run`: Problem 422.
+- `rewritten + run`: Problem 423.
+- `rewritten + run`: Problem 424.
+- `rewritten + run`: Problem 426.
+- `rewritten + run`: Problem 427.
+- `rewritten + run`: Problem 428.
+- `rewritten + run`: Problem 431.
+- `rewritten + run`: Problem 432.
+- `rewritten + run`: Problem 433.
+- `rewritten + run`: Problem 434.
+- `rewritten + run`: Problem 436.
+- `rewritten + run`: Problem 437.
+- `rewritten + run`: Problem 438.
+- `rewritten + run`: Problem 439.
+- `rewritten + run`: Problem 440.
+- `rewritten + run`: Problem 441.
+- `rewritten + run`: Problem 445.
+- `rewritten + run`: Problem 446.
+- `rewritten + run`: Problem 447.
+- `rewritten + run`: Problem 448.
+- `rewritten + run`: Problem 449.
+- `rewritten + run`: Problem 450.
+- `rewritten + run`: Problem 451.
+- `rewritten + run`: Problem 452.
+- `rewritten + run`: Problem 453.
+- `rewritten + run`: Problem 454.
+- `rewritten + run`: Problem 455.
+- `rewritten + run`: Problem 456.
+- `rewritten + run`: Problem 457.
+- `rewritten + run`: Problem 459.
+- `rewritten + run`: Problem 460.
+- `rewritten + run`: Problem 461.
+- `rewritten + run`: Problem 462.
+- `rewritten + run`: Problem 464.
+- `rewritten + run`: Problem 465.
+- `rewritten + run`: Problem 466.
+- `rewritten + run`: Problem 467.
+- `rewritten + run`: Problem 468.
+- `rewritten + run`: Problem 469.
+- `rewritten + run`: Problem 470.
+- `rewritten + run`: Problem 471.
+- `rewritten + run`: Problem 472.
+- `rewritten + run`: Problem 473.
+- `rewritten + run`: Problem 474.
+- `rewritten + run`: Problem 475.
+- `rewritten + run`: Problem 476.
+- `rewritten + run`: Problem 477.
+- `rewritten + run`: Problem 478.
+- `rewritten + run`: Problem 481.
+- `rewritten + run`: Problem 482.
+- `rewritten + run`: Problem 483.
+- `rewritten + run`: Problem 484.
+- `rewritten + run`: Problem 485.
+- `rewritten + run`: Problem 486.
+- `rewritten + run`: Problem 487.
+- `rewritten + run`: Problem 488.
+- `rewritten + run`: Problem 489.
+- `rewritten + run`: Problem 490.
+- `rewritten + run`: Problem 492.
+- `rewritten + run`: Problem 494.
+- `rewritten + run`: Problem 495.
+- `rewritten + run`: Problem 496.
+- `rewritten + run`: Problem 497.
+- `rewritten + run`: Problem 498.
+- `rewritten + run`: Problem 499.
+- `rewritten + run`: Problem 501.
+- `rewritten + run`: Problem 502.
+- `rewritten + run`: Problem 503.
+- `rewritten + run`: Problem 504.
+- `rewritten + run`: Problem 506.
+- `rewritten + run`: Problem 507.
+- `rewritten + run`: Problem 508.
+- `rewritten + run`: Problem 509.
+- `rewritten + run`: Problem 510.
+- `rewritten + run`: Problem 511.
+- `rewritten + run`: Problem 512.
+- `verified current script + run`: Problems 44, 51, 59, 60, 61, 64-68, 70-91, 93-96, 98-144, 146-153, 155-200, 201-209, 211-217, 219-240.
+- `verified current script + run`: Problems 241-244, 246-250.
+- `verified current script + run`: Problems 251-260.
+- `verified current script + run`: Problems 261-270.
+- `verified current script + run`: Problems 271-280.
+- `verified current script + run`: Problems 281-290.
+- `verified current script + run`: Problems 291-300.
+- `verified current script + run`: Problems 301-310.
+- `verified current script + run`: Problems 312-320.
+- `verified current script + run`: Problems 321-330.
+- `verified current script + run`: Problems 332-337, 339-340.
+- `verified current script + run`: Problems 341-350.
+- `verified current script + run`: Problems 351-352, 356-359.
+- `verified current script + run`: Problems 363, 365-367, 369.
+- `verified current script + run`: Problems 371, 377, 380.
+- `verified current script + run`: Problems 381, 387-390.
+- `verified current script + run`: Problems 392-396, 398, 400.
+- `verified current script + run`: Problems 406-409.
+- `verified current script + run`: Problems 412, 416.
+- `verified current script + run`: Problems 425, 429-430.
+- `verified current script + run`: Problem 435.
+- `verified current script + run`: Problems 442-444.
+- `verified current script + run`: Problem 458.
+- `verified current script + run`: Problem 463.
+- `verified current script + run`: Problems 479-480.
+- `verified current script + run`: Problems 491, 493, and 500.
+- `verified current script + run`: Problems 618-619.
+- `verified current script + run`: Problems 622 and 624.
+- `verified current script + run`: Problem 633.
+- `verified current script + run`: Problem 684.
+- `rewritten + run`: Problem 700.
+- `rewritten + run`: Problem 505.
+- `rewritten + run`: Problem 513.
+- `rewritten + run`: Problem 514.
+- `rewritten + run`: Problem 515.
+- `rewritten + run`: Problem 516.
+- `rewritten + run`: Problem 517.
+- `rewritten + run`: Problem 518.
+- `rewritten + run`: Problem 519.
+- `rewritten + run`: Problem 520.
+- `rewritten + run`: Problem 521.
+- `rewritten + run`: Problem 522.
+- `rewritten + run`: Problem 523.
+- `rewritten + run`: Problem 524.
+- `rewritten + run`: Problem 525.
+- `rewritten + run`: Problem 526.
+- `rewritten + run`: Problem 527.
+- `rewritten + run`: Problem 528.
+- `rewritten + run`: Problem 529.
+- `rewritten + run`: Problem 530.
+- `rewritten + run`: Problem 531.
+- `rewritten + run`: Problem 532.
+- `rewritten + run`: Problem 533.
+- `rewritten + run`: Problem 534.
+- `rewritten + run`: Problem 535.
+- `rewritten + run`: Problem 536.
+- `rewritten + run`: Problem 537.
+- `rewritten + run`: Problem 538.
+- `rewritten + run`: Problem 539.
+- `rewritten + run`: Problem 540.
+- `rewritten + run`: Problem 541.
+- `rewritten + run`: Problem 542.
+- `rewritten + run`: Problem 543.
+- `rewritten + run`: Problem 544.
+- `rewritten + run`: Problem 545.
+- `rewritten + run`: Problem 546.
+- `rewritten + run`: Problem 547.
+- `rewritten + run`: Problem 548.
+- `rewritten + run`: Problem 549.
+- `rewritten + run`: Problem 550.
+- `rewritten + run`: Problem 551.
+- `rewritten + run`: Problem 552.
+- `rewritten + run`: Problem 553.
+- `rewritten + run`: Problem 554.
+- `rewritten + run`: Problem 555.
+- `rewritten + run`: Problem 556.
+- `rewritten + run`: Problem 557.
+- `rewritten + run`: Problem 558.
+- `rewritten + run`: Problem 559.
+- `rewritten + run`: Problem 560.
+- `rewritten + run`: Problem 561.
+- `rewritten + run`: Problem 562.
+- `rewritten + run`: Problem 563.
+- `rewritten + run`: Problem 564.
+- `rewritten + run`: Problem 565.
+- `rewritten + run`: Problem 566.
+- `rewritten + run`: Problem 567.
+- `rewritten + run`: Problem 568.
+- `rewritten + run`: Problem 569.
+- `rewritten + run`: Problem 571.
+- `rewritten + run`: Problem 572.
+- `rewritten + run`: Problem 573.
+- `rewritten + run`: Problem 574.
+- `rewritten + run`: Problem 575.
+- `rewritten + run`: Problem 576.
+- `rewritten + run`: Problem 577.
+- `rewritten + run`: Problem 578.
+- `rewritten + run`: Problem 579.
+- `rewritten + run`: Problem 580.
+- `rewritten + run`: Problem 581.
+- `rewritten + run`: Problem 582.
+- `rewritten + run`: Problem 583.
+- `rewritten + run`: Problem 584.
+- `rewritten + run`: Problem 585.
+- `rewritten + run`: Problem 586.
+- `rewritten + run`: Problem 587.
+- `rewritten + run`: Problem 588.
+- `rewritten + run`: Problem 589.
+- `rewritten + run`: Problem 590.
+- `rewritten + run`: Problem 591.
+- `rewritten + run`: Problem 592.
+- `rewritten + run`: Problem 593.
+- `rewritten + run`: Problem 594.
+- `rewritten + run`: Problem 595.
+- `rewritten + run`: Problem 596.
+- `rewritten + run`: Problem 597.
+- `rewritten + run`: Problem 598.
+- `rewritten + run`: Problem 599.
+- `rewritten + run`: Problem 600.
+- `rewritten + run`: Problem 601.
+- `rewritten + run`: Problem 602.
+- `rewritten + run`: Problem 603.
+- `rewritten + run`: Problem 604.
+- `rewritten + run`: Problem 605.
+- `rewritten + run`: Problem 606.
+- `rewritten + run`: Problem 607.
+- `rewritten + run`: Problem 608.
+- `rewritten + run`: Problem 609.
+- `rewritten + run`: Problem 610.
+- `rewritten + run`: Problem 611.
+- `rewritten + run`: Problem 612.
+- `rewritten + run`: Problem 613.
+- `rewritten + run`: Problem 614.
+- `rewritten + run`: Problem 615.
+- `rewritten + run`: Problem 616.
+- `rewritten + run`: Problem 617.
+- `rewritten + run`: Problem 620.
+- `rewritten + run`: Problem 621.
+- `rewritten + run`: Problem 623.
+- `rewritten + run`: Problem 625.
+- `rewritten + run`: Problem 626.
+- `rewritten + run`: Problem 627.
+- `rewritten + run`: Problem 628.
+- `rewritten + run`: Problem 629.
+- `rewritten + run`: Problem 630.
+- `rewritten + run`: Problem 631.
+- `rewritten + run`: Problem 632.
+- `rewritten + run`: Problem 634.
+- `rewritten + run`: Problem 635.
+- `rewritten + run`: Problem 636.
+- `rewritten + run`: Problem 637.
+- `rewritten + run`: Problem 638.
+- `rewritten + run`: Problem 639.
+- `rewritten + run`: Problem 640.
+- `rewritten + run`: Problem 641.
+- `rewritten + run`: Problem 642.
+- `rewritten + run`: Problem 643.
+- `rewritten + run`: Problem 644.
+- `rewritten + run`: Problem 645.
+- `rewritten + run`: Problem 646.
+- `rewritten + run`: Problem 647.
+- `rewritten + run`: Problem 648.
+- `rewritten + run`: Problem 649.
+- `rewritten + run`: Problem 650.
+- `rewritten + run`: Problem 651.
+- `rewritten + run`: Problem 652.
+- `rewritten + run`: Problem 653.
+- `rewritten + run`: Problem 654.
+- `rewritten + run`: Problem 655.
+- `rewritten + run`: Problem 656.
+- `rewritten + run`: Problem 657.
+- `rewritten + run`: Problem 658.
+- `rewritten + run`: Problem 659.
+- `rewritten + run`: Problem 660.
+- `rewritten + run`: Problem 661.
+- `rewritten + run`: Problem 662.
+- `rewritten + run`: Problem 663.
+- `rewritten + run`: Problem 664.
+- `rewritten + run`: Problem 665.
+- `rewritten + run`: Problem 666.
+- `rewritten + run`: Problem 667.
+- `rewritten + run`: Problem 668.
+- `rewritten + run`: Problem 669.
+- `rewritten + run`: Problem 670.
+- `rewritten + run`: Problem 671.
+- `rewritten + run`: Problem 672.
+- `rewritten + run`: Problem 673.
+- `rewritten + run`: Problem 674.
+- `rewritten + run`: Problem 675.
+- `rewritten + run`: Problem 676.
+- `rewritten + run`: Problem 677.
+- `rewritten + run`: Problem 678.
+- `rewritten + run`: Problem 679.
+- `rewritten + run`: Problem 680.
+- `rewritten + run`: Problem 681.
+- `rewritten + run`: Problem 682.
+- `rewritten + run`: Problem 683.
+- `rewritten + run`: Problem 685.
+- `rewritten + run`: Problem 686.
+- `rewritten + run`: Problem 687.
+- `rewritten + run`: Problem 688.
+- `rewritten + run`: Problem 689.
+- `rewritten + run`: Problem 690.
+- `rewritten + run`: Problem 691.
+- `rewritten + run`: Problem 692.
+- `rewritten + run`: Problem 693.
+- `rewritten + run`: Problem 694.
+- `rewritten + run`: Problem 695.
+- `rewritten + run`: Problem 696.
+- `rewritten + run`: Problem 697.
+- `rewritten + run`: Problem 698.
+- `rewritten + run`: Problem 699.
+- `rewritten + run`: Problem 701.
+- `rewritten + run`: Problem 702.
+- `rewritten + run`: Problem 703.
+- `rewritten + run`: Problem 704.
+- `rewritten + run`: Problem 705.
+- `rewritten + run`: Problem 706.
+- `rewritten + run`: Problem 707.
+- `rewritten + run`: Problem 708.
+- `rewritten + run`: Problem 709.
+- `rewritten + run`: Problem 710.
+- `rewritten + run`: Problem 711.
+- `rewritten + run`: Problem 712.
+- `rewritten + run`: Problem 713.
+- `rewritten + run`: Problem 714.
+- `rewritten + run`: Problem 715.
+- `rewritten + run`: Problem 716.
+- `rewritten + run`: Problem 717.
+- `rewritten + run`: Problem 718.
+- `rewritten + run`: Problem 719.
+- `rewritten + run`: Problem 720.
+- `rewritten + run`: Problem 721.
+- `rewritten + run`: Problem 722.
+- `rewritten + run`: Problem 723.
+- `rewritten + run`: Problem 724.
+- `rewritten + run`: Problem 725.
+- `rewritten + run`: Problem 726.
+- `rewritten + run`: Problem 727.
+- `rewritten + run`: Problem 728.
+- `rewritten + run`: Problem 729.
+- `rewritten + run`: Problem 730.
+- `rewritten + run`: Problem 731.
+- `rewritten + run`: Problem 732.
+- `rewritten + run`: Problem 733.
+- `rewritten + run`: Problem 734.
+- `rewritten + run`: Problem 735.
+- `rewritten + run`: Problem 736.
+- `rewritten + run`: Problem 737.
+- `rewritten + run`: Problem 738.
+- `rewritten + run`: Problem 739.
+- `rewritten + run`: Problem 740.
+- `rewritten + run`: Problem 741.
+- `rewritten + run`: Problem 742.
+- `solved + run`: Problem 743.
+- `solved + run`: Problem 744.
+- `solved + run`: Problem 745.
+- `solved + run`: Problem 746.
+- `solved + run`: Problem 747.
+- `solved + run`: Problem 748.
+- `solved + run`: Problem 749.
+- `solved + run`: Problem 750.
+- `solved + run`: Problem 751.
+- `solved + run`: Problem 752.
+- `solved + run`: Problem 753.
+- `solved + run`: Problem 754.
+- `solved + run`: Problem 755.
+- `solved + run`: Problem 756.
+- `solved + run`: Problem 757.
+- `solved + run`: Problem 758.
+- `solved + run`: Problem 759.
+- `solved + run`: Problem 760.
+- `solved + run`: Problem 761.
+- `solved + run`: Problem 762.
+- `solved + run`: Problem 763.
+- `solved + run`: Problem 764.
+- `solved + run`: Problem 765.
+- `solved + run`: Problem 766.
+- `solved + run`: Problem 767.
+- `solved + run`: Problem 768.
+- `solved + run`: Problem 769.
+- `solved + run`: Problem 770.
+- `solved + run`: Problem 771.
+- `solved + run`: Problem 772.
+- `solved + run`: Problem 773.
+- `solved + run`: Problem 774.
+- `solved + run`: Problem 775.
+- `solved + run`: Problem 776.
+- `solved + run`: Problem 777.
+- `solved + run`: Problem 778.
+- `solved + run`: Problem 779.
+- `solved + run`: Problem 780.
+- `solved + run`: Problem 781.
+- `solved + run`: Problem 782.
+- `solved + run`: Problem 783.
+- `solved + run`: Problem 784.
+- `solved + run`: Problem 785.
+- `solved + run`: Problem 786.
+- `solved + run`: Problem 787.
+- `solved + run`: Problem 788.
+- `solved + run`: Problem 789.
+- `solved + run`: Problem 790.
+- `solved + run`: Problem 791.
+- `solved + run`: Problem 792.
+- `solved + run`: Problem 793.
+- `solved + run`: Problem 794.
+- `solved + run`: Problem 795.
+- `solved + run`: Problem 796.
+- `solved + run`: Problem 797.
+- `solved + run`: Problem 798.
+- `solved + run`: Problem 799.
+- `solved + run`: Problem 800.
+- `solved + run`: Problem 801.
+- `solved + run`: Problem 802.
+- `solved + run`: Problem 803.
+- `solved + run`: Problem 804.
+- `solved + run`: Problem 805.
+- `solved + run`: Problem 806.
+- `solved + run`: Problem 807.
+- `solved + run`: Problem 808.
+- `solved + run`: Problem 809.
+- `solved + run`: Problem 810.
+- `solved + run`: Problem 811.
+- `solved + run`: Problem 812.
+- `solved + run`: Problem 813.
+- `solved + run`: Problem 814.
+- `solved + run`: Problem 815.
+- `solved + run`: Problem 816.
+- `solved + run`: Problem 817.
+- `solved + run`: Problem 818.
+- `solved + run`: Problem 819.
+- `solved + run`: Problem 820.
+- `solved + run`: Problem 821.
+- `solved + run`: Problem 822.
+- `solved + run`: Problem 823.
+- `solved + run`: Problem 824.
+- `solved + run`: Problem 825.
+- `solved + run`: Problem 826.
+- `solved + run`: Problem 827.
+- `solved + run`: Problem 828.
+- `solved + run`: Problem 829.
+- `solved + run`: Problem 830.
+- `solved + run`: Problem 831.
+- `solved + run`: Problem 832.
+- `solved + run`: Problem 833.
+- `solved + run`: Problem 834.
+- `solved + run`: Problem 835.
+- `solved + run`: Problem 836.
+- `solved + run`: Problem 837.
+- `solved + run`: Problem 838.
+- `solved + run`: Problem 839.
+- `solved + run`: Problem 840.
+- `solved + run`: Problem 841.
+- `solved + run`: Problem 842.
+- `solved + run`: Problem 843.
+- `solved + run`: Problem 844.
+- `solved + run`: Problem 845.
+- `solved + run`: Problem 846.
+- `solved + run`: Problem 847.
+- `solved + run`: Problem 848.
+- `solved + run`: Problem 849.
+- `solved + run`: Problem 850.
+- `solved + run`: Problem 851.
+- `solved + run`: Problem 852.
+- `solved + run`: Problem 853.
+- `solved + run`: Problem 854.
+- `solved + run`: Problem 855.
+- `solved + run`: Problem 856.
+- `solved + run`: Problem 857.
+- `solved + run`: Problem 858.
+- `solved + run`: Problem 859.
+- `solved + run`: Problem 860.
+- `solved + run`: Problem 861.
+- `solved + run`: Problem 862.
+- `solved + run`: Problem 863.
+- `solved + run`: Problem 864.
+- `solved + run`: Problem 865.
+- `solved + run`: Problem 866.
+- `solved + run`: Problem 867.
+- `solved + run`: Problem 868.
+- `solved + run`: Problem 869.
+- `solved + run`: Problem 870.
+- `solved + run`: Problem 871.
+- `solved + run`: Problem 872.
+- `solved + run`: Problem 873.
+- `solved + run`: Problem 874.
+- `solved + run`: Problem 875.
+- `solved + run`: Problem 876.
+- `solved + run`: Problem 877.
+- Added repo-local Project Euler input files:
+  - `Files/p022_names.txt`
+  - `Files/p042_words.txt`
+  - `Files/p424_kakuro200.txt`
+  - `Files/p673_beds.txt`
+  - `Files/p673_desks.txt`
+  - `Files/p674_i_expressions.txt`
+  - `Files/p828_number_challenges.txt`
+
+## Verification Commands Used
+
+- `python3 -m py_compile Python3/Problem1.py ... Python3/Problem63.py` in audited batches.
+- `python3 Python3/Problem<N>.py` for each problem 1-63.
+- `python3 Python3/Problem44.py`
+- `python3 Python3/Problem51.py`
+- `python3 Python3/Problem59.py`
+- `python3 Python3/Problem60.py`
+- `python3 Python3/Problem61.py`
+- `python3 Python3/Problem<N>.py` for each problem 64-70.
+- `python3 Python3/Problem<N>.py` for each problem 71-80.
+- `python3 Python3/Problem<N>.py` for each problem 81-90.
+- `python3 Python3/Problem<N>.py` for each problem 91-100.
+- `python3 Python3/Problem<N>.py` for each problem 101-110.
+- `python3 Python3/Problem<N>.py` for each problem 111-120.
+- `python3 Python3/Problem<N>.py` for each problem 121-130.
+- `python3 Python3/Problem<N>.py` for each problem 131-140.
+- `python3 Python3/Problem<N>.py` for each problem 141-150.
+- `python3 Python3/Problem<N>.py` for each problem 151-160.
+- `python3 Python3/Problem<N>.py` for each problem 161-170.
+- `python3 Python3/Problem<N>.py` for each problem 171-180.
+- `python3 Python3/Problem<N>.py` for each problem 181-190.
+- `python3 Python3/Problem<N>.py` for each problem 191-200.
+- `python3 -m py_compile Python3/Problem201.py ... Python3/Problem210.py`
+- `python3 Python3/Problem<N>.py` for each problem 201-210.
+- `python3 -m py_compile Python3/Problem211.py ... Python3/Problem220.py`
+- `python3 Python3/Problem<N>.py` for each problem 211-220.
+- `python3 -m py_compile Python3/Problem221.py ... Python3/Problem230.py`
+- `python3 Python3/Problem<N>.py` for each problem 221-230.
+- `python3 -m py_compile Python3/Problem231.py ... Python3/Problem240.py`
+- `python3 Python3/Problem<N>.py` for each problem 231-240.
+- Official Project Euler statements checked for Problems 241-250.
+- `python3 -m py_compile Python3/Problem241.py ... Python3/Problem250.py`
+- `python3 Python3/Problem<N>.py` for each problem 241-250.
+- Official Project Euler statement checked for Problem 245 rewrite.
+- `python3 -m py_compile Python3/Problem245.py`
+- `python3 Python3/Problem245.py`
+- Official Project Euler statements checked for Problems 251-260.
+- `python3 -m py_compile Python3/Problem251.py ... Python3/Problem260.py`
+- `python3 Python3/Problem<N>.py` for each problem 251-260.
+- Official Project Euler statements checked for Problems 261-270.
+- `python3 -m py_compile Python3/Problem261.py ... Python3/Problem270.py`
+- `python3 Python3/Problem<N>.py` for each problem 261-270.
+- Official Project Euler statements checked for Problems 271-280.
+- `python3 -m py_compile Python3/Problem271.py ... Python3/Problem280.py`
+- `python3 Python3/Problem<N>.py` for each problem 271-280.
+- Official Project Euler statements checked for Problems 281-290.
+- `python3 -m py_compile Python3/Problem281.py ... Python3/Problem290.py`
+- `python3 Python3/Problem<N>.py` for each problem 281-290.
+- Official Project Euler statements checked for Problems 291-300.
+- `python3 -m py_compile Python3/Problem291.py ... Python3/Problem300.py`
+- `python3 Python3/Problem<N>.py` for each problem 291-300.
+- Official Project Euler statements checked for Problems 301-310.
+- `python3 -m py_compile Python3/Problem301.py ... Python3/Problem310.py`
+- `python3 Python3/Problem<N>.py` for each problem 301-310.
+- Official Project Euler statements checked for Problems 311-320.
+- `python3 -m py_compile Python3/Problem311.py ... Python3/Problem320.py`
+- Official Project Euler statement checked for Problem 311 rewrite.
+- `python3 -m py_compile Python3/Problem311.py`
+- `python3 Python3/Problem311.py`
+- `python3 Python3/Problem<N>.py` for each problem 312-320.
+- Official Project Euler statements checked for Problems 321-330.
+- `python3 -m py_compile Python3/Problem321.py ... Python3/Problem330.py`
+- `python3 Python3/Problem<N>.py` for each problem 321-330.
+- Official Project Euler statement checked for Problem 331 rewrite.
+- `python3 -m py_compile Python3/Problem331.py`
+- `python3 Python3/Problem331.py`
+- Official Project Euler statements checked for Problems 332-340.
+- `python3 -m py_compile Python3/Problem332.py ... Python3/Problem340.py`
+- Official Project Euler statement checked for Problem 338 rewrite.
+- `python3 -m py_compile Python3/Problem338.py`
+- `python3 Python3/Problem338.py`
+- `python3 Python3/Problem<N>.py` for Problems 332-337 and 339-340.
+- Official Project Euler statements checked for Problems 341-350.
+- `python3 -m py_compile Python3/Problem341.py ... Python3/Problem350.py`
+- `python3 Python3/Problem<N>.py` for each problem 341-350.
+- Official Project Euler statements checked for Problems 351-360.
+- `python3 -m py_compile Python3/Problem351.py ... Python3/Problem360.py`
+- Official Project Euler statement checked for Problem 353 rewrite.
+- `python3 -m py_compile Python3/Problem353.py`
+- `python3 Python3/Problem353.py`
+- Official Project Euler statement checked for Problem 354 rewrite.
+- `python3 -m py_compile Python3/Problem354.py`
+- `python3 Python3/Problem354.py`
+- Official Project Euler statement checked for Problem 355 rewrite.
+- `python3 -m py_compile Python3/Problem355.py`
+- `python3 Python3/Problem355.py`
+- Official Project Euler statement checked for Problem 360 rewrite.
+- `python3 -m py_compile Python3/Problem360.py`
+- `python3 Python3/Problem360.py`
+- `python3 Python3/Problem<N>.py` for Problems 351-352 and 356-359.
+- Official Project Euler statements checked for Problems 361-370.
+- `python3 -m py_compile Python3/Problem361.py ... Python3/Problem370.py`
+- Official Project Euler statement checked for Problem 361 rewrite.
+- `python3 -m py_compile Python3/Problem361.py`
+- `python3 Python3/Problem361.py`
+- Official Project Euler statement checked for Problem 362 rewrite.
+- `python3 -m py_compile Python3/Problem362.py`
+- `python3 Python3/Problem362.py`
+- Official Project Euler statement checked for Problem 364 rewrite.
+- `python3 -m py_compile Python3/Problem364.py`
+- `python3 Python3/Problem364.py`
+- Official Project Euler statement checked for Problem 368 rewrite.
+- `python3 -m py_compile Python3/Problem368.py`
+- `python3 Python3/Problem368.py`
+- Official Project Euler statement checked for Problem 370 rewrite.
+- `python3 -m py_compile Python3/Problem370.py`
+- `python3 Python3/Problem370.py`
+- `python3 Python3/Problem<N>.py` for Problems 363, 365-367, and 369.
+- Official Project Euler statements checked for Problems 371-380.
+- `python3 -m py_compile Python3/Problem371.py ... Python3/Problem380.py`
+- Official Project Euler statement checked for Problem 372 rewrite.
+- `python3 -m py_compile Python3/Problem372.py`
+- `python3 Python3/Problem372.py`
+- Official Project Euler statement checked for Problem 373 rewrite.
+- `python3 -m py_compile Python3/Problem373.py`
+- `python3 Python3/Problem373.py`
+- Official Project Euler statement checked for Problem 374 rewrite.
+- `python3 -m py_compile Python3/Problem374.py`
+- `python3 Python3/Problem374.py`
+- Official Project Euler statement checked for Problem 375 rewrite.
+- `python3 -m py_compile Python3/Problem375.py`
+- `python3 Python3/Problem375.py`
+- Official Project Euler statement checked for Problem 376 rewrite.
+- `python3 -m py_compile Python3/Problem376.py`
+- `python3 Python3/Problem376.py`
+- Official Project Euler statement checked for Problem 378 rewrite.
+- `python3 -m py_compile Python3/Problem378.py`
+- `python3 Python3/Problem378.py`
+- Official Project Euler statement checked for Problem 379 rewrite.
+- `python3 -m py_compile Python3/Problem379.py`
+- `python3 Python3/Problem379.py`
+- Official Project Euler statement checked for Problem 382 rewrite.
+- `python3 -m py_compile Python3/Problem382.py`
+- `python3 Python3/Problem382.py`
+- Official Project Euler statement checked for Problem 383 rewrite.
+- `python3 -m py_compile Python3/Problem383.py`
+- `python3 Python3/Problem383.py`
+- Official Project Euler statement checked for Problem 384 rewrite.
+- `python3 -m py_compile Python3/Problem384.py`
+- `python3 Python3/Problem384.py`
+- Official Project Euler statement checked for Problem 385 rewrite.
+- `python3 -m py_compile Python3/Problem385.py`
+- `python3 Python3/Problem385.py`
+- Official Project Euler statement checked for Problem 386 rewrite.
+- `python3 -m py_compile Python3/Problem386.py`
+- `python3 Python3/Problem386.py`
+- `python3 Python3/Problem<N>.py` for Problems 371, 377, and 380.
+- Official Project Euler statements checked for Problems 381-390.
+- `python3 -m py_compile Python3/Problem381.py ... Python3/Problem390.py`
+- `python3 Python3/Problem<N>.py` for Problems 381 and 387-390.
+- Official Project Euler statements checked for Problems 391-400.
+- `python3 -m py_compile Python3/Problem391.py ... Python3/Problem400.py`
+- Official Project Euler statement checked for Problem 391 rewrite.
+- `python3 -m py_compile Python3/Problem391.py`
+- `python3 Python3/Problem391.py`
+- Official Project Euler statement checked for Problem 397 rewrite.
+- `python3 -m py_compile Python3/Problem397.py`
+- `python3 Python3/Problem397.py`
+- Official Project Euler statement checked for Problem 399 rewrite.
+- `python3 -m py_compile Python3/Problem399.py`
+- `python3 Python3/Problem399.py`
+- Official Project Euler statement checked for Problem 401 rewrite.
+- `python3 -m py_compile Python3/Problem401.py`
+- `python3 Python3/Problem401.py`
+- Official Project Euler statement checked for Problem 402 rewrite.
+- `python3 -m py_compile Python3/Problem402.py`
+- `python3 Python3/Problem402.py`
+- Official Project Euler statement checked for Problem 403 rewrite.
+- `python3 -m py_compile Python3/Problem403.py`
+- `python3 Python3/Problem403.py`
+- Official Project Euler statement checked for Problem 404 rewrite.
+- `python3 -m py_compile Python3/Problem404.py`
+- `python3 Python3/Problem404.py`
+- Official Project Euler statement checked for Problem 405 rewrite.
+- `python3 -m py_compile Python3/Problem405.py`
+- `python3 Python3/Problem405.py`
+- Official Project Euler statement checked for Problem 410 rewrite.
+- `python3 -m py_compile Python3/Problem410.py`
+- `python3 Python3/Problem410.py`
+- Official Project Euler statement checked for Problem 411 rewrite.
+- `python3 -m py_compile Python3/Problem411.py`
+- `python3 Python3/Problem411.py`
+- Official Project Euler statement checked for Problem 413 rewrite.
+- `python3 -m py_compile Python3/Problem413.py`
+- `python3 Python3/Problem413.py`
+- Official Project Euler statement checked for Problem 414 rewrite.
+- `python3 -m py_compile Python3/Problem414.py`
+- `python3 Python3/Problem414.py`
+  - Output: `Found 552506775824935461 in 170.3786497116089 seconds.`
+- Official Project Euler statement checked for Problem 415 rewrite.
+- `python3 -m py_compile Python3/Problem415.py`
+- `python3 Python3/Problem415.py`
+  - Output: `Found 55859742 in 81.44130516052246 seconds.`
+- Official Project Euler statement checked for Problem 417 rewrite.
+- `python3 -m py_compile Python3/Problem417.py`
+- `python3 Python3/Problem417.py`
+  - Output: `Found 446572970925740 in 199.60968399047852 seconds.`
+- Official Project Euler statement checked for Problem 418 rewrite.
+- `python3 -m py_compile Python3/Problem418.py`
+- `python3 Python3/Problem418.py`
+  - Output: `Found 1177163565297340320 in 11.42264699935913 seconds.`
+- Official Project Euler statement checked for Problem 419 rewrite.
+- Conway atom table checked against Wikipedia's atom/decay table.
+- `python3 -m py_compile Python3/Problem419.py`
+- `python3 Python3/Problem419.py`
+  - Output: `Found 998567458,1046245404,43363922 in 1.7965052127838135 seconds.`
+- Official Project Euler statement checked for Problem 420 rewrite.
+- `python3 -m py_compile Python3/Problem420.py`
+- `python3 Python3/Problem420.py`
+  - Output: `Found 145159332 in 6.710388898849487 seconds.`
+- Official Project Euler statement checked for Problem 421 rewrite.
+- `python3 -m py_compile Python3/Problem421.py`
+- `python3 Python3/Problem421.py`
+  - Output: `Found 2304215802083466198 in 12.744078874588013 seconds.`
+- Official Project Euler statement checked for Problem 422 rewrite.
+- `python3 -m py_compile Python3/Problem422.py`
+- `python3 Python3/Problem422.py`
+  - Output: `Found 92060460 in 6.198883056640625e-05 seconds.`
+- Official Project Euler statement checked for Problem 423 rewrite.
+- `python3 -m py_compile Python3/Problem423.py`
+- `python3 Python3/Problem423.py`
+  - Output: `Found 653972374 in 19.06561517715454 seconds.`
+- Official Project Euler statement and `0424_kakuro200.txt` input checked for Problem 424 rewrite.
+- `python3 -m py_compile Python3/Problem424.py`
+- `python3 Python3/Problem424.py`
+  - Output: `Found 1059760019628 in 20.49346613883972 seconds.`
+- Official Project Euler statement checked for Problem 426 rewrite.
+- `python3 -m py_compile Python3/Problem426.py`
+- `python3 Python3/Problem426.py`
+  - Output: `Found 31591886008 in 12.684839963912964 seconds.`
+- Official Project Euler statement checked for Problem 427 rewrite.
+- `python3 -m py_compile Python3/Problem427.py`
+- `python3 Python3/Problem427.py`
+  - Output: `Found 97138867 in 45.77681589126587 seconds.`
+- Official Project Euler statement checked for Problem 428 rewrite.
+- `python3 -m py_compile Python3/Problem428.py`
+- `python3 Python3/Problem428.py`
+  - Output: `Found 747215561862 in 2.2736120223999023 seconds.`
+- Official Project Euler statement checked for Problem 431 rewrite.
+- `python3 -m py_compile Python3/Problem431.py`
+- `python3 Python3/Problem431.py`
+  - Output: `Found 23.386029052 in 0.16289305686950684 seconds.`
+- Official Project Euler statement checked for Problem 432 rewrite.
+- `python3 -m py_compile Python3/Problem432.py`
+- `python3 Python3/Problem432.py`
+  - Output: `Found 754862080 in 48.216665267944336 seconds.`
+- Official Project Euler statement checked for Problem 434 rewrite.
+- `python3 -m py_compile Python3/Problem434.py`
+- `python3 Python3/Problem434.py`
+  - Output: `Found 863253606 in 2.636359930038452 seconds.`
+- Official Project Euler statement checked for Problem 436 rewrite.
+- `python3 -m py_compile Python3/Problem436.py`
+- `python3 Python3/Problem436.py`
+  - Output: `Found 0.5276662759 in 1.621246337890625e-05 seconds.`
+- Official Project Euler statement checked for Problem 437 rewrite.
+- `python3 -m py_compile Python3/Problem437.py`
+- `python3 Python3/Problem437.py`
+  - Output: `Found 74204709657207 in 34.0396568775177 seconds.`
+- `python3 Python3/Problem<N>.py` for Problems 392-396, 398, and 400.
+- Official Project Euler statements checked for Problems 401-410.
+- `python3 -m py_compile Python3/Problem401.py ... Python3/Problem410.py`
+- `python3 Python3/Problem<N>.py` for Problems 406-409.
+- Official Project Euler statements checked for Problems 411-420.
+- `python3 -m py_compile Python3/Problem411.py ... Python3/Problem420.py`
+- `python3 Python3/Problem<N>.py` for Problems 412 and 416.
+- Official Project Euler statements checked for Problems 421-430.
+- `python3 -m py_compile Python3/Problem421.py ... Python3/Problem430.py`
+- `python3 Python3/Problem<N>.py` for Problems 425 and 429-430.
+- Official Project Euler statements checked for Problems 431-440.
+- `python3 -m py_compile Python3/Problem431.py ... Python3/Problem440.py`
+- `python3 Python3/Problem435.py`
+- Official Project Euler statements checked for Problems 441-450.
+- `python3 -m py_compile Python3/Problem441.py ... Python3/Problem450.py`
+- `python3 Python3/Problem<N>.py` for Problems 442-444.
+- Official Project Euler statements checked for Problems 451-460.
+- `python3 -m py_compile Python3/Problem451.py ... Python3/Problem460.py`
+- `python3 Python3/Problem453.py`
+- `python3 Python3/Problem458.py`
+- `python3 Python3/Problem459.py`
+- Official Project Euler statements checked for Problems 461-470.
+- `python3 -m py_compile Python3/Problem461.py ... Python3/Problem470.py`
+- `python3 Python3/Problem463.py`
+- Official Project Euler statements checked for Problems 471-480.
+- `python3 -m py_compile Python3/Problem471.py ... Python3/Problem480.py`
+- `python3 Python3/Problem471.py`
+- `python3 Python3/Problem472.py`
+- `python3 Python3/Problem473.py`
+- `python3 Python3/Problem474.py`
+- `python3 Python3/Problem475.py`
+- `python3 Python3/Problem476.py`
+- `python3 Python3/Problem477.py`
+- `python3 Python3/Problem478.py`
+- `python3 Python3/Problem479.py`
+- `python3 Python3/Problem480.py`
+- Official Project Euler statements checked for Problems 481-490.
+- `python3 -m py_compile Python3/Problem481.py ... Python3/Problem490.py`
+- `python3 Python3/Problem481.py`
+- `python3 Python3/Problem482.py`
+- `python3 Python3/Problem483.py`
+- `python3 Python3/Problem484.py`
+- `python3 Python3/Problem485.py`
+- `python3 Python3/Problem486.py`
+- `python3 Python3/Problem487.py`
+- `python3 Python3/Problem488.py`
+- `python3 Python3/Problem489.py`
+- `python3 Python3/Problem490.py`
+- Official Project Euler statements checked for Problems 491-500.
+- `python3 -m py_compile Python3/Problem491.py ... Python3/Problem500.py`
+- `python3 Python3/Problem491.py`
+- `python3 Python3/Problem492.py`
+- `python3 Python3/Problem493.py`
+- `python3 Python3/Problem494.py`
+- `python3 Python3/Problem495.py`
+- `python3 Python3/Problem496.py`
+- `python3 Python3/Problem497.py`
+- `python3 Python3/Problem498.py`
+- `python3 Python3/Problem499.py`
+- `python3 Python3/Problem500.py`
+- Official Project Euler statements checked for Problems 501-510.
+- `python3 -m py_compile Python3/Problem501.py ... Python3/Problem510.py`
+- `python3 Python3/Problem501.py`
+- `python3 Python3/Problem502.py`
+- `python3 Python3/Problem503.py`
+- `python3 Python3/Problem504.py`
+- `python3 Python3/Problem506.py`
+- `python3 Python3/Problem507.py`
+- `python3 Python3/Problem508.py`
+- `python3 Python3/Problem509.py`
+- `python3 Python3/Problem510.py`
+- `python3 Python3/Problem511.py`
+- `python3 Python3/Problem512.py`
+- Official Project Euler statements checked for Problems 511-520.
+- `python3 -m py_compile Python3/Problem511.py ... Python3/Problem520.py`
+- `python3 Python3/Problem513.py`
+- `python3 Python3/Problem514.py`
+- `python3 Python3/Problem515.py`
+- `python3 Python3/Problem516.py`
+- `python3 Python3/Problem517.py`
+- `python3 Python3/Problem518.py`
+- `python3 Python3/Problem519.py`
+- `python3 Python3/Problem520.py`
+- Official Project Euler statements checked for Problems 521-530.
+- `python3 -m py_compile Python3/Problem521.py ... Python3/Problem530.py`
+- `python3 Python3/Problem521.py`
+- `python3 Python3/Problem522.py`
+- `python3 Python3/Problem523.py`
+- `python3 Python3/Problem524.py`
+- `python3 Python3/Problem525.py`
+- `python3 Python3/Problem526.py`
+- `python3 Python3/Problem527.py`
+- `python3 Python3/Problem528.py`
+- `python3 Python3/Problem529.py`
+- `python3 Python3/Problem530.py`
+- `python3 Python3/Problem531.py`
+- `python3 Python3/Problem532.py`
+- `python3 Python3/Problem533.py`
+- `python3 Python3/Problem534.py`
+- `python3 Python3/Problem535.py`
+- `python3 Python3/Problem536.py`
+- `python3 Python3/Problem537.py`
+- `python3 Python3/Problem538.py`
+- `python3 Python3/Problem539.py`
+- `python3 Python3/Problem540.py`
+- `python3 Python3/Problem541.py`
+- `python3 Python3/Problem542.py`
+- `python3 Python3/Problem543.py`
+- `python3 Python3/Problem544.py`
+- Official Project Euler statements checked for Problems 531-540.
+- `python3 -m py_compile Python3/Problem531.py ... Python3/Problem540.py`
+- Official Project Euler statements checked for Problems 541-550.
+- `python3 -m py_compile Python3/Problem541.py ... Python3/Problem550.py`
+- Official Project Euler statements checked for Problems 551-560.
+- `python3 -m py_compile Python3/Problem551.py ... Python3/Problem560.py`
+- Official Project Euler statements checked for Problems 561-570.
+- `python3 -m py_compile Python3/Problem561.py ... Python3/Problem570.py`
+- Official Project Euler statements checked for Problems 571-580.
+- `python3 -m py_compile Python3/Problem571.py ... Python3/Problem580.py`
+- Official Project Euler statements checked for Problems 581-590.
+- `python3 -m py_compile Python3/Problem581.py ... Python3/Problem590.py`
+- Official Project Euler statements checked for Problems 591-600.
+- `python3 -m py_compile Python3/Problem591.py ... Python3/Problem600.py`
+- Official Project Euler statements checked for Problems 601-610.
+- `python3 -m py_compile Python3/Problem601.py ... Python3/Problem610.py`
+- Official Project Euler statements checked for Problems 611-620.
+- `python3 -m py_compile Python3/Problem611.py ... Python3/Problem620.py`
+- `python3 Python3/Problem618.py`
+- `python3 Python3/Problem619.py`
+- Official Project Euler statements checked for Problems 621-630.
+- `python3 -m py_compile Python3/Problem621.py ... Python3/Problem630.py`
+- `python3 Python3/Problem622.py`
+- `python3 Python3/Problem624.py`
+- Official Project Euler statements checked for Problems 631-640.
+- `python3 -m py_compile Python3/Problem631.py ... Python3/Problem640.py`
+- `python3 Python3/Problem633.py`
+- Official Project Euler statements checked for Problems 641-650.
+- `python3 -m py_compile Python3/Problem641.py ... Python3/Problem650.py`
+- Official Project Euler statements checked for Problems 651-660.
+- `python3 -m py_compile Python3/Problem651.py ... Python3/Problem660.py`
+- Official Project Euler statements checked for Problems 661-670.
+- `python3 -m py_compile Python3/Problem661.py ... Python3/Problem670.py`
+- Official Project Euler statements checked for Problems 671-680.
+- `python3 -m py_compile Python3/Problem671.py ... Python3/Problem680.py`
+- Official Project Euler statements checked for Problems 681-690.
+- `python3 -m py_compile Python3/Problem681.py ... Python3/Problem690.py`
+- `python3 Python3/Problem684.py`
+- Official Project Euler statements checked for Problems 691-700.
+- `python3 -m py_compile Python3/Problem691.py ... Python3/Problem700.py`
+- Official Project Euler statement checked for Problem 700 rewrite.
+- `python3 -m py_compile Python3/Problem700.py`
+- `python3 Python3/Problem700.py`
+  - Output: `Found 1517926517777556 in 2.745281934738159 seconds.`
+- Official Project Euler statement checked for Problem 505 rewrite.
+- `python3 -m py_compile Python3/Problem505.py`
+- `python3 - <<'PY' ... p505.runTests(); p505.bidirectionalA(10**6); p505.bidirectionalA(10**9); p505.bidirectionalA(10**10) ... PY`
+  - Output included `1000000 12541668533`, `1000000000 1551491048361091`, and `10000000000 1091173346864234358`.
+- `python3 Python3/Problem505.py`
+  - Output: `Found 714591308667615832 in 371.1021068096161 seconds.`
+- Official Project Euler statement checked for Problem 545 rewrite.
+- `python3 -m py_compile Python3/Problem545.py`
+- `python3 -c "import importlib.util,time; ... D4,D308,F1,F10 ..."`
+  - Output included `D4 30`, `D308 20010`, `F1 308`, and `F10 96404`.
+- `python3 Python3/Problem545.py`
+  - Output: `Found 921107572 in 0.9653449058532715 seconds.`
+- Official Project Euler statement checked for Problem 546 rewrite.
+- `python3 -m py_compile Python3/Problem546.py`
+- `python3 - <<'PY' ... p546.runTests(); p546.floorRecursion(...); p546.floorRecursionSum(10**14) ... PY`
+  - Output included `5 10 18`, `7 100 1003`, `2 1000 264830889564`, and `sum 215656873`.
+- `python3 Python3/Problem546.py`
+  - Output: `Found 215656873 in 0.00880575180053711 seconds.`
+- Official Project Euler statement checked for Problem 547 rewrite.
+- `python3 -m py_compile Python3/Problem547.py`
+- `python3 - <<'PY' ... p547.runTests(); p547.hollowSquareDistanceSum(...) ... PY`
+  - Output included `3 1.6514`, `4 19.6564`, and `40 11730879.0023`.
+- `python3 Python3/Problem547.py`
+  - Output: `Found 11730879.0023 in 0.895902156829834 seconds.`
+- Official Project Euler statement checked for Problem 548 rewrite.
+- `python3 -m py_compile Python3/Problem548.py`
+- `python3 - <<'PY' ... p548.runTests(); len(p548.exponentPatterns(10**16)) ... PY`
+  - Output included `tests 0.009118795394897461` and `patterns 17563`.
+- `python3 Python3/Problem548.py`
+  - Output: `Found 12144044603581281 in 41.02319693565369 seconds.`
+- Official Project Euler statement checked for Problem 549 rewrite.
+- `python3 -m py_compile Python3/Problem549.py`
+- `python3 - <<'PY' ... p549.runTests(); p549.leastFactorialDivisibilitySum(...) ... PY`
+  - Output included `100 2012`, `10000 10125843`, `100000 793183093`, and `1000000 64938007616`.
+- `python3 Python3/Problem549.py`
+  - Output: `Found 476001479068717 in 60.15378212928772 seconds.`
+- Official Project Euler statement checked for Problem 550 rewrite.
+- `python3 -m py_compile Python3/Problem550.py`
+- `python3 - <<'PY' ... p550.runTests(); p550.divisorGameWinningCount(...) ... PY`
+  - Output included `10 5 40085`, `100 5 386807306`, and `10000 10 753666121`.
+- `python3 Python3/Problem550.py`
+  - Output: `Found 328104836 in 2.18892502784729 seconds.`
+- Official Project Euler statement checked for Problem 551 rewrite.
+- `python3 -m py_compile Python3/Problem551.py`
+- `python3 - <<'PY' ... p551.runTests(); p551.digitSumSequence(...) ... PY`
+  - Output included `10 62`, `100 1205`, `1000 16577`, `100000 2609882`, and `1000000 31054319`.
+- `python3 Python3/Problem551.py`
+  - Output: `Found 73597483551591773 in 0.013779878616333008 seconds.`
+- Official Project Euler statement checked for Problem 552 rewrite.
+- `python3 -m py_compile Python3/Problem552.py`
+- `python3 - <<'PY' ... chineseLeftoverA(...); primeDivisorSum(50) ... PY`
+  - Output included `5 23 53 1523` and `69`.
+- `python3 Python3/Problem552.py`
+  - Output: `Found 326227335 in 30.46545696258545 seconds.`
+- Official Project Euler statement checked for Problem 553 rewrite.
+- `python3 -m py_compile Python3/Problem553.py`
+- `python3 - <<'PY' ... brutePowerSetGraphCount(...); powerSetGraphCount(...) ... PY`
+  - Output included `6 111 486` and `728209718`.
+- `python3 Python3/Problem553.py`
+  - Output: `Found 57717170 in 30.664870977401733 seconds.`
+- Official Project Euler statement checked for Problem 554 rewrite.
+- `python3 -m py_compile Python3/Problem554.py`
+- `python3 - <<'PY' ... centaurPlacements(...); transferCentaurPlacements(...); centaurPlacementsModulo(...) ... PY`
+  - Output included `4 25 1477721`, `[4, 25, 120, 497, 1924, 7265, 27288]`, and `1477721`.
+- `python3 Python3/Problem554.py`
+  - Output: `Found 89539872 in 2.745836019515991 seconds.`
+- Official Project Euler statement checked for Problem 555 rewrite.
+- `python3 -m py_compile Python3/Problem555.py`
+- `python3 - <<'PY' ... fixedPointSum(...); generalizedFixedPointSum(...); bruteFixedPointSum(...) ... PY`
+  - Output included `91`, `225`, `208724467`, and `True`.
+- `python3 Python3/Problem555.py`
+  - Output: `Found 208517717451208352 in 0.04581093788146973 seconds.`
+- Official Project Euler statement checked for Problem 556 rewrite.
+- `python3 -m py_compile Python3/Problem556.py`
+- `python3 - <<'PY' ... squarefreeGaussianCount(...) ... PY`
+  - Output included `10 7`, `100 54`, `10000 5218`, and `100000000 52126906`.
+- `python3 Python3/Problem556.py`
+  - Output: `Found 52126939292957 in 4.958216905593872 seconds.`
+- Official Project Euler statement checked for Problem 557 rewrite.
+- `python3 -m py_compile Python3/Problem557.py`
+- `python3 - <<'PY' ... triangleCuttingSum(20); total-area-55 quadruples ... PY`
+  - Output included `259` and `[(20, 2, 24, 9), (22, 8, 11, 14)]`.
+- `python3 Python3/Problem557.py`
+  - Output: `Found 2699929328 in 22.305272102355957 seconds.`
+- Official Project Euler statement checked for Problem 558 rewrite.
+- `python3 -m py_compile Python3/Problem558.py`
+- `python3 - <<'PY' ... representationWeight(...); squareRepresentationWeightSum(...) ... PY`
+  - Output included `4 3`, `61`, and `19403`.
+- `python3 Python3/Problem558.py`
+  - Output: `Found 226754889 in 183.17797780036926 seconds.`
+- Official Project Euler statement checked for Problem 559 rewrite.
+- `python3 -m py_compile Python3/Problem559.py`
+- `python3 - <<'PY' ... permutedMatrixCount(...); permutedMatrixSum(...); brute exact Q(5) ... PY`
+  - Output included `19 19`, `65508751`, `161858102`, `21879393751 879391168`, and `819573537`.
+- `python3 Python3/Problem559.py`
+  - Output: `Found 684724920 in 0.5856077671051025 seconds.`
+- Official Project Euler statement checked for Problem 560 rewrite.
+- `python3 -m py_compile Python3/Problem560.py`
+- `python3 - <<'PY' ... losingPositionCount(...); losingPositionCountBrute(...) ... PY`
+  - Output included `6 6`, `9964`, `472400303`, and `954021836`.
+- `python3 Python3/Problem560.py`
+  - Output: `Found 994345168 in 0.5110399723052979 seconds.`
+- Official Project Euler statement checked for Problem 561 rewrite.
+- `python3 -m py_compile Python3/Problem561.py`
+- `python3 - <<'PY' ... divisorPairCount(...); divisorPairPower(...); divisorPairPowerSum(...) ... PY`
+  - Output included `5`, `0`, `2714886`, and `452480999988235494`.
+- `python3 Python3/Problem561.py`
+  - Output: `Found 452480999988235494 in 4.0531158447265625e-06 seconds.`
+- Official Project Euler statement checked for Problem 562 rewrite.
+- `python3 -m py_compile Python3/Problem562.py`
+- `python3 - <<'PY' ... maximalTriangle(5); maximalPerimeterRatio(10); maximalPerimeterRatio(100) ... PY`
+  - Output included `[13, 34, 89]`, `97.26729`, and `9157.64707`.
+- `python3 Python3/Problem562.py`
+  - Output: `Found 51208732914368 in 4.270672798156738 seconds.`
+- Official Project Euler statement checked for Problem 563 rewrite.
+- `python3 -m py_compile Python3/Problem563.py`
+- `python3 - <<'PY' ... smoothNumbers(25); minimalArea(3) ... PY`
+  - Output included `25 1 25` and `889200`.
+- `python3 Python3/Problem563.py`
+  - Output: `Found 27186308211734760 in 14.301725149154663 seconds.`
+- Official Project Euler statement checked for Problem 564 rewrite.
+- `python3 -m py_compile Python3/Problem564.py`
+- `python3 - <<'PY' ... expectedArea(...); maximalPolygonAreaSum(...) ... PY`
+  - Output included `3 0.433013`, `4 1.299038`, `5 4.604767`, and `10 66.955511`.
+- `python3 Python3/Problem564.py`
+  - Output: `Found 12363.698850 in 25.88292407989502 seconds.`
+- Official Project Euler statement checked for Problem 565 rewrite.
+- `python3 -m py_compile Python3/Problem565.py`
+- `python3 - <<'PY' ... divisorSumDivisibilitySum(...) ... PY`
+  - Output included `S20_7 49`, `S1e6 150850429`, and `S1e9 249652238344557`.
+- `python3 Python3/Problem565.py`
+  - Output: `Found 2992480851924313898 in 1.5047111511230469 seconds.`
+- Official Project Euler statement checked for Problem 566 rewrite.
+- `python3 -m py_compile Python3/Problem566.py`
+- `python3 - <<'PY' ... flips(...); cakeIcingSum(...) ... PY`
+  - Output included `(9, 10, 11) 60`, `(10, 14, 16) 506`, `(15, 16, 17) 785232`, `(9, 10, 28) 96320848344`, `G 11 60`, `G 14 58020`, and `G 17 1269260`.
+- `python3 - <<'PY' ... flips(13,14,53); flips(9,10,28); flips(12,17,18) ... PY`
+  - Output included `(13, 14, 53) 329422932751440`, `(9, 10, 28) 96320848344`, and `(12, 17, 18) 12391236`.
+- `python3 - <<'PY' ... cakeIcingSum(53, workers=1) ... PY`
+  - Output: `329569369413585`.
+- `python3 Python3/Problem566.py`
+  - Output: `Found 329569369413585 in 70.28000521659851 seconds.`
+- Official Project Euler statement checked for Problem 567 rewrite.
+- `python3 -m py_compile Python3/Problem567.py`
+- `python3 - <<'PY' ... reciprocalGameSumValue(...) direct-vs-fast checks ... PY`
+  - Output included exact agreement for `n = 1`, `2`, `6`, `50`, `200`, `201`, and `300`.
+- `python3 Python3/Problem567.py`
+  - Output: `Found 75.44817535 in 5.0067901611328125e-06 seconds.`
+- Official Project Euler statement checked for Problem 568 rewrite.
+- `python3 -m py_compile Python3/Problem568.py`
+- `python3 - <<'PY' ... reciprocalDifferenceExact(...); leadingDigitsOfDifference(...) ... PY`
+  - Output included `6 49/1280 3828125` and `123456789 4228020`.
+- `python3 Python3/Problem568.py`
+  - Output: `Found 4228020 in 0.00013065338134765625 seconds.`
+- Official Project Euler statement checked for Problem 569 rewrite.
+- `python3 -m py_compile Python3/Problem569.py`
+- `python3 - <<'PY' ... visiblePeakList(...); visiblePeaks(...); visiblePeakSum(...) ... PY`
+  - Output included `P3 1 [2]`, `P9 3 [8, 7, 5]`, and `S100 227`.
+- `python3 Python3/Problem569.py`
+  - Output: `Found 21025060 in 27.787967920303345 seconds.`
+- Official Project Euler statement checked for Problem 570 rewrite.
+- `python3 -m py_compile Python3/Problem570.py`
+- `python3 - <<'PY' ... oneLayerTriangles(...); threeLayerTriangles(...); snowflakeGcd(...); snowflakeGcdSum(...) ... PY`
+  - Output included `A3 30`, `B3 6`, `G3 6`, `A11 3027630`, `B11 19862070`, `G11 30`, `G500 186`, and `S500 5124`.
+- `python3 Python3/Problem570.py`
+  - Output: `Found 271197444 in 7.664608001708984 seconds.`
+- Official Project Euler statement checked for Problem 571 rewrite.
+- `python3 -m py_compile Python3/Problem571.py`
+- `python3 - <<'PY' ... superPandigitalNumbers(...); superPandigitalSum(...) ... PY`
+  - Output included `978 bases2-5 [True, True, True, True]`, `smallest5 978`, `smallest10 1093265784`, and `sum10 20319792309`.
+- `python3 Python3/Problem571.py`
+  - Output: `Found 30510390701978 in 130.66168975830078 seconds.`
+- Official Project Euler statement checked for Problem 572 rewrite.
+- `python3 -m py_compile Python3/Problem572.py`
+- `python3 - <<'PY' ... idempotentMatrixCount(...); idempotentMatrixCountBrute(...) ... PY`
+  - Output included `brute1 164`, `C1 164`, `C2 848`, and `C3 1928`.
+- `python3 Python3/Problem572.py`
+  - Output: `Found 19737656 in 194.33554410934448 seconds.`
+- Official Project Euler statement checked for Problem 573 rewrite.
+- `python3 -m py_compile Python3/Problem573.py`
+- `python3 - <<'PY' ... winnerProbabilityExact(...); expectedStartingNumberExact(...); unfairRaceExpected(...) ... PY`
+  - Output included `P3 4/9 2/9 1/3`, `E3 17/9`, `E4 2.21875`, `E5 2.5104`, `E10 3.66021568`, and `E1000000 1252.9809`.
+- `python3 Python3/Problem573.py`
+  - Output: `Found 1252.9809 in 0.12534379959106445 seconds.`
+- Official Project Euler statement checked for Problem 574 rewrite.
+- `python3 -m py_compile Python3/Problem574.py`
+- `python3 - <<'PY' ... verifierValue(...); verifierSum(...) ... PY`
+  - Output included `V2 1`, `V37 22`, `V151 165`, `S10 10`, and `S200 7177`.
+- `python3 Python3/Problem574.py`
+  - Output: `Found 5780447552057000454 in 11.16560411453247 seconds.`
+- Official Project Euler statement checked for Problem 575 rewrite.
+- `python3 -m py_compile Python3/Problem575.py`
+- `python3 - <<'PY' ... exitCount(...); squareRoomProbabilityExact(...); squareRoomProbability(...) ... PY`
+  - Output included `exits 2 4 3`, `P5 exact 299/1680`, `P5 0.177976190476`, and `P1000 0.000989640561`.
+- `python3 Python3/Problem575.py`
+  - Output: `Found 0.000989640561 in 0.0001270771026611328 seconds.`
+- Official Project Euler statement checked for Problem 576 rewrite.
+- `python3 -m py_compile Python3/Problem576.py`
+- `python3 - <<'PY' ... jumpSum(...); jumpSumValue(...); maxJumpSum(...) ... PY`
+  - Output included `S2a 0.7071`, `S2b 1.4142`, `S2c 16.263455967290593`, `M3 29.5425`, and `M10 266.9010`.
+- `python3 Python3/Problem576.py`
+  - Output: `Found 344457.5871 in 5.848176956176758 seconds.`
+- Official Project Euler statement checked for Problem 577 rewrite.
+- `python3 -m py_compile Python3/Problem577.py`
+- `python3 - <<'PY' ... hexagonCount(...); hexagonCountSum(...) ... PY`
+  - Output included `H3 1`, `H6 12`, `H20 966`, `sum20 4592`, and `sum12345 265695031399260211`.
+- `python3 Python3/Problem577.py`
+  - Output: `Found 265695031399260211 in 0.00036406517028808594 seconds.`
+- Official Project Euler statement checked for Problem 578 rewrite.
+- `python3 -m py_compile Python3/Problem578.py`
+- `python3 - <<'PY' ... isDecreasingPrimePower(...); DecreasingPrimePowerCounter(...) ... PY`
+  - Output included `excluded [18, 50, 54, 75, 90, 98]`, `C100 94`, and `C1e6 922052`.
+- `python3 Python3/Problem578.py`
+  - Output: `Found 9219696799346 in 8.699777841567993 seconds.`
+- Official Project Euler statement checked for Problem 579 rewrite.
+- `python3 -m py_compile Python3/Problem579.py`
+- `python3 - <<'PY' ... latticeCubeCount(...); latticePointSum(...); latticePointSumMod(...) ... PY`
+  - Output included `C [1, 9, 100, 229, 4469, 8154671]`, `S [8, 91, 1878, 5832, 387003, 29948928129]`, and `S50mod 948928129`.
+- `python3 Python3/Problem579.py`
+  - Output: `Found 3805524 in 70.21471929550171 seconds.`
+- Official Project Euler statement checked for Problem 580 rewrite.
+- `python3 -m py_compile Python3/Problem580.py`
+- `python3 - <<'PY' ... isSquarefreeHilbertNumber(...); squarefreeHilbertCount(...) ... PY`
+  - Output included `small [1, 5, 9, 13, 17, 21, 29, 33, 37, 41, 45, 49, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]` and `H1e7 2327192`.
+- `python3 Python3/Problem580.py`
+  - Output: `Found 2327213148095366 in 0.34665989875793457 seconds.`
+- Official Project Euler statement checked for Problem 581 rewrite.
+- `python3 -m py_compile Python3/Problem581.py`
+- `python3 - <<'PY' ... isSmooth(...); smoothNumbers(...); smoothTriangularIndices(...) ... PY`
+  - Output included `smooth checks True True False`, `tiny indices [1, 2, 3, 4, 5, 8, 9, 15, 24, 80]`, and `count 1502 max 1109496723125 sum 2227616372734`.
+- `python3 Python3/Problem581.py`
+  - Output: `Found 2227616372734 in 5.575855731964111 seconds.`
+- Official Project Euler statement checked for Problem 582 rewrite.
+- `python3 -m py_compile Python3/Problem582.py`
+- `python3 - <<'PY' ... bruteNearlyIsoscelesCount(...); nearlyIsoscelesCount(...) ... PY`
+  - Output included `brute50 16 pell50 16`, `T1000 235`, `T1e8 1245`, and `T1e100 19903`.
+- `python3 Python3/Problem582.py`
+  - Output: `Found 19903 in 0.004471778869628906 seconds.`
+- Official Project Euler statement checked for Problem 583 rewrite.
+- `python3 -m py_compile Python3/Problem583.py`
+- `python3 - <<'PY' ... bruteHeronEnvelopePerimeterSum(...); heronEnvelopePerimeterSum(...) ... PY`
+  - Output included `brute200 0 generated200 0`, `brute500 488 generated500 488`, and `S1e4 884680`.
+- `python3 Python3/Problem583.py`
+  - Output: `Found 1174137929000 in 50.531121015548706 seconds.`
+- Official Project Euler statement checked for Problem 584 rewrite.
+- `python3 -m py_compile Python3/Problem584.py`
+- `python3 - <<'PY' ... bruteExpectedStoppingPeople(...); birthdayExpectation(...) ... PY`
+  - Output included `tiny brute 4.0944`, `tiny generated 4.0944`, `sample wimwi 5.78688636`, and `sample joka 8.48967364`.
+- `python3 Python3/Problem584.py`
+  - Output: `Found 32.83822408 in 26.861560106277466 seconds.`
+- Official Project Euler statement checked for Problem 585 rewrite; Ciro Santilli's public primitive-pair counting notes were consulted, but the target-scale collapsed-pairing subcount is now computed by a local embedded C++ helper rather than stored as a constant.
+- `python3 -m py_compile Python3/Problem585.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem585 as p; print('F10', p.denestableRootCount(10)); print('F15', p.denestableRootCount(15)); print('F20', p.denestableRootCount(20)); print('F30', p.denestableRootCount(30)); print('F100', p.denestableRootCount(100)); print('F5000', p.denestableRootCount(5000))"`
+  - Output included `F10 17`, `F15 46`, `F20 86`, `F30 213`, `F100 2918`, and `F5000 11134074`.
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem585 as p; print('C3_5000', p.collapsedPairingCount(5000)); print('F5e6', p.denestableRootCount(5_000_000))"`
+  - Output included `C3_5000 44545` and `F5e6 17714439395932`.
+- `python3 Python3/Problem585.py`
+  - Output: `Found 17714439395932 in 6.083030939102173 seconds.`
+- Official Project Euler statement checked for Problem 586 rewrite.
+- `python3 -m py_compile Python3/Problem586.py`
+- `python3 - <<'PY' ... bruteQuadraticFormCount(...); quadraticFormCount(...) ... PY`
+  - Output included `brute500 4 solver500 4`, `sample1 237`, and `sample2 59517`.
+- `python3 Python3/Problem586.py`
+  - Output: `Found 82490213 in 10.342868089675903 seconds.`
+- Official Project Euler statement checked for Problem 587 rewrite.
+- `python3 -m py_compile Python3/Problem587.py`
+- `python3 - <<'PY' ... concaveTriangleRatio(...); leastCircleCount(...) ... PY`
+  - Output included `ratio1 0.500000000000`, `ratio2_percent 36.46`, `least10pct 15`, `ratio2239 0.001000047496`, and `ratio2240 0.000999609892`.
+- `python3 Python3/Problem587.py`
+  - Output: `Found 2240 in 9.775161743164062e-06 seconds.`
+- Official Project Euler statement checked for Problem 588 rewrite.
+- `python3 -m py_compile Python3/Problem588.py`
+- `python3 - <<'PY' ... oddQuintinomialCoefficients(...); oddQuintinomialSum() ... PY`
+  - Output included `Q3 7`, `Q10 17`, `Q100 35`, `terms [17, 35, 281, 475, 749, 2825, 15925, 81665, 594473, 428525, 7117105, 10977665, 19268375, 27902525, 659123395, 221271625, 813145717, 9891998675]`, and `sum 11651930052`.
+- `python3 Python3/Problem588.py`
+  - Output: `Found 11651930052 in 0.0013947486877441406 seconds.`
+- Official Project Euler statement checked for Problem 589 rewrite.
+- `python3 -m py_compile Python3/Problem589.py`
+- `python3 - <<'PY' ... expectedPlayTime(...); poohsticksSum(...) ... PY`
+  - Output included `E60_30 1036.154792778992`, `E60_30_rounded 1036.15`, and `S5 7722.82`.
+- `python3 Python3/Problem589.py`
+  - Output: `Found 131776959.25 in 7.439443826675415 seconds.`
+- Official Project Euler statement checked for Problem 590 rewrite.
+- `python3 -m py_compile Python3/Problem590.py`
+- `python3 - <<'PY' ... lcmSetCount(...); hl(...) ... PY`
+  - Output included `H6 10`, `HL4 44`, and `HL50000 834171904`.
+- `python3 Python3/Problem590.py`
+  - Output: `Found 834171904 in 1.6916759014129639 seconds.`
+- Official Project Euler statement checked for Problem 591 rewrite; Ciro Santilli's public alpha-numeration/Ostrowski search notes were consulted for finding the closest bounded quadratic integer without brute-forcing `b`.
+- `python3 -m py_compile Python3/Problem591.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem591 as p; pi, frac = p.piContext(); print('BQA2_10', p.bestQuadraticApproximation(2,10,pi,frac)); print('BQA5_100', p.bestQuadraticApproximation(5,100,pi,frac)); print('BQA7_1e6', p.bestQuadraticApproximation(7,10**6,pi,frac)); print('I2_1e13', p.bestQuadraticApproximation(2,10**13,pi,frac)[0]); print('sum', p.integralPartSum())"`
+  - Output included `BQA2_10 (6, -2)`, `BQA5_100 (-55, 26)`, `BQA7_1e6 (560323, -211781)`, `I2_1e13 -6188084046055`, and `sum 526007984625966`.
+- `python3 Python3/Problem591.py`
+  - Output: `Found 526007984625966 in 0.016780853271484375 seconds.`
+- Official Project Euler statement checked for Problem 592 rewrite; Ciro Santilli's public 2-adic odd-factorial notes were consulted for computing the last twelve nonzero hexadecimal digits of `(20!)!`.
+- `python3 -m py_compile Python3/Problem592.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem592 as p; print('f20', p.trailingHexDigits(20)); print('f20fact', p.targetTrailingHexDigits())"`
+  - Output included `f20 21C3677C82B4` and `f20fact 13415DF2BE9C`.
+- `python3 Python3/Problem592.py`
+  - Output: `Found 13415DF2BE9C in 0.01215982437133789 seconds.`
+- Official Project Euler statement checked for Problem 593 rewrite.
+- `python3 -m py_compile Python3/Problem593.py`
+- `python3 - <<'PY' ... fleetingMedian(...); medianSum(...) ... PY`
+  - Output included `M1_10 2021.5`, `M100_1000 4715.0`, `F100_10 463628.5`, and `F1e5_1e4 675348207.5`.
+- `python3 Python3/Problem593.py`
+  - Output: `Found 96632320042.0 in 1.8455641269683838 seconds.`
+- Official Project Euler statement checked for Problem 594 rewrite; Ciro Santilli's public monotone-matrix/LGV determinant notes were consulted for the octagon rhombus-tiling count.
+- `python3 -m py_compile Python3/Problem594.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem594 as p; print('T1_1', p.rhombusTilings(1,1)); print('T2_1', p.rhombusTilings(2,1)); print('T3_2', p.rhombusTilings(3,2)); print('T4_2', p.rhombusTilings(4,2))"`
+  - Output included `T1_1 8`, `T2_1 76`, `T3_2 456572`, and `T4_2 47067598`.
+- `python3 Python3/Problem594.py`
+  - Output: `Found 47067598 in 0.09688496589660645 seconds.`
+- Official Project Euler statement checked for Problem 595 rewrite.
+- `python3 -m py_compile Python3/Problem595.py`
+- `python3 - <<'PY' ... successionCounts(...); expectedShuffles(...); formatExpectedShuffles(...) ... PY`
+  - Output included `counts3 [3, 2, 1]`, `S1 0`, `S2 1`, `S5 4213/871`, and `S52 54.17529329`.
+- `python3 Python3/Problem595.py`
+  - Output: `Found 54.17529329 in 0.023573875427246094 seconds.`
+- Official Project Euler statement checked for Problem 596 rewrite.
+- `python3 -m py_compile Python3/Problem596.py`
+- `python3 - <<'PY' ... hyperballLatticePoints(...); hyperballLatticePointsMod(...) ... PY`
+  - Output included `T2 89`, `T5 3121`, `T100 493490641`, `T1e4 49348022079085897`, and `T100mod 493490641`.
+- `python3 Python3/Problem596.py`
+  - Output: `Found 734582049 in 1.4025120735168457 seconds.`
+- Official Project Euler statement checked for Problem 597 rewrite; Ciro Santilli's public exponential-rate decomposition notes were consulted for the exact expected-sign recursion.
+- `python3 -m py_compile Python3/Problem597.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem597 as p; print('p3_160', p.evenPermutationProbability(3,160)); print('p4_400', p.formattedEvenPermutationProbability(4,400)); print('p13_1800', p.formattedEvenPermutationProbability(13,1800))"`
+  - Output included `p3_160 56/135`, `p4_400 0.5107843137`, and `p13_1800 0.5001817828`.
+- `python3 Python3/Problem597.py`
+  - Output: `Found 0.5001817828 in 0.0016303062438964844 seconds.`
+- Official Project Euler statement checked for Problem 598 rewrite; Ciro Santilli's public divisor-count ratio-vector DP notes were consulted for counting equal-divisor factor pairs of `100!`.
+- `python3 -m py_compile Python3/Problem598.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem598 as p; print('C48', p.splitDivisibilityCount(48)); print('C10fact', p.splitDivisibilityCountFromExponentsBrute(p.factorialPrimeExponents(10))); print('C100fact', p.splitDivisibilityCount100Factorial())"`
+  - Output included `C48 1`, `C10fact 3`, and `C100fact 543194779059`.
+- `python3 Python3/Problem598.py`
+  - Output: `Found 543194779059 in 0.5068948268890381 seconds.`
+- Official Project Euler statement checked for Problem 599 rewrite; Ciro Santilli's public Burnside/corner-twist notes were consulted for the 2x2x2 cube facelet-colouring orbit count.
+- `python3 -m py_compile Python3/Problem599.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem599 as p; print('C2', p.rubikColourings(2)); print('C10', p.rubikColourings(10))"`
+  - Output included `C2 183` and `C10 12395526079546335`.
+- `python3 Python3/Problem599.py`
+  - Output: `Found 12395526079546335 in 1.71661376953125e-05 seconds.`
+- Official Project Euler statement checked for Problem 600 rewrite.
+- `python3 -m py_compile Python3/Problem600.py`
+- `python3 - <<'PY' ... equiangularHexagons(...); vertexReflectionFixedCount(...) ... PY`
+  - Output included `H6 1`, `H12 10`, `H100 31248`, `V100 12872`, and `H55106 2668608479740672`.
+- `python3 Python3/Problem600.py`
+  - Output: `Found 2668608479740672 in 0.007609844207763672 seconds.`
+- Official Project Euler statement checked for Problem 601 rewrite.
+- `python3 -m py_compile Python3/Problem601.py`
+- `python3 - <<'PY' ... streak(...); streakCount(...); streakPowerSum() ... PY`
+  - Output included `streak13 4`, `streak120 1`, `P3_14 1`, `P6_1e6 14286`, and `sum 1617243`.
+- `python3 Python3/Problem601.py`
+  - Output: `Found 1617243 in 3.5762786865234375e-05 seconds.`
+- Official Project Euler statement checked for Problem 602 rewrite.
+- `python3 -m py_compile Python3/Problem602.py`
+- `python3 - <<'PY' ... headCountCoefficient(...) ... PY`
+  - Output included `c3_1 1`, `c3_2 4`, `c3_3 1`, and `c100_40 986699437`.
+- `python3 Python3/Problem602.py`
+  - Output: `Found 269496760 in 3.2529029846191406 seconds.`
+- Official Project Euler statement checked for Problem 603 rewrite.
+- `python3 -m py_compile Python3/Problem603.py`
+- `python3 - <<'PY' ... substringSum(...); primeConcatenation(...); repeatedPrimeSubstringSum(...) ... PY`
+  - Output included `S2024 2304`, `P7 2357111317`, `C7_3 235711131723571113172357111317`, `S_C7_3_mod 704184352`, and `brute_C7_3_mod 704184352`.
+- `python3 Python3/Problem603.py`
+  - Output: `Found 879476477 in 1.7988190650939941 seconds.`
+- Official Project Euler statement checked for Problem 604 rewrite.
+- `python3 -m py_compile Python3/Problem604.py`
+- `python3 - <<'PY' ... convexPathMaxPoints(...) ... PY`
+  - Output included `F1 2`, `F3 3`, `F9 6`, `F11 7`, `F100 30`, `F50000 1898`, and `F1e18 1398582231101`.
+- `python3 Python3/Problem604.py`
+  - Output: `Found 1398582231101 in 3.195319175720215 seconds.`
+- Official Project Euler statement checked for Problem 605 rewrite.
+- `python3 -m py_compile Python3/Problem605.py`
+- `python3 - <<'PY' ... winProbability(...); probabilityProduct(...) ... PY`
+  - Output included `P3_1 12/49`, `P6_2 368/1323`, `M3_1 588`, `M6_2 486864`, and `Mbig 59992576`.
+- `python3 Python3/Problem605.py`
+  - Output: `Found 59992576 in 4.291534423828125e-06 seconds.`
+- Official Project Euler statement checked for Problem 606 rewrite; Ciro Santilli's public gozinta-chain/order-factorization notes were consulted for the prime-cube summatory reduction.
+- `python3 -m py_compile Python3/Problem606.py`
+- `python3 - <<'PY' ... gozintaChainCount(...); signaturesWithChainCount(...); exactGozinta252Sum(...); gozinta252SumLastNineDigits(...) ... PY`
+  - Output included `g(12 signature) 8`, `signatures252 [(3, 3)]`, `S1e6 8462952`, `S1e12 623291998881978`, and `last9_1e12 998881978`.
+- `python3 Python3/Problem606.py`
+  - Output: `Found 158452775 in 53.2472779750824 seconds.`
+- Official Project Euler statement checked for Problem 607 rewrite.
+- `python3 -m py_compile Python3/Problem607.py`
+- `python3 - <<'PY' ... straightCrossingTime(); optimalCrossingTime(); marshCrossingTime(...) ... PY`
+  - Output included `straight_raw 13.473802361543434`, `straight 13.4738`, `optimal_raw 13.126510858558497`, and `optimal 13.1265108586`.
+- `python3 Python3/Problem607.py`
+  - Output: `Found 13.1265108586 in 8.082389831542969e-05 seconds.`
+- Official Project Euler statement checked for Problem 608 rewrite.
+- `python3 -m py_compile Python3/Problem608.py`
+- `python3 - <<'PY' ... divisorSum(...); directDivisorSum(...) ... PY`
+  - Output included `D3_20 476 476`, `D4_30 2310 2310`, `D3_100 3398`, and `D4_1e6 268882292`.
+- `python3 Python3/Problem608.py`
+  - Output: `Found 439689828 in 2.5253570079803467 seconds.`
+- Official Project Euler statement checked for Problem 609 rewrite.
+- `python3 -m py_compile Python3/Problem609.py`
+- `python3 - <<'PY' ... smallPiSequenceCounts(...); piSequenceProduct(...) ... PY`
+  - Output included `counts10 {0: 3, 1: 8, 2: 9, 3: 3}`, `P10 648`, and `P100 31038676032`.
+- `python3 Python3/Problem609.py`
+  - Output: `Found 172023848 in 1.1014671325683594 seconds.`
+- Official Project Euler statement checked for Problem 610 rewrite.
+- `python3 -m py_compile Python3/Problem610.py`
+- `python3 - <<'PY' ... suffixExpectations(); romanNumeralExpectationValue(); romanNumeralExpectation() ... PY`
+  - Output included `XLIX 49`, `IL_valid False`, `E_IX 9`, `raw 319.30207832881473`, and `rounded 319.30207833`.
+- `python3 Python3/Problem610.py`
+  - Output: `Found 319.30207833 in 0.0007939338684082031 seconds.`
+- Official Project Euler statement checked for Problem 611 rewrite; Ciro Santilli's public sum-of-two-squares parity and prime-counting notes were consulted for the one-mod-four prime counting reduction.
+- `python3 -m py_compile Python3/Problem611.py`
+- `python3 - <<'PY' ... bruteOpenDoorCount(...); openDoorCount(...) ... PY`
+  - Output included `brute 5 1`, `brute 100 27`, `brute 1000 233`, `brute 1000000 112168`, `fast 5 1`, `fast 100 27`, `fast 1000 233`, and `fast 1000000 112168`.
+- `python3 Python3/Problem611.py`
+  - Output: `Found 49283233900 in 68.64732599258423 seconds.`
+- Official Project Euler statement checked for Problem 612 rewrite.
+- `python3 -m py_compile Python3/Problem612.py`
+- `python3 - <<'PY' ... bruteFriendPairCount(...); friendPairCount(...); maskCountsBelowPowerOfTen(...) ... PY`
+  - Output included `mask_count_2 99`, `f30 153 153`, and `f100 1539`.
+- `python3 Python3/Problem612.py`
+  - Output: `Found 819963842 in 0.01699995994567871 seconds.`
+- Official Project Euler statement checked for Problem 613 rewrite.
+- `python3 -m py_compile Python3/Problem613.py`
+- `python3 - <<'PY' ... hypotenuseExitProbability(...); longestSideExitProbability(...); visualAngle(...) ... PY`
+  - Output included `right_angle 1.570796326795`, `raw 0.3916721504087494`, and `rounded 0.3916721504`.
+- `python3 Python3/Problem613.py`
+  - Output: `Found 0.3916721504 in 1.358875036239624 seconds.`
+- Official Project Euler statement checked for Problem 614 rewrite; the product identity `F(q)=psi(q)/phi(-q^4)` was used to reduce the special-partition prefix sum to reciprocal-theta coefficients.
+- `python3 -m py_compile Python3/Problem614.py`
+- `python3 - <<'PY' ... specialPartitionsUpTo(...); specialPartitionPrefixSum(...) ... PY`
+  - Output included `P1 1`, `P2 0`, `P3 1`, `P6 1`, `P10 3`, `P100 37076`, `P1000 3699177285485660336`, `sum1000mod 514141877`, and `helper1000 514141877`.
+- `python3 Python3/Problem614.py`
+  - Output: `Found 130694090 in 1.306060791015625 seconds.`
+- Official Project Euler statement checked for Problem 615 rewrite.
+- `python3 -m py_compile Python3/Problem615.py`
+- `python3 - <<'PY' ... bruteNumbersWithPrimeFactors(...); nthNumberWithPrimeFactors(...); primeFactorCount(...) ... PY`
+  - Output included `omega [5, 5, 6, 5, 5]`, `first10 [32, 48, 64, 72, 80, 96, 108, 112, 120, 128]`, `nth5_5 80`, and `nth5_10 128`.
+- `python3 Python3/Problem615.py`
+  - Output: `Found 108424772 in 0.323422908782959 seconds.`
+- Official Project Euler statement checked for Problem 616 rewrite; the creative-number classification was implemented by enumerating perfect powers and removing prime-base/prime-exponent powers plus the exceptional value 16.
+- `python3 -m py_compile Python3/Problem616.py`
+- `python3 - <<'PY' ... canReachNineFromEight(); allPerfectPowers(...); primePrimePowers(...); creativeNumbers(...) ... PY`
+  - Output included `8_to_9 True`, `perfect10 [4, 8, 9]`, `primeprime10 [4, 8, 9]`, `creative100 [36, 64, 81, 100]`, and `sum100 281`.
+- `python3 Python3/Problem616.py`
+  - Output: `Found 310884668312456458 in 0.24526119232177734 seconds.`
+- Official Project Euler statement checked for Problem 617 rewrite.
+- `python3 -m py_compile Python3/Problem617.py`
+- `python3 - <<'PY' ... bruteMirrorPowerSequenceTotal(...); mirrorPowerSequenceTotal(...); nextMirrorPowerTerm(...) ... PY`
+  - Output included `step2 4`, `step4 2`, `brute100 21`, `D10 2`, `D100 21`, `D1000 69`, `D1000000 1303`, and `D1000000000000 1014800`.
+- `python3 Python3/Problem617.py`
+  - Output: `Found 1001133757 in 0.024461746215820312 seconds.`
+- Official Project Euler statement checked for Problem 620 rewrite.
+- `python3 -m py_compile Python3/Problem620.py`
+- `python3 - <<'PY' ... gearArrangementCount(...); totalGearArrangements(...) ... PY`
+  - Output included `g(5,5,6) 9`, `G16 9`, `G20 205`, and `G500 1470337306`.
+- `python3 Python3/Problem620.py`
+  - Output: `Found 1470337306 in 3.108301877975464 seconds.`
+- Official Project Euler statement checked for Problem 621 rewrite.
+- `python3 -m py_compile Python3/Problem621.py`
+- `python3 - <<'PY' ... factorInteger(...); triangularTripleCount(...); fundamentalClassNumber(...) ... PY`
+  - Output included `9 {3: 1, 5: 2} 7`, `1000 {53: 1, 151: 1} 78`, `1000000 {11: 1, 727273: 1} 2106`, `17526000000000 {3: 8, 13: 1, 3527: 1, 466073: 1} 11429712`, and `h0 23664`.
+- `python3 Python3/Problem621.py`
+  - Output: `Found 11429712 in 0.04317212104797363 seconds.`
+- Official Project Euler statement checked for Problem 623 rewrite.
+- `python3 -m py_compile Python3/Problem623.py`
+- `python3 - <<'PY' ... lambdaCountSlow(...); lambdaCount(...) ... PY`
+  - Output included `6 1 1`, `9 2 2`, `15 20 20`, `35 3166438 3166438`, and `2000 3679796`.
+- `python3 Python3/Problem623.py`
+  - Output: `Found 3679796 in 1.986440896987915 seconds.`
+- Official Project Euler statement checked for Problem 625 rewrite.
+- `python3 -m py_compile Python3/Problem625.py`
+- `python3 - <<'PY' ... gcdSum(...); gcdSumBrute(...) ... PY`
+  - Output included `G10 122`, `G50 4000`, `G1000 2475190`, `brute50 4000`, and `prefix_ready True cache 0 time 1.369`.
+- `python3 Python3/Problem625.py`
+  - Output: `Found 551614306 in 25.30361771583557 seconds.`
+- Official Project Euler statement checked for Problem 626 rewrite.
+- `python3 -m py_compile Python3/Problem626.py`
+- `python3 - <<'PY' ... binaryMatrixClassCount(...) ... PY`
+  - Output included `3 3`, `5 39`, `8 656108`, and `20 695577663 time 4.799`.
+- `python3 Python3/Problem626.py`
+  - Output: `Found 695577663 in 4.906438112258911 seconds.`
+- Official Project Euler statement checked for Problem 627 rewrite.
+- `python3 -m py_compile Python3/Problem627.py`
+- `python3 - <<'PY' ... exactProductCount(...); directProductCount30(...); productCount(...); forwardCoefficients(...) ... PY`
+  - Output included `F9_2 36`, `F30_2 308`, `coeffs [1, 29, 249, 1074, 2772, 4620, 5124, 3774, 1779, 487, 59]`, `F30_11_direct 7174102`, and `F30_10001_mod 220196142`.
+- `python3 Python3/Problem627.py`
+  - Output: `Found 220196142 in 0.00011920928955078125 seconds.`
+- Official Project Euler statement checked for Problem 628 rewrite.
+- `python3 -m py_compile Python3/Problem628.py`
+- `python3 - <<'PY' ... openPositionCountBrute(...); openPositionCount(...) ... PY`
+  - Output included `1 0 0`, `3 2 2`, `5 70 70`, `8 29572 29572`, and `target 921308079`.
+- `python3 Python3/Problem628.py`
+  - Output: `Found 210286684 in 9.79302191734314 seconds.`
+- Official Project Euler statement checked for Problem 629 rewrite.
+- `python3 -m py_compile Python3/Problem629.py`
+- `python3 - <<'PY' ... winningPositionCount(...); scatterstoneTotal(...); enumeratedGrundyValues(...) ... PY`
+  - Output included `f5_2 3`, `f5_3 5`, `g7 66`, `g10 291`, `g200 626616617`, and `g4check30 True`.
+- `python3 Python3/Problem629.py`
+  - Output: `Found 626616617 in 0.23054885864257812 seconds.`
+- Official Project Euler statement checked for Problem 630 rewrite.
+- `python3 -m py_compile Python3/Problem630.py`
+- `python3 - <<'PY' ... generatedPoints(...); lineCountAndCrossedLineSum(...) ... PY`
+  - Output included `points3 [(527, 144), (-488, 732), (-454, -947)]`, `3 (3, 6)`, and `100 (4948, 24477690)`.
+- `python3 Python3/Problem630.py`
+  - Output: `Found 9669182880384 in 3.5921950340270996 seconds.`
+- Official Project Euler statement checked for Problem 631 rewrite.
+- `python3 -m py_compile Python3/Problem631.py`
+- `python3 - <<'PY' ... constrainedPermutationCount(...) ... PY`
+  - Output included `f2_0 3`, `f4_5 32`, `f10_25 294400`, and `f49_40 869588692`.
+- `python3 Python3/Problem631.py`
+  - Output: `Found 869588692 in 18.055192947387695 seconds.`
+- Official Project Euler statement checked for Problem 632 rewrite.
+- `python3 -m py_compile Python3/Problem632.py`
+- `python3 - <<'PY' ... squarePrimeFactorCounts(...); squarePrimeFactorCountsDirect(...) ... PY`
+  - Output included `10 [7, 3, 0, 0, 0, 0]`, `1000 [608, 343, 48, 1, 0, 0]`, `100000000 [60792694, 33539196, 5329747, 329028, 9257, 78]`, and `direct100 [61, 36, 3, 0, 0, 0]`.
+- `python3 Python3/Problem632.py`
+  - Output: `Found 728378714 in 0.6304659843444824 seconds.`
+- Official Project Euler statement checked for Problem 634 rewrite.
+- `python3 -m py_compile Python3/Problem634.py`
+- `python3 - <<'PY' ... formCount(...); formCountBrute(...); primeSixthPowerCount(...) ... PY`
+  - Output included `100 2`, `20000 130`, `3000000 2014`, `9000000000000000000 4019680944`, `brute100 2`, and `sixth 228`.
+- `python3 Python3/Problem634.py`
+  - Output: `Found 4019680944 in 0.34471702575683594 seconds.`
+- Official Project Euler statement checked for Problem 635 rewrite.
+- `python3 -m py_compile Python3/Problem635.py`
+- `python3 - <<'PY' ... subsetCount(...); subsetPrimeSums(...) ... PY`
+  - Output included `A2_5 52`, `A3_5 603`, `S10 (554, 17253)`, and `S100 (100433628, 855618282)`.
+- `python3 Python3/Problem635.py`
+  - Output: `Found 689294705 in 11.810500144958496 seconds.`
+- Official Project Euler statement checked for Problem 636 rewrite.
+- `python3 -m py_compile Python3/Problem636.py`
+- `python3 - <<'PY' ... restrictedFactorisationCount(...) ... PY`
+  - Output included `25 4933`, `100 693952493`, `1000 6364496`, and `1000000 888316`.
+- `python3 Python3/Problem636.py`
+  - Output: `Found 888316 in 2.3266942501068115 seconds.`
+- Official Project Euler statement checked for Problem 637 rewrite.
+- `python3 -m py_compile Python3/Problem637.py`
+- `python3 - <<'PY' ... digitSumSteps(...); matchingStepSum(...) ... PY`
+  - Output included `f7_10 0`, `f123_10 1`, `g100_10_3 3302`, and `g1e7_10_3 49000634845039`.
+- `python3 Python3/Problem637.py`
+  - Output: `Found 49000634845039 in 1.3903937339782715 seconds.`
+- Official Project Euler statement checked for Problem 638 rewrite.
+- `python3 -m py_compile Python3/Problem638.py`
+- `python3 - <<'PY' ... weightedPathSum(...); weightedPathTargetTotal() ... PY`
+  - Output included `(2, 2, 1, None) 6`, `(2, 2, 2, None) 35`, `(15, 10, 3, 1000000007) 880419838`, `(10000, 10000, 4, 1000000007) 395913804`, and `target 18423394`.
+- `python3 Python3/Problem638.py`
+  - Output: `Found 18423394 in 2.054176092147827 seconds.`
+- Official Project Euler statement checked for Problem 639 rewrite.
+- `python3 -m py_compile Python3/Problem639.py`
+- `python3 - <<'PY' ... multipleExponentSum(...) ... PY`
+  - Output included `S1_10 41`, `S1_100 3512`, `S2_100_sum 211602`, and `sample 338787512`.
+- `python3 Python3/Problem639.py`
+  - Output: `Found 797866893 in 114.6619119644165 seconds.`
+- Official Project Euler statement checked for Problem 640 rewrite.
+- `python3 -m py_compile Python3/Problem640.py`
+- `python3 - <<'PY' ... possibleCoinRolls(); expectedTurnValue(...); expectedTurns(...) ... PY`
+  - Output included `coin_rolls [(1, 1), (1, 2), (2, 1), (2, 2)]`, `alice_raw 5.673650793649648`, `alice 5.673651`, and `bob 50.317928`.
+- `python3 Python3/Problem640.py`
+  - Output: `Found 50.317928 in 16.027911901474 seconds.`
+- Official Project Euler statement checked for Problem 641 rewrite.
+- `python3 -m py_compile Python3/Problem641.py`
+- `python3 - <<'PY' ... diceShowingOneDirect(...); diceShowingOne(...) ... PY`
+  - Output included `direct100 2`, `100 2`, `100000000 69`, and `1000000000000 740`.
+- `python3 Python3/Problem641.py`
+  - Output: `Found 793525366 in 8.44305682182312 seconds.`
+- Official Project Euler statement checked for Problem 642 rewrite.
+- `python3 -m py_compile Python3/Problem642.py`
+- `python3 - <<'PY' ... largestPrimeFactorSumBrute(...); largestPrimeFactorSum(...) ... PY`
+  - Output included `brute 10 32`, `fast 10 32`, `brute 100 1915`, `fast 100 1915`, `brute 10000 10118280`, `fast 10000 10118280`, and `target 631499044`.
+- `python3 Python3/Problem642.py`
+  - Output: `Found 631499044 in 0.9438011646270752 seconds.`
+- Official Project Euler statement checked for Problem 643 rewrite.
+- `python3 -m py_compile Python3/Problem643.py`
+- `python3 - <<'PY' ... isTwoFriendly(...); twoFriendlyPairCountBrute(...); twoFriendlyPairCount(...) ... PY`
+  - Output included `friendly True False`, `brute100 1031`, `100 1031 time 0.529`, `1000000 321418433 time 0.0`, and `100000000000 968274154 time 17.53`.
+- `python3 Python3/Problem643.py`
+  - Output: `Found 968274154 in 17.358821153640747 seconds.`
+- Official Project Euler statement checked for Problem 644 rewrite.
+- `python3 -m py_compile Python3/Problem644.py`
+- `python3 - <<'PY' ... expectedGain(...); optimalExpectedGain(...) ... PY`
+  - Output included `e2 2.00000000`, `e4 1.11974851`, `f2_10 2.61969775`, and `f10_20 5.99374121`.
+- `python3 Python3/Problem644.py`
+  - Output: `Found 20.11208767 in 31.926496028900146 seconds.`
+- Official Project Euler statement checked for Problem 645 rewrite.
+- `python3 -m py_compile Python3/Problem645.py`
+- `python3 - <<'PY' ... expectedEmperorsExactSmall(...); expectedEmperors(...); expectedEmperorsValue(...) ... PY`
+  - Output included `E2exact 1`, `E5exact 31/6`, `365 1174.3501 1174.3500868153985`, and `10000 48894.2174 48894.217449177304`.
+- `python3 Python3/Problem645.py`
+  - Output: `Found 48894.2174 in 0.6821980476379395 seconds.`
+- Official Project Euler statement checked for Problem 646 rewrite.
+- `python3 -m py_compile Python3/Problem646.py`
+- `python3 - <<'PY' ... boundedLiouvilleDivisorSum(...) ... PY`
+  - Output included `(10, 100, 1000) 1457 time 0.0`, `(15, 1000, 100000) -107974 time 0.0`, `(30, 100000000, 1000000000000) 9766732243224 time 0.011`, and `(70, 100000000000000000000, 1000000000000000000000000000000000000000000000000000000000000) 845218467 time 4.788`.
+- `python3 Python3/Problem646.py`
+  - Output: `Found 845218467 in 4.810097932815552 seconds.`
+- Official Project Euler statement checked for Problem 647 rewrite.
+- `python3 -m py_compile Python3/Problem647.py`
+- `python3 - <<'PY' ... transformationPair(...); polygonalNumber(...); polygonalTransformationSum(...) ... PY`
+  - Output included `pair_d1_t1 (9, 1)`, `pair_d3_t1 (49, 2)`, `map_check 247 247`, `F3_100 184`, `all_odd_1000 14993`, and `all_odd_1e12 563132994232918611`.
+- `python3 Python3/Problem647.py`
+  - Output: `Found 563132994232918611 in 0.2898070812225342 seconds.`
+- Official Project Euler statement checked for Problem 648 rewrite.
+- `python3 -m py_compile Python3/Problem648.py`
+- `python3 - <<'PY' ... coefficient(...); coefficientPrefixSum(...) ... PY`
+  - Output included `a0 1`, `a1 0`, `a5 -18`, `a10 45176`, `F10 53964`, `F50 842418857`, and `F1000 301483197`.
+- `python3 Python3/Problem648.py`
+  - Output: `Found 301483197 in 0.5935068130493164 seconds.`
+- Official Project Euler statement checked for Problem 649 rewrite.
+- `python3 -m py_compile Python3/Problem649.py`
+- `python3 - <<'PY' ... oneDimensionalGrundyValues(...); winningArrangementCount(...); coordinateGrundyCounts(...) ... PY`
+  - Output included `period18 [0, 0, 1, 1, 2, 2, 3, 3, 4, 0, 0, 1, 1, 2, 2, 3, 3, 4]`, `M3_1 4`, `M3_2 40`, `M9_3 450304`, `coord_target {0: 2222228, 1: 2222226, 2: 2222226, 3: 2222226, 4: 1111113}`, and `target 924668016`.
+- `python3 Python3/Problem649.py`
+  - Output: `Found 924668016 in 0.0005660057067871094 seconds.`
+- Official Project Euler statement checked for Problem 650 rewrite.
+- `python3 -m py_compile Python3/Problem650.py`
+- `python3 - <<'PY' ... binomialProduct(...); binomialProductDivisorSum(...); divisorSumPrefix(...) ... PY`
+  - Output included `B5 2500`, `D5 5467`, `S5direct 5736`, `S10direct 141740594713218418`, `S100 332792866`, and `S20000 538319652`.
+- `python3 Python3/Problem650.py`
+  - Output: `Found 538319652 in 3.061580181121826 seconds.`
+- Official Project Euler statement checked for Problem 651 rewrite.
+- `python3 -m py_compile Python3/Problem651.py`
+- `python3 - <<'PY' ... patternedCylinderCount(...); patternedCylinderTotal() ... PY`
+  - Output included `f2_2_3 11`, `f3_2_3 56`, `f2_3_4 156`, `f8_13_21 49718354`, `f13_144_233 907081451`, and `total 448233151`.
+- `python3 Python3/Problem651.py`
+  - Output: `Found 448233151 in 0.17004704475402832 seconds.`
+- Official Project Euler statement checked for Problem 652 rewrite.
+- `python3 -m py_compile Python3/Problem652.py`
+- `python3 - <<'PY' ... protoLogDistinctValueCount(...) ... PY`
+  - Output included `5 13`, `10 69`, `100 9607`, `10000 99959605`, and `1000000000000000000 983924497`.
+- `python3 Python3/Problem652.py`
+  - Output: `Found 983924497 in 0.12898802757263184 seconds.`
+- Official Project Euler statement checked for Problem 653 rewrite.
+- `python3 -m py_compile Python3/Problem653.py`
+- `python3 - <<'PY' ... frictionlessTubeDistance(...) ... PY`
+  - Output included `(5000, 3, 2) 5519`, `(10000, 11, 6) 11780`, `(100000, 101, 51) 114101`, and `(1000000000, 1000001, 500001) 1130658687`.
+- `python3 Python3/Problem653.py`
+  - Output: `Found 1130658687 in 0.1730806827545166 seconds.`
+- Official Project Euler statement checked for Problem 654 rewrite.
+- `python3 -m py_compile Python3/Problem654.py`
+- `python3 - <<'PY' ... neighbourlyTupleCount(...) ... PY`
+  - Output included `(3, 4) 8`, `(5, 5) 246`, `(10, 100) 862820094`, and `(100, 10) 782136797`.
+- `python3 Python3/Problem654.py`
+  - Output: `Found 815868280 in 1.2754759788513184 seconds.`
+- Official Project Euler statement checked for Problem 655 rewrite.
+- `python3 -m py_compile Python3/Problem655.py`
+- `python3 - <<'PY' ... Problem655 sample/count checks ... PY`
+  - Output included `first_109 [545, 5995, 15151]`, `count_109_100000 9`, and `count_10000019_10_32 2000008332`.
+- `python3 Python3/Problem655.py`
+  - Output: `Found 2000008332 in 6.971625328063965 seconds.`
+- Official Project Euler statement checked for Problem 656 rewrite.
+- `python3 -m py_compile Python3/Problem656.py`
+- `python3 - <<'PY' ... Problem656 sample/count checks ... PY`
+  - Output included `H20_31 150243655` and `total_1000 888873503555187`.
+- `python3 Python3/Problem656.py`
+  - Output: `Found 888873503555187 in 0.01900506019592285 seconds.`
+- Official Project Euler statement checked for Problem 657 rewrite.
+- `python3 -m py_compile Python3/Problem657.py`
+- `python3 - <<'PY' ... Problem657 sample/count checks ... PY`
+  - Output included `(3, 0) 1`, `(3, 2) 13`, `(3, 4) 79`, and `(10000000, 1000000000000) 219493139`.
+- `python3 Python3/Problem657.py`
+  - Output: `Found 219493139 in 1.239274024963379 seconds.`
+- Official Project Euler statement checked for Problem 658 rewrite.
+- `python3 -m py_compile Python3/Problem658.py`
+- `python3 - <<'PY' ... Problem658 sample/count checks ... PY`
+  - Output included `(4, 4) 406`, `(8, 8) 27902680`, `(10, 100) 983602076`, and `(10000000, 1000000000000) 958280177`.
+- `python3 Python3/Problem658.py`
+  - Output: `Found 958280177 in 1.0176210403442383 seconds.`
+- Official Project Euler statement checked for Problem 659 rewrite.
+- `python3 -m py_compile Python3/Problem659.py`
+- `python3 - <<'PY' ... Problem659 sample/count checks ... PY`
+  - Output included `intro_constant_3 13`, `P3_square_parameter 37`, `sum 1000 299015732`, and `sum 10000000 238518915714422000`.
+- `python3 Python3/Problem659.py`
+  - Output: `Found 238518915714422000 in 0.4508848190307617 seconds.`
+- Official Project Euler statement checked for Problem 660 rewrite.
+- `python3 -m py_compile Python3/Problem660.py`
+- `python3 - <<'PY' ... Problem660 sample/count checks ... PY`
+  - Output included `base9 1082`, `(9, 12) 58980`, and `(9, 18) 474766783`.
+- `python3 Python3/Problem660.py`
+  - Output: `Found 474766783 in 23.374829053878784 seconds.`
+- Official Project Euler statement checked for Problem 661 rewrite.
+- `python3 -m py_compile Python3/Problem661.py`
+- `python3 - <<'PY' ... Problem661 sample/count checks ... PY`
+  - Output included `E_equal 0.585786`, `E_biased 377.471736`, `H3 6.8345`, and `H50 646231.2177`.
+- `python3 Python3/Problem661.py`
+  - Output: `Found 646231.2177 in 0.00019502639770507812 seconds.`
+- Official Project Euler statement checked for Problem 662 rewrite.
+- `python3 -m py_compile Python3/Problem662.py`
+- `python3 - <<'PY' ... Problem662 sample/count checks ... PY`
+  - Output included `(3, 4) 278`, `(10, 10) 215846462`, and `(10000, 10000) 860873428`.
+- `python3 Python3/Problem662.py`
+  - Output: `Found 860873428 in 4.437406063079834 seconds.`
+- Official Project Euler statement checked for Problem 663 rewrite.
+- `python3 -m py_compile Python3/Problem663.py`
+- `python3 - <<'PY' ... Problem663 sample/count checks ... PY`
+  - Output included `S (5, 6) 32`, `S (5, 100) 2416`, `S (14, 100) 3881`, `S (107, 1000) 1618572`, and `diff 1884138010064752`.
+- `python3 Python3/Problem663.py`
+  - Output: `Found 1884138010064752 in 4.0115580558776855 seconds.`
+- Official Project Euler statement checked for Problem 664 rewrite.
+- `python3 -m py_compile Python3/Problem664.py`
+- `python3 - <<'PY' ... Problem664 sample/count checks ... PY`
+  - Output included `0 4`, `1 6`, `2 9`, `3 13`, `11 58`, `123 1173`, and `1234567 35295862`.
+- `python3 Python3/Problem664.py`
+  - Output: `Found 35295862 in 0.027987957000732422 seconds.`
+- Official Project Euler statement checked for Problem 665 rewrite; Ciro Santilli's public solver notes were consulted for the successor-DSU invariant jump optimization.
+- `python3 -m py_compile Python3/Problem665.py`
+- `python3 - <<'PY' ... Problem665 sample checks ... PY`
+  - Output included `10 21`, `100 1164`, `1000 117002`, and `10000000 11541685709674`.
+- `python3 Python3/Problem665.py`
+  - Output: `Found 11541685709674 in 0.17513012886047363 seconds.`
+- Official Project Euler statement checked for Problem 666 rewrite.
+- `python3 -m py_compile Python3/Problem666.py`
+- `python3 - <<'PY' ... Problem666 sample/count checks ... PY`
+  - Output included `(2, 2) 0.07243802`, `(4, 3) 0.18554021`, `(10, 5) 0.53466253`, and `(500, 10) 0.48023168`.
+- `python3 Python3/Problem666.py`
+  - Output: `Found 0.48023168 in 0.015515804290771484 seconds.`
+- Official Project Euler statement checked for Problem 667 rewrite; Ciro Santilli's public numerical solver was consulted for the pentagon parameterization and corridor-clearance optimization structure.
+- `python3 -m py_compile Python3/Problem667.py`
+- `python3 - <<'PY' ... Problem667 geometry checks ... PY`
+  - Output included `square_format 1.0000000000`, `unit_edges_ok True`, and `area 1.5276527928`.
+- `python3 Python3/Problem667.py`
+  - Output: `Found 1.5276527928 in 11.634827136993408 seconds.`
+- Official Project Euler statement checked for Problem 668 rewrite.
+- `python3 -m py_compile Python3/Problem668.py`
+- `python3 - <<'PY' ... Problem668 sample/count checks ... PY`
+  - Output included `100 29`, `1000 274`, `10000 2656`, and `10000000000 2811077773`.
+- `python3 Python3/Problem668.py`
+  - Output: `Found 2811077773 in 1.2454948425292969 seconds.`
+- Official Project Euler statement checked for Problem 669 rewrite; Ciro Santilli's public adaptation of Igor Vanloo's notes was consulted for the Fibonacci indexing recurrence.
+- `python3 -m py_compile Python3/Problem669.py`
+- `python3 - <<'PY' ... Problem669 sample/count checks ... PY`
+  - Output included `(7, 3) 7`, `(34, 3) 30`, and `(99194853094755497, 10000000000000000) 56342087360542122`.
+- `python3 Python3/Problem669.py`
+  - Output: `Found 56342087360542122 in 1.8835067749023438e-05 seconds.`
+- Official Project Euler statement checked for Problem 670 rewrite; Ciro Santilli's public finite-state solver was consulted for the state encoding of the corner constraint.
+- `python3 -m py_compile Python3/Problem670.py`
+- `python3 - <<'PY' ... Problem670 sample/count checks ... PY`
+  - Output included `2 120`, `5 45876`, `100 53275818`, and `10000000000000000 551055065`.
+- `python3 Python3/Problem670.py`
+  - Output: `Found 551055065 in 2.5850720405578613 seconds.`
+- Official Project Euler statement checked for Problem 671 rewrite; Ciro Santilli's public finite-state loop solver was consulted for the closed-loop state encoding.
+- `python3 -m py_compile Python3/Problem671.py`
+- `python3 - <<'PY' ... Problem671 sample/count checks ... PY`
+  - Output included `(4, 3) 104`, `(5, 7) 3327300`, `(6, 101) 75309980`, and `(10, 10004003002001) 946106780`.
+- `python3 Python3/Problem671.py`
+  - Output: `Found 946106780 in 0.6781723499298096 seconds.`
+- Official Project Euler statement checked for Problem 672 rewrite; Ciro Santilli's public matrix-recursion solution notes were consulted for the base-7 digit recurrence.
+- `python3 -m py_compile Python3/Problem672.py`
+- `python3 - <<'PY' ... Problem672 sample/count checks ... PY`
+  - Output included `g 125 8`, `g 1000 9`, `g 10000 21`, `H 10 690409338`, and `H 1000000000 91627537`.
+- `python3 Python3/Problem672.py`
+  - Output: `Found 91627537 in 0.00021076202392578125 seconds.`
+- Official Project Euler statement checked for Problem 673 rewrite; official `beds.txt` and `desks.txt` resources were downloaded to `Files/p673_beds.txt` and `Files/p673_desks.txt`; Ciro Santilli's public automorphism-count notes were consulted for the involution component classification.
+- `python3 -m py_compile Python3/Problem673.py`
+- `python3 - <<'PY' ... Problem673 sample/count checks ... PY`
+  - Output included `n4 2`, `n6 8`, `n36 663552`, and `download 700325380`.
+- `python3 Python3/Problem673.py`
+  - Output: `Found 700325380 in 0.0003578662872314453 seconds.`
+- Official Project Euler statement checked for Problem 674 rewrite; official `I-expressions.txt` resource was downloaded to `Files/p674_i_expressions.txt`; Ciro Santilli's public unification notes were consulted for the injective-constructor reduction.
+- `python3 -m py_compile Python3/Problem674.py`
+- `python3 - <<'PY' ... Problem674 sample/count checks ... PY`
+  - Output included `A,B 23`, `A,C 0`, `A,B,C total 26`, and `file 416678753`.
+- `python3 Python3/Problem674.py`
+  - Output: `Found 416678753 in 2.938185930252075 seconds.`
+- Official Project Euler statement checked for Problem 675 rewrite; Ciro Santilli's public notes adapting Igor Vanloo's incremental product method were consulted for the `S(n)=prod(2e_p+1)` factorial update.
+- `python3 -m py_compile Python3/Problem675.py`
+- `python3 - <<'PY' ... Problem675 sample/count checks ... PY`
+  - Output included `3 12`, `5 96`, and `10 4821`.
+- `python3 Python3/Problem675.py`
+  - Output: `Found 416146418 in 10.767490148544312 seconds.`
+- Official Project Euler statement checked for Problem 676 rewrite; Ciro Santilli's public digit-DP notes were consulted for the power-of-two bit-weight identity.
+- `python3 -m py_compile Python3/Problem676.py`
+- `python3 - <<'PY' ... Problem676 sample/count checks ... PY`
+  - Output included `d(9,2) 2`, `d(9,4) 3`, `d(17,4) 2`, `d(17,2) 2`, `M 10 18`, `M 100 292`, `M 1000000 19173952`, and `total 3562668074339584`.
+- `python3 Python3/Problem676.py`
+  - Output: `Found 3562668074339584 in 0.01111912727355957 seconds.`
+- Official Project Euler statement checked for Problem 677 rewrite; Ciro Santilli's public Pólya/dissymmetry solution notes were consulted for the planted-tree coefficient recurrences.
+- `python3 -m py_compile Python3/Problem677.py`
+- `python3 - <<'PY' ... Problem677 sample/count checks ... PY`
+  - Output included `2 5`, `3 15`, `4 57`, `10 710249`, `100 919747298`, and `10000 984183023`.
+- `python3 Python3/Problem677.py`
+  - Output: `Found 984183023 in 6.34763503074646 seconds.`
+- Official Project Euler statement checked for Problem 678 rewrite; Ciro Santilli's public case-split solution notes were consulted for the perfect-power multiplicity and exponent-specific counting methods.
+- `python3 -m py_compile Python3/Problem678.py`
+- `python3 - <<'PY' ... Problem678 sample/count checks ... PY`
+  - Output included `1000 7`, `100000 53`, and `10000000 287`.
+- `python3 Python3/Problem678.py`
+  - Output: `Found 1986065 in 13.162729978561401 seconds.`
+- Official Project Euler statement checked for Problem 679 rewrite; Ciro Santilli's public Aho-Corasick/DP notes were consulted for exact-once keyword matching with overlaps.
+- `python3 -m py_compile Python3/Problem679.py`
+- `python3 - <<'PY' ... Problem679 sample/count checks ... PY`
+  - Output included `9 1`, `15 72863`, and `30 644997092988678`.
+- `python3 Python3/Problem679.py`
+  - Output: `Found 644997092988678 in 0.0012998580932617188 seconds.`
+- Official Project Euler statement checked for Problem 680 rewrite; Ciro Santilli's public implicit-treap rope notes were consulted for lazy reversal and checksum aggregates.
+- `python3 -m py_compile Python3/Problem680.py`
+- `python3 - <<'PY' ... Problem680 sample/count checks ... PY`
+  - Output included `(5, 4) 27`, `(100, 100) 246597`, and `(10000, 10000) 249275481640`.
+- `python3 Python3/Problem680.py`
+  - Output: `Found 563917241 in 151.56679010391235 seconds.`
+- Official Project Euler statement checked for Problem 681 rewrite; Ciro Santilli's public Brahmagupta/divisor-enumeration notes were consulted for the `UVWT=k^2` transformation and pruning bounds.
+- `python3 -m py_compile Python3/Problem681.py`
+- `python3 - <<'PY' ... Problem681 sample/count checks ... PY`
+  - Output included `10 186`, `100 23238`, `10000 271512946`, and `100000 26927556378`.
+- `python3 Python3/Problem681.py`
+  - Output: `Found 2611227421428 in 185.9226372241974 seconds.`
+- Official Project Euler statement checked for Problem 682 rewrite; Ciro Santilli's public generating-function/Bostan-Mori notes were consulted for the rational coefficient extraction.
+- `python3 -m py_compile Python3/Problem682.py`
+- `python3 - <<'PY' ... Problem682 sample/count checks ... PY`
+  - Output included `10 4`, `100 3629`, and `10000000 290872710`.
+- `python3 Python3/Problem682.py`
+  - Output: `Found 290872710 in 0.014759063720703125 seconds.`
+- Official Project Euler statement checked for Problem 683 rewrite; Ciro Santilli's public Markov-chain moment solver notes were consulted for the cyclic pentadiagonal system and Sherman-Morrison-Woodbury corner correction.
+- `python3 -m py_compile Python3/Problem683.py`
+- `python3 - <<'PY' ... Problem683 sample/count checks ... PY`
+  - Output included `G5_rounded 96.544`, `G50_sci 2.82491788e6`, and `G500_sci 2.38955315e11`.
+- `python3 Python3/Problem683.py`
+  - Output: `Found 2.38955315e11 in 0.15953612327575684 seconds.`
+- Official Project Euler statement checked for Problem 685 rewrite; Ciro Santilli's public digit-sum unranking notes were consulted for the bounded-deficit counting and repeated-9 skip.
+- `python3 -m py_compile Python3/Problem685.py`
+- `python3 - <<'PY' ... Problem685 sample/count checks ... PY`
+  - Output included `f(10,1) 19`, `f(10,10) 109`, `f(10,100) 1423`, `S(3) 7128`, and `S(10) 32287064`.
+- `python3 Python3/Problem685.py`
+  - Output: `Found 662878999 in 0.4749429225921631 seconds.`
+- Official Project Euler statement checked for Problem 686 rewrite; Ciro Santilli's public logarithmic-window notes adapting Igor Vanloo's solution were consulted for the leading-digit interval test.
+- `python3 -m py_compile Python3/Problem686.py`
+- `python3 - <<'PY' ... Problem686 sample/count checks ... PY`
+  - Output included `p(12,1) 7`, `p(12,2) 80`, and `p(123,45) 12710`.
+- `python3 Python3/Problem686.py`
+  - Output: `Found 193060223 in 8.448199033737183 seconds.`
+- Official Project Euler statement checked for Problem 687 rewrite; Ciro Santilli's public inclusion-exclusion/binomial-inversion notes were consulted for rank-string counting.
+- `python3 -m py_compile Python3/Problem687.py`
+- `python3 - <<'PY' ... Problem687 sample/count checks ... PY`
+  - Output included `expected_num_den_checked 0.3285320869` and `distribution_sum_matches True`.
+- `python3 Python3/Problem687.py`
+  - Output: `Found 0.3285320869 in 0.00013494491577148438 seconds.`
+- Official Project Euler statement checked for Problem 688 rewrite; Ciro Santilli's public summation-reversal notes were consulted for the collapsed arithmetic-series formula.
+- `python3 -m py_compile Python3/Problem688.py`
+- `python3 - <<'PY' ... Problem688 sample/count checks ... PY`
+  - Output included `f(10,3) 2`, `f(10,5) 0`, `F(100) 275`, `S_exact(100) 12656`, and `S_mod(100) 12656`.
+- `python3 Python3/Problem688.py`
+  - Output: `Found 110941813 in 33.520509004592896 seconds.`
+- Official Project Euler statement checked for Problem 689 rewrite; Ciro Santilli's public characteristic-function inversion notes were consulted for the cosine-product integral and adaptive Simpson integration.
+- `python3 -m py_compile Python3/Problem689.py`
+- `python3 - <<'PY' ... Problem689 sample/count checks ... PY`
+  - Output included `d2(1/4) 1`, `d1(1/4) 0`, and `p(0.5) 0.56565454`.
+- `python3 Python3/Problem689.py`
+  - Output: `Found 0.56565454 in 0.3026909828186035 seconds.`
+- Official Project Euler statement checked for Problem 690 rewrite; Ciro Santilli's public lobster-tree/Euler-transform notes were consulted for the Tom graph generating function.
+- `python3 -m py_compile Python3/Problem690.py`
+- `python3 - <<'PY' ... Problem690 sample/count checks ... PY`
+  - Output included `3 3`, `7 37`, `10 328`, `20 1416269`, and `2019 415157690`.
+- `python3 Python3/Problem690.py`
+  - Output: `Found 415157690 in 1.1209630966186523 seconds.`
+- Official Project Euler statement checked for Problem 691 rewrite; Ciro Santilli's public suffix-automaton notes were consulted for occurrence-count propagation and the fixed-point Beatty-word generator.
+- `python3 -m py_compile Python3/Problem691.py`
+- `python3 - <<'PY' ... Problem691 sample/count checks ... PY`
+  - Output included `n 10 sum 19 L2 5 L3 2`, `n 100 sum 232 L2 14 L4 6`, and `n 1000 sum 2460 L2 86 L3 45 L5 31`.
+- `python3 Python3/Problem691.py`
+  - Output: `Found 11570761 in 6.4813008308410645 seconds.`
+- Official Project Euler statement checked for Problem 692 rewrite; Ciro Santilli's public Fibonacci/Zeckendorf prefix-sum notes were consulted for the game structure.
+- `python3 -m py_compile Python3/Problem692.py`
+- `python3 - <<'PY' ... Problem692 sample/count checks ... PY`
+  - Output included `H 1 1`, `H 4 1`, `H 17 1`, `H 8 8`, `H 18 5`, `G13 43`, and `target 842043391019219959`.
+- `python3 Python3/Problem692.py`
+  - Output: `Found 842043391019219959 in 1.6927719116210938e-05 seconds.`
+- Official Project Euler statement checked for Problem 693 rewrite; Ciro Santilli's public active-set/branch-and-bound notes were consulted for the exact `f(n)` search.
+- `python3 -m py_compile Python3/Problem693.py`
+- `python3 - <<'PY' ... Problem693 sample/count checks ... PY`
+  - Output included `5 29`, `100 145`, and `10000 8824`.
+- `python3 Python3/Problem693.py`
+  - Output: `Found 699161 in 13.926182270050049 seconds.`
+- Official Project Euler statement checked for Problem 694 rewrite; Ciro Santilli's public cube-full divisor enumeration notes adapting Igor Vanloo's solution were consulted for the divisor-sum swap and prime recursion.
+- `python3 -m py_compile Python3/Problem694.py`
+- `python3 - <<'PY' ... Problem694 sample/count checks ... PY`
+  - Output included `16 19`, `100 126`, and `10000 13344`.
+- `python3 Python3/Problem694.py`
+  - Output: `Found 1339784153569958487 in 1.4125981330871582 seconds.`
+- Official Project Euler statement checked for Problem 695 rewrite; Ciro Santilli's public geometric-reduction/quadrature notes were consulted for the gap-ratio integral.
+- `python3 -m py_compile Python3/Problem695.py`
+- `python3 - <<'PY' ... Problem695 sample/count checks ... PY`
+  - Output included `median_111 0.75`, `median_110 0.25`, `weights8 1.000000000000001`, and `rounded 0.1017786859`.
+- `python3 Python3/Problem695.py`
+  - Output: `Found 0.1017786859 in 0.8143439292907715 seconds.`
+- Official Project Euler statement checked for Problem 696 rewrite; Ciro Santilli's public NFA/DFA/block-table Mahjong counting notes were consulted for counting distinct tile multisets.
+- `python3 -m py_compile Python3/Problem696.py`
+- `python3 -c "from Python3.Problem696 import winningHandCount; cases=[(4,1,1),(9,1,4),(9,3,4),(1000,1000,5),(10**8,10**8,30)]; [print(case, winningHandCount(*case)) for case in cases]"`
+  - Output included `(4, 1, 1) 20`, `(9, 1, 4) 13259`, `(9, 3, 4) 5237550`, `(1000, 1000, 5) 107662178`, and `(100000000, 100000000, 30) 436944244`.
+- `python3 Python3/Problem696.py`
+  - Output: `Found 436944244 in 0.9586770534515381 seconds.`
+- Official Project Euler statement checked for Problem 697 rewrite; Ciro Santilli's public gamma-quantile/Wilson-Hilferty notes were consulted, and the repo solution uses a continued-fraction upper incomplete gamma tail plus bisection to solve the probability equation directly.
+- `python3 -m py_compile Python3/Problem697.py`
+- `python3 -c "from Python3.Problem697 import criticalLog10Value, gammaUpperTail, inverseGammaUpperTail; import math; print('n100', criticalLog10Value(100)); q=inverseGammaUpperTail(10**7, 0.25); print('target', '{:.2f}'.format(q/math.log(10.0))); print('tail', '{:.12f}'.format(gammaUpperTail(10**7, q)))"`
+  - Output included `n100 46.27`, `target 4343871.06`, and `tail 0.250000004607`.
+- `python3 Python3/Problem697.py`
+  - Output: `Found 4343871.06 in 0.006682872772216797 seconds.`
+- Official Project Euler statement checked for Problem 698 rewrite; Ciro Santilli's public 123-number unranking notes were consulted for the length counting and lexicographic construction.
+- `python3 -m py_compile Python3/Problem698.py`
+- `python3 -c "from Python3.Problem698 import number123, nth123String, modDecimalString, MODULUS, TARGET_INDEX; cases=[4,10,40,1000,6000]; [print(i, number123(i)) for i in cases]; s=nth123String(TARGET_INDEX); print('target_length', len(s)); print('target_prefix', s[:20]); print('target_suffix', s[-20:]); print('target_mod', modDecimalString(s, MODULUS))"`
+  - Output included `4 11`, `10 31`, `40 1112`, `1000 1223321`, `6000 2333333333323`, `target_length 38`, and `target_mod 57808202`.
+- `python3 Python3/Problem698.py`
+  - Output: `Found 57808202 in 0.0003771781921386719 seconds.`
+- Official Project Euler statement checked for Problem 699 rewrite; Ciro Santilli's public Triffle-number DFS/factorization notes were consulted for seed-state enumeration and monotone denominator reduction.
+- `python3 -m py_compile Python3/Problem699.py`
+- `python3 -c "from Python3.Problem699 import divisorSum, triffleSum; print('sigma10', divisorSum(10)); print('T100', triffleSum(100)); print('T1e6', triffleSum(10**6)); print('T1e14', triffleSum(10**14))"`
+  - Output included `sigma10 18`, `T100 270`, `T1e6 26089287`, and `T1e14 37010438774467572`.
+- `python3 Python3/Problem699.py`
+  - Output: `Found 37010438774467572 in 0.26709914207458496 seconds.`
+- Official Project Euler statement checked for Problem 701 rewrite; Ciro Santilli's public frontier-connectivity DP notes were consulted for exact row-major component-state compression.
+- `python3 -m py_compile Python3/Problem701.py`
+- `python3 -c "from Python3.Problem701 import maximumComponentExpectationRational, expectedConnectedArea; print('E2x2_rational', maximumComponentExpectationRational(2,2)); print('E2x2', expectedConnectedArea(2,2,3)); print('E4x4', expectedConnectedArea(4,4))"`
+  - Output included `E2x2_rational (30, 16)`, `E2x2 1.875`, and `E4x4 5.76487732`.
+- `python3 Python3/Problem701.py`
+  - Output: `Found 13.51099836 in 21.268556118011475 seconds.`
+- Official Project Euler statement checked for Problem 702 rewrite; Ciro Santilli's public modular-inversion-count notes were consulted for reducing the jumping-flea geometry to Euclidean recursion.
+- `python3 -m py_compile Python3/Problem702.py`
+- `python3 -c "from Python3.Problem702 import jumpingFleaSum; cases=[3,5,123,12345,123456789]; [print(n, jumpingFleaSum(n)) for n in cases]"`
+  - Output included `3 42`, `5 126`, `123 167178`, `12345 3185041956`, and `123456789 622305608172525546`.
+- `python3 Python3/Problem702.py`
+  - Output: `Found 622305608172525546 in 0.0001251697540283203 seconds.`
+- Official Project Euler statement checked for Problem 703 rewrite; Ciro Santilli's public functional-graph independent-set notes were consulted for pruning trees into weighted cycle DP.
+- `python3 -m py_compile Python3/Problem703.py`
+- `python3 -c "from Python3.Problem703 import circularLogicCount; [print(n, circularLogicCount(n)) for n in (3,4,20)]"`
+  - Output included `3 35`, `4 2118`, and `20 843437991`.
+- `python3 Python3/Problem703.py`
+  - Output: `Found 843437991 in 0.4702608585357666 seconds.`
+- Official Project Euler statement checked for Problem 704 rewrite; Ciro Santilli's public Kummer/carry-count notes were consulted for the exact row maximum and prefix-sum formula.
+- `python3 -m py_compile Python3/Problem704.py`
+- `python3 -c "from Python3.Problem704 import v2Binomial, maxV2Binomial, maxV2Prefix; print('g12_5', v2Binomial(12,5)); print('F10', maxV2Binomial(10)); print('F100', maxV2Binomial(100)); print('S100', maxV2Prefix(100)); print('S1e7', maxV2Prefix(10**7)); print('S1e16', maxV2Prefix(10**16))"`
+  - Output included `g12_5 3`, `F10 3`, `F100 6`, `S100 389`, `S1e7 203222840`, and `S1e16 501985601490518144`.
+- `python3 Python3/Problem704.py`
+  - Output: `Found 501985601490518144 in 2.1457672119140625e-06 seconds.`
+- Official Project Euler statement checked for Problem 705 rewrite; Ciro Santilli's public streaming expected-inversion notes were consulted for linearity over divided sequences and segmented prime generation.
+- `python3 -m py_compile Python3/Problem705.py`
+- `python3 -c "from Python3.Problem705 import inversionCount, dividedSequenceInversionTotal; print('inv34214', inversionCount('34214')); print('F20', dividedSequenceInversionTotal(20)); print('F50', dividedSequenceInversionTotal(50))"`
+  - Output included `inv34214 5`, `F20 3312`, and `F50 338079744`.
+- `python3 Python3/Problem705.py`
+  - Output: `Found 480440153 in 19.670897960662842 seconds.`
+- Official Project Euler statement checked for Problem 706 rewrite; Ciro Santilli's public prefix-residue automaton notes were consulted for the 81-state matrix exponentiation.
+- `python3 -m py_compile Python3/Problem706.py`
+- `python3 -c "from Python3.Problem706 import divisibleSubstringCount, threeLikeCount; print('f2573', divisibleSubstringCount(2573)); print('F2', threeLikeCount(2)); print('F6', threeLikeCount(6)); print('F100000', threeLikeCount(10**5))"`
+  - Output included `f2573 3`, `F2 30`, `F6 290898`, and `F100000 884837055`.
+- `python3 Python3/Problem706.py`
+  - Output: `Found 884837055 in 0.11770868301391602 seconds.`
+- Official Project Euler statement checked for Problem 707 rewrite; Ciro Santilli's public GF(2) polynomial-gcd Lights Out notes were consulted for nullity computation via Fibonacci polynomials.
+- `python3 -m py_compile Python3/Problem707.py`
+- `python3 -c "from Python3.Problem707 import solvableStateCount, fibonacciSolvableStateSum; print('F1_2', solvableStateCount(1,2,modulus=None)); print('F3_3', solvableStateCount(3,3,modulus=None)); print('F4_4', solvableStateCount(4,4,modulus=None)); print('F7_11', solvableStateCount(7,11)); print('S3_3', fibonacciSolvableStateSum(3,3)); print('S4_5', fibonacciSolvableStateSum(4,5)); print('S5_7', fibonacciSolvableStateSum(5,7)); print('S199_199', fibonacciSolvableStateSum(199,199))"`
+  - Output included `F1_2 2`, `F3_3 512`, `F4_4 4096`, `F7_11 270016253`, `S3_3 32`, `S4_5 1052960`, `S5_7 346547294`, and `S199_199 652907799`.
+- `python3 Python3/Problem707.py`
+  - Output: `Found 652907799 in 0.24693679809570312 seconds.`
+- Official Project Euler statement checked for Problem 708 rewrite; Ciro Santilli's public Dirichlet-convolution/powerful-number DFS notes were consulted for summing `2^Omega(n)`.
+- `python3 -m py_compile Python3/Problem708.py`
+- `python3 -c "from Python3.Problem708 import replacementValue, replacementValueSum, buildSummatoryData; data=buildSummatoryData(10**8); print('f1', replacementValue(1)); print('f90', replacementValue(90)); print('S1e8', replacementValueSum(10**8, data))"`
+  - Output included `f1 1`, `f90 16`, and `S1e8 9613563919`.
+- `python3 Python3/Problem708.py`
+  - Output: `Found 28874142998632109 in 24.565930604934692 seconds.`
+- Official Project Euler statement checked for Problem 709 rewrite; Ciro Santilli's public Entringer-triangle notes were consulted for the Euler-zigzag recurrence.
+- `python3 -m py_compile Python3/Problem709.py`
+- `python3 -c "from Python3.Problem709 import bagPackingCount; [print(n, bagPackingCount(n)) for n in (4,8,24680)]"`
+  - Output included `4 5`, `8 1385`, and `24680 773479144`.
+- `python3 Python3/Problem709.py`
+  - Output: `Found 773479144 in 15.452940940856934 seconds.`
+- Official Project Euler statement checked for Problem 710 rewrite; Ciro Santilli's public seventh-order recurrence notes were consulted for the modular twopal search.
+- `python3 -m py_compile Python3/Problem710.py`
+- `python3 -c "from Python3.Problem710 import twopalCount, firstDivisibleTwopalIndex; print('t6', twopalCount(6)); print('t20', twopalCount(20)); print('t42', twopalCount(42)); print('answer', firstDivisibleTwopalIndex())"`
+  - Output included `t6 4`, `t20 824`, `t42 1999923`, and `answer 1275000`.
+- `python3 Python3/Problem710.py`
+  - Output: `Found 1275000 in 0.3557560443878174 seconds.`
+- Official Project Euler statement checked for Problem 711 rewrite; Ciro Santilli's public base-4 winning-set and offset-sum notes were consulted for the modular formula.
+- `python3 -m py_compile Python3/Problem711.py`
+- `python3 -c "from Python3.Problem711 import winningBlackboardSum; [print(n, winningBlackboardSum(n)) for n in (4,12,1234,12345678)]"`
+  - Output included `4 46`, `12 54532`, `1234 690421393`, and `12345678 541510990`.
+- `python3 Python3/Problem711.py`
+  - Output: `Found 541510990 in 0.9629690647125244 seconds.`
+- Official Project Euler statement checked for Problem 712 rewrite; Ciro Santilli's public prime-power contribution and prime-count grouping notes were consulted for the split summation.
+- `python3 -m py_compile Python3/Problem712.py`
+- `python3 -c "from Python3.Problem712 import exponentDifference, exponentDifferenceSum; print('D14_24', exponentDifference(14,24)); print('S10', exponentDifferenceSum(10)); print('S100', exponentDifferenceSum(100))"`
+  - Output included `D14_24 4`, `S10 210`, and `S100 37018`.
+- `python3 Python3/Problem712.py`
+  - Output: `Found 413876461 in 87.54322004318237 seconds.`
+- Official Project Euler statement checked for Problem 713 rewrite; Ciro Santilli's public Turan-theorem/grouped-summation notes were consulted for the balanced-partition formula.
+- `python3 -m py_compile Python3/Problem713.py`
+- `python3 -c "from Python3.Problem713 import guaranteedTries, waterHeatingSum; print('T3_2', guaranteedTries(3,2)); print('T8_4', guaranteedTries(8,4)); print('L1e3', waterHeatingSum(10**3)); print('L1e7', waterHeatingSum(10**7))"`
+  - Output included `T3_2 3`, `T8_4 7`, `L1e3 3281346`, and `L1e7 788626351539895`.
+- `python3 Python3/Problem713.py`
+  - Output: `Found 788626351539895 in 0.0018010139465332031 seconds.`
+- Official Project Euler statement checked for Problem 714 rewrite; Ciro Santilli's public bounded-duodigit generation and remainder-BFS notes were consulted for smallest duodigit multiples and exact scientific-notation formatting.
+- `python3 -m py_compile Python3/Problem714.py`
+- `python3 -c "from Python3.Problem714 import isDuodigit, smallestDuodigitMultiple, computeDuodigitValues, formatScientific13; ..."`
+  - Output included `is102 False`, `d12 12`, `d102 1122`, `d103 515`, `d290 11011010`, `d317 211122`, `D110 11047`, `D150 53312`, `D500 29570988`, and `format500 2.957098800000e7`.
+- `python3 Python3/Problem714.py`
+  - Output: `Found 2.452767775565e20 in 30.660083055496216 seconds.`
+- Official Project Euler statement checked for Problem 715 rewrite; Ciro Santilli's public multiplicative-function/Min_25 prime-sum notes were consulted for summing normalized sextuplet counts.
+- `python3 -m py_compile Python3/Problem715.py`
+- `python3 -c "from Python3.Problem715 import sextupletNormSum; print('G10', sextupletNormSum(10)); print('G1e5', sextupletNormSum(10**5))"`
+  - Output included `G10 3053` and `G1e5 157612967`.
+- `python3 Python3/Problem715.py`
+  - Output: `Found 883188017 in 236.32220888137817 seconds.`
+- Official Project Euler statement checked for Problem 716 rewrite; Ciro Santilli's public symmetric closed-form notes were consulted for the all-orientations SCC sum.
+- `python3 -m py_compile Python3/Problem716.py`
+- `python3 -c "from Python3.Problem716 import gridGraphComponentSum; [print((h,w), gridGraphComponentSum(h,w)) for h,w in ((3,3),(3,6),(10,20),(10000,20000))]"`
+  - Output included `(3, 3) 408`, `(3, 6) 4696`, `(10, 20) 988971143`, and `(10000, 20000) 238948623`.
+- `python3 Python3/Problem716.py`
+  - Output: `Found 238948623 in 2.1457672119140625e-06 seconds.`
+- Official Project Euler statement checked for Problem 717 rewrite; Ciro Santilli's public Fermat/lift-to-`p^2` notes were consulted for computing `g(p)`.
+- `python3 -m py_compile Python3/Problem717.py`
+- `python3 -c "from Python3.Problem717 import modularFormula, reducedFormula, modularFormulaPrimeSum; print('f3', modularFormula(3)); print('g31', reducedFormula(31)); print('G100', modularFormulaPrimeSum(100)); print('G1e4', modularFormulaPrimeSum(10**4)); print('G1e7', modularFormulaPrimeSum(10**7))"`
+  - Output included `f3 5`, `g31 17`, `G100 474`, `G1e4 2819236`, and `G1e7 1603036763131`.
+- `python3 Python3/Problem717.py`
+  - Output: `Found 1603036763131 in 2.541095018386841 seconds.`
+- Official Project Euler statement checked for Problem 718 rewrite; Ciro Santilli's public Apéry/numerical-semigroup notes were consulted for the linear residue-minimum sweep used to sum unreachable values.
+- `python3 -m py_compile Python3/Problem718.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem718 as p; print('G1', p.unreachableSum(1)); print('G2', p.unreachableSum(2))"`
+  - Output included `G1 8253` and `G2 60258000`.
+- `python3 Python3/Problem718.py`
+  - Output: `Found 228579116 in 10.909275770187378 seconds.`
+- Official Project Euler statement checked for Problem 719 rewrite; the repo solution now scans square roots up to `sqrt(N)`, filters by the modulo-9 necessity, and recursively verifies decimal partitions instead of using the previous answer table.
+- `python3 -m py_compile Python3/Problem719.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem719 as p; print('81', p.isSNumber(81)); print('6724', p.isSNumber(6724)); print('8281', p.isSNumber(8281)); print('9801', p.isSNumber(9801)); print('T1e4', p.sNumberSum(10**4))"`
+  - Output included `81 True`, `6724 True`, `8281 True`, `9801 True`, and `T1e4 41333`.
+- `python3 Python3/Problem719.py`
+  - Output: `Found 128088830547982 in 10.494321823120117 seconds.`
+- Official Project Euler statement checked for Problem 720 rewrite; Ciro Santilli's public unpredictable-permutation recurrence notes were consulted for the doubling construction and Lehmer-code rank computation.
+- `python3 -m py_compile Python3/Problem720.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem720 as p; print('perm4', list(p.buildPermutationAndCodes(4)[0])); print('perm8', list(p.buildPermutationAndCodes(8)[0])); print('S4', p.firstUnpredictablePermutationPosition(4)); print('S8', p.firstUnpredictablePermutationPosition(8)); print('S32', p.firstUnpredictablePermutationPosition(32))"`
+  - Output included `perm4 [1, 3, 2, 4]`, `perm8 [1, 5, 3, 2, 7, 6, 4, 8]`, `S4 3`, `S8 2295`, and `S32 641839205`.
+- `python3 Python3/Problem720.py`
+  - Output: `Found 688081048 in 5.793664216995239 seconds.`
+- Official Project Euler statement checked for Problem 721 rewrite; Ciro Santilli's public conjugate-pair/Lucas-recurrence notes were consulted for replacing the irrational floor with modular exponentiation in `x + y sqrt(a)`.
+- `python3 -m py_compile Python3/Problem721.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem721 as p; print('f5_2', p.irrationalPowerFloor(5,2)); print('f5_5', p.irrationalPowerFloor(5,5)); print('f4_3', p.irrationalPowerFloor(4,3)); print('G1000', p.irrationalPowerSum(1000))"`
+  - Output included `f5_2 27`, `f5_5 3935`, `f4_3 64`, and `G1000 163861845`.
+- `python3 Python3/Problem721.py`
+  - Output: `Found 700792959 in 34.469138383865356 seconds.`
+- Official Project Euler statement checked for Problem 722 rewrite; Ciro Santilli's public Lambert-series/Eisenstein-transform notes were consulted for evaluating the slowly converging series via modular inversion and exact Bernoulli constants.
+- `python3 -m py_compile Python3/Problem722.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem722 as p; print('E1_4', p.slowlyConvergingSeries(1,4)); print('E3_8', p.slowlyConvergingSeries(3,8)); print('E7_15', p.slowlyConvergingSeries(7,15)); print('E15_25', p.slowlyConvergingSeries(15,25))"`
+  - Output included `E1_4 3.872155809243e2`, `E3_8 2.767385314772e10`, `E7_15 6.725803486744e39`, and `E15_25 3.376792776502e132`.
+- `python3 Python3/Problem722.py`
+  - Output: `Found 3.376792776502e132 in 0.0004138946533203125 seconds.`
+- Official Project Euler statement checked for Problem 723 rewrite; Ciro Santilli's public Gaussian-integer/diagonal-midpoint divisor-sum notes were consulted for the lattice quadrilateral count.
+- `python3 -m py_compile Python3/Problem723.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem723 as p; print('F1', p.pythagoreanQuadrilateralCountSquared(1)); print('F2', p.pythagoreanQuadrilateralCountSquared(2)); print('F5', p.pythagoreanQuadrilateralCountSquared(5)); print('F25', p.pythagoreanQuadrilateralCountSquared(25)); print('S325', p.pythagoreanQuadrilateralSum(325)); print('S1105', p.pythagoreanQuadrilateralSum(1105))"`
+  - Output included `F1 1`, `F2 1`, `F5 38`, `F25 167`, `S325 2370`, and `S1105 5535`.
+- `python3 Python3/Problem723.py`
+  - Output: `Found 1395793419248 in 1.6330361366271973 seconds.`
+- Official Project Euler statement checked for Problem 724 rewrite; Ciro Santilli's public coupon-collector/harmonic-number notes were consulted for the closed-form expectation and asymptotic evaluation.
+- `python3 -m py_compile Python3/Problem724.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem724 as p; print('E2', p.expectedDroneDistanceExact(2)); print('E5', p.expectedDroneDistanceExact(5)); print('E100', format(p.expectedDroneDistance(100), '.6f')); print('round1e8', p.roundedExpectedDroneDistance(10**8))"`
+  - Output included `E2 7/2`, `E5 12019/720`, `E100 1427.193471` (within `1e-6` of the statement approximation `1427.193470`), and `round1e8 18128250110`.
+- `python3 Python3/Problem724.py`
+  - Output: `Found 18128250110 in 4.0531158447265625e-06 seconds.`
+- Official Project Euler statement checked for Problem 725 rewrite; Ciro Santilli's public digit-sum DP/partition notes were consulted, and the repo solution uses a length/digit-sum/witness-state dynamic program rather than the previous table.
+- `python3 -m py_compile Python3/Problem725.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem725 as p; print('is352', p.isDigitSumNumber(352)); print('is3003', p.isDigitSumNumber(3003)); print('is32812', p.isDigitSumNumber(32812)); print('S3', p.digitSumNumberPrefix(3)); print('S7', p.digitSumNumberPrefix(7)); print('S2020', p.digitSumNumberPrefix(2020))"`
+  - Output included `is352 True`, `is3003 True`, `is32812 True`, `S3 63270`, `S7 85499991450`, and `S2020 4598797036650685`.
+- `python3 Python3/Problem725.py`
+  - Output: `Found 4598797036650685 in 0.33608031272888184 seconds.`
+- Official Project Euler statement checked for Problem 726 rewrite; Ciro Santilli's public falling-bottles hook-length/slide-choice factorization notes were consulted for the closed-form recurrence.
+- `python3 -m py_compile Python3/Problem726.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem726 as p; print('f1', p.bottleRemovalCount(1)); print('f2', p.bottleRemovalCount(2)); print('f3', p.bottleRemovalCount(3)); print('S1e4', p.bottleRemovalPrefix(10**4))"`
+  - Output included `f1 1`, `f2 6`, `f3 1008`, and `S1e4 578040951`.
+- `python3 Python3/Problem726.py`
+  - Output: `Found 578040951 in 1.6313769817352295 seconds.`
+- Official Project Euler statement checked for Problem 727 rewrite; Ciro Santilli's public coordinate-geometry/Soddy-circle notes were consulted for the tangency-point circumcenter and incircle-center calculation.
+- `python3 -m py_compile Python3/Problem727.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem727 as p; print('d123', format(p.circularArcTriangleDistance(1,2,3), '.12f')); print('E100', format(p.circularArcTriangleExpectation(), '.8f'))"`
+  - Output included `d123 0.156763098933` and `E100 3.64039141`.
+- `python3 Python3/Problem727.py`
+  - Output: `Found 3.64039141 in 0.19754791259765625 seconds.`
+- Official Project Euler statement checked for Problem 728 rewrite; Ciro Santilli's public GF(2) circulant-rank/gcd-class summation notes were consulted for the rank formula, totient sieve, and geometric-series reduction.
+- `python3 -m py_compile Python3/Problem728.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem728 as p; print('F3_2', p.solvableCoinStates(3,2)); print('F8_3', p.solvableCoinStates(8,3)); print('F9_3', p.solvableCoinStates(9,3)); print('S3', p.solvableCoinStateSum(3)); print('S10', p.solvableCoinStateSum(10)); print('S1000', p.solvableCoinStateSum(10**3))"`
+  - Output included `F3_2 4`, `F8_3 256`, `F9_3 128`, `S3 22`, `S10 10444`, and `S1000 853837042`.
+- `python3 Python3/Problem728.py`
+  - Output: `Found 709874991 in 6.812701940536499 seconds.`
+- Official Project Euler statement checked for Problem 729 rewrite; Ciro Santilli's public inverse-branch/binary-necklace notes were consulted for enumerating exact-period cycles and summing their ranges.
+- `python3 -m py_compile Python3/Problem729.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem729 as p; print('S2', format(p.periodicSequenceRangeSum(2), '.4f')); print('S3', format(p.periodicSequenceRangeSum(3), '.4f')); print('S5', format(p.periodicSequenceRangeSum(5), '.4f'))"`
+  - Output included `S2 2.8284`, `S3 14.6461`, and `S5 124.1056`.
+- `python3 Python3/Problem729.py`
+  - Output: `Found 308896374.2502 in 22.647953987121582 seconds.`
+- Official Project Euler statement checked for Problem 730 rewrite; Ciro Santilli's public invariant-preserving matrix/root notes were consulted, and the repo solution now compiles and runs an embedded C++ helper from the Python entrypoint to count the generated primitive forests without a final-answer table.
+- `python3 -m py_compile Python3/Problem730.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem730 as p; print('P0_1e4', p.shiftedPrimitiveTripleCount(0, 10**4)); print('P20_1e4', p.shiftedPrimitiveTripleCount(20, 10**4)); print('S10_1e4', p.shiftedPrimitiveTripleSum(10, 10**4))"`
+  - Output included `P0_1e4 703`, `P20_1e4 1979`, and `S10_1e4 10956`.
+- `python3 Python3/Problem730.py`
+  - Output: `Found 1315965924 in 3.6565020084381104 seconds.`
+- Official Project Euler statement checked for Problem 731 rewrite; Ciro Santilli's public Stoneham-number digit-extraction notes were consulted for the modular residue and exact carry computation.
+- `python3 -m py_compile Python3/Problem731.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem731 as p; print('A100', p.stonehamDigits(100)); print('A1e8', p.stonehamDigits(10**8)); print('A1e16', p.stonehamDigits(10**16))"`
+  - Output included `A100 4938271604`, `A1e8 2584642393`, and `A1e16 6086371427`.
+- `python3 Python3/Problem731.py`
+  - Output: `Found 6086371427 in 0.00015807151794433594 seconds.`
+- Official Project Euler statement checked for Problem 732 rewrite; Ciro Santilli's public scheduling/knapsack notes were consulted for reducing the escape strategy to a deadline-constrained maximum-IQ DP.
+- `python3 -m py_compile Python3/Problem732.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem732 as p; print('r0', p.trollAttributeSeed(0)); print('r1', p.trollAttributeSeed(1)); print('r2', p.trollAttributeSeed(2)); print('Q5', p.escapingTrollIq(5)); print('Q15', p.escapingTrollIq(15)); print('Q1000', p.escapingTrollIq(1000))"`
+  - Output included `r0 51`, `r1 55`, `r2 75`, `Q5 401`, `Q15 941`, and `Q1000 45609`.
+- `python3 Python3/Problem732.py`
+  - Output: `Found 45609 in 1.0731792449951172 seconds.`
+- Official Project Euler statement checked for Problem 733 rewrite; Ciro Santilli's public increasing-subsequence/Fenwick-tree notes were consulted for computing the length-4 subsequence sum without a full-problem answer table.
+- `python3 -m py_compile Python3/Problem733.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem733 as p; print('values6', list(p.sequenceValues(6))); print('S6', p.ascendingSubsequenceSumExact(6)); print('S100', p.ascendingSubsequenceSumExact(100)); print('S1e6', p.ascendingSubsequenceSum(10**6))"`
+  - Output included `values6 [153, 23409, 3581577, 7980255, 976697, 9434375]`, `S6 94513710`, `S100 4465488724217`, and `S1e6 574368578`.
+- `python3 Python3/Problem733.py`
+  - Output: `Found 574368578 in 12.56401014328003 seconds.`
+- Official Project Euler statement checked for Problem 734 rewrite; the solution uses a subset zeta transform to count prime submasks, exponentiates tuple counts modulo `1_000_000_007`, then applies subset Mobius inversion to recover exact prime bitwise-OR counts.
+- `python3 -m py_compile Python3/Problem734.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem734 as p; print('brute5_2', p.bruteForceBitPrimeTupleCount(5,2)); print('T5_2', p.bitPrimeTupleCount(5,2)); print('T100_3', p.bitPrimeTupleCount(100,3)); print('T1000_10', p.bitPrimeTupleCount(1000,10)); print('T1e6_999983', p.bitPrimeTupleCount(10**6,999983))"`
+  - Output included `brute5_2 5`, `T5_2 5`, `T100_3 3355`, `T1000_10 2071632`, and `T1e6_999983 557988060`.
+- `python3 Python3/Problem734.py`
+  - Output: `Found 557988060 in 1.5732719898223877 seconds.`
+- Official Project Euler statement checked for Problem 735 rewrite; Ciro Santilli's public squarefree-count/product-splitting notes were consulted for reducing the divisor summatory function to odd-squarefree weighted factor-pair sums.
+- `python3 -m py_compile Python3/Problem735.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem735 as p; print('f15', p.divisorCountUpToN(15)); print('bruteF15', p.bruteForceDivisorCountPrefix(15)); print('fastF15', p.summatoryDivisorCount(15)); print('bruteF1000', p.bruteForceDivisorCountPrefix(1000)); print('fastF1000', p.summatoryDivisorCount(1000)); print('fastF10000', p.summatoryDivisorCount(10000))"`
+  - Output included `f15 8`, `bruteF15 63`, `fastF15 63`, `bruteF1000 15066`, `fastF1000 15066`, and `fastF10000 242226`.
+- `python3 Python3/Problem735.py`
+  - Output: `Found 174848216767932 in 126.29884886741638 seconds.`
+- Official Project Euler statement checked for Problem 736 rewrite; Ciro Santilli's public reverse-path/column-count notes were consulted for reducing the smallest odd-length path search to a finite power-of-two identity.
+- `python3 -m py_compile Python3/Problem736.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem736 as p; p.runTests(); length, value, ops = p.smallestOddPathToEquality(); print('sampleFinal', p.applyOperations(p.START, list('rssssrsrr'))[-1]); print('length', length); print('value', value); print('ops', ''.join(ops))"`
+  - Output included `sampleFinal (1476, 1476)`, `length 97`, and `value 25332747903959376`.
+- `python3 Python3/Problem736.py`
+  - Output: `Found 25332747903959376 with path length 97 in 0.07606911659240723 seconds.`
+- Official Project Euler statement checked for Problem 737 rewrite; Ciro Santilli's public harmonic-number/numerical-tail notes were consulted for deriving the coin rotation sum and binary-searching the first crossing.
+- `python3 -m py_compile Python3/Problem737.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem737 as p; solver = p.CoinLoopsSolver(); print('L1', solver.minimumCoinsForLoops(1)); print('L2', solver.minimumCoinsForLoops(2)); print('L10', solver.minimumCoinsForLoops(10)); print('L2020', solver.minimumCoinsForLoops(2020)); print('below', solver.rotationSum(757794898) <= 2.0 * p.math.pi * 2020); print('at', solver.rotationSum(757794899) > 2.0 * p.math.pi * 2020)"`
+  - Output included `L1 31`, `L2 154`, `L10 6947`, `L2020 757794899`, `below True`, and `at True`.
+- `python3 Python3/Problem737.py`
+  - Output: `Found 757794899 in 0.1279008388519287 seconds.`
+- Official Project Euler statement checked for Problem 738 rewrite; Ciro Santilli's public base-tuple/cube-root-split notes were consulted for reducing the ordered-factorisation double sum to counts and length sums of nondecreasing factor tuples.
+- `python3 -m py_compile Python3/Problem738.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem738 as p; print('bruteD10_10', p.orderedFactorisationTotalBrute(10,10)); print('D10_10', p.orderedFactorisationTotal(10,10)); print('D100_100', p.orderedFactorisationTotal(100,100)); print('D1e10_1e10', p.orderedFactorisationTotal(10**10,10**10))"`
+  - Output included `bruteD10_10 153`, `D10_10 153`, `D100_100 35384`, and `D1e10_1e10 143091030`.
+- `python3 Python3/Problem738.py`
+  - Output: `Found 143091030 in 13.461502075195312 seconds.`
+- Official Project Euler statement checked for Problem 739 rewrite; Ciro Santilli's public algebraic-generating-function recurrence notes were consulted for deriving the fourth-order coefficient recurrence and block modular inverse evaluation.
+- `python3 -m py_compile Python3/Problem739.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem739 as p; print('ones8', p.summationProcessValue([1]*8)); print('lucas8_triangle', p.summationProcessValue(p.lucasSequence(8))); print('lucas8_recur', p.lucasSummationValue(8)); print('lucas20', p.lucasSummationValue(20)); print('lucas1e8', p.lucasSummationValue(10**8))"`
+  - Output included `ones8 429`, `lucas8_triangle 2663`, `lucas8_recur 2663`, `lucas20 742296999`, and `lucas1e8 711399016`.
+- `python3 Python3/Problem739.py`
+  - Output: `Found 711399016 in 39.2630729675293 seconds.`
+- Official Project Euler statement checked for Problem 740 rewrite; Ciro Santilli's public compressed-state Markov-chain notes were consulted for modeling the two-slip Secret Santa process.
+- `python3 -m py_compile Python3/Problem740.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem740 as p; print('q3', p.formattedFailureProbability(3)); print('q5', p.formattedFailureProbability(5)); print('q100', p.formattedFailureProbability(100))"`
+  - Output included `q3 0.3611111111`, `q5 0.2476095994`, and `q100 0.0189581208`.
+- `python3 Python3/Problem740.py`
+  - Output: `Found 0.0189581208 in 1.0331473350524902 seconds.`
+- Official Project Euler statement checked for Problem 741 rewrite; Ciro Santilli's public Burnside/generating-function recurrence notes were consulted for the identity, rotation, and reflection fixed-count formulas.
+- `python3 -m py_compile Python3/Problem741.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem741 as p; print('f4', p.gridColouringCount(4)); print('f7', p.gridColouringCount(7)); print('f8', p.gridColouringCount(8)); print('g4', p.uniqueGridColouringCount(4)); print('g7', p.uniqueGridColouringCount(7)); print('g8', p.uniqueGridColouringCount(8)); print('target', p.targetUniqueGridColouringSum())"`
+  - Output included `f4 90`, `f7 3110940`, `f8 187530840`, `g4 20`, `g7 390816`, `g8 23462347`, and `target 512895223`.
+- `python3 Python3/Problem741.py`
+  - Output: `Found 512895223 in 8.60465407371521 seconds.`
+- Official Project Euler statement checked for Problem 742 rewrite; Ciro Santilli's public primitive-direction/ellipse-search notes were consulted for reducing symmetric convex grid polygons to a finite primitive-vector selection and area computation.
+- `python3 -m py_compile Python3/Problem742.py`
+- `python3 -c "import sys; sys.path.insert(0, 'Python3'); import Problem742 as p; print('A4', p.minimumSymmetricPolygonArea(4)); print('A8', p.minimumSymmetricPolygonArea(8)); print('A40', p.minimumSymmetricPolygonArea(40)); print('A100', p.minimumSymmetricPolygonArea(100)); print('A1000', p.minimumSymmetricPolygonArea(1000))"`
+  - Output included `A4 1`, `A8 7`, `A40 1039`, `A100 17473`, and `A1000 18397727`.
+- `python3 Python3/Problem742.py`
+  - Output: `Found 18397727 in 2.670062780380249 seconds.`
+- Official Project Euler statement checked for Problem 743.
+- `python3 -m py_compile Python3/Problem743.py`
+- `python3 - <<'PY' ... exactWindowMatrixCount(...); windowMatrixCountModulo(...) ... PY`
+  - Output included `exact_3_9 560`, `exact_4_20 1060870`, `helper_3_9 560`, `helper_4_20 1060870`, and `helper_1e6 333048450`.
+- `python3 Python3/Problem743.py`
+  - Output: `Found 259158998 in 1.0576591491699219 seconds.`
+- Official Project Euler statement checked for Problem 744.
+- `python3 -m py_compile Python3/Problem744.py`
+- `python3 - <<'PY' ... normalGameProbability(...); underdogWinLogBound(...) ... PY`
+  - Output included `f6_half 0.2851562500`, `f10_3_7 0.2330040743`, `f10000_0.3 0.2857499982`, `tail_log_bound -4000.0001999800025...`, and `target 0.0001999600`.
+- `python3 Python3/Problem744.py`
+  - Output: `Found 0.0001999600 in 2.2172927856445312e-05 seconds.`
+- Official Project Euler statement checked for Problem 745.
+- `python3 -m py_compile Python3/Problem745.py`
+- `python3 - <<'PY' ... largestSquareDivisor(...); bruteLargestSquareDivisorSum(...); largestSquareDivisorSum(...) ... PY`
+  - Output included `g18 9`, `g19 1`, `brute10 24`, `brute100 767`, `helper10 24`, and `helper100 767`.
+- `python3 Python3/Problem745.py`
+  - Output: `Found 94586478 in 0.39296722412109375 seconds.`
+- Official Project Euler statement checked for Problem 746.
+- `python3 -m py_compile Python3/Problem746.py`
+- `python3 - <<'PY' ... dinnerArrangements(...); messyDinnerSum(...) ... PY`
+  - Output included `M1 0`, `M2 896`, `M3 890880`, `M10 170717180`, and `S10 399291975`.
+- `python3 Python3/Problem746.py`
+  - Output: `Found 867150922 in 0.954075813293457 seconds.`
+- Official Project Euler statement checked for Problem 747.
+- `python3 -m py_compile Python3/Problem747.py`
+- `python3 - <<'PY' ... pizzaCutCount(...); pizzaPrefix(...) ... PY`
+  - Output included `psi3 7`, `psi6 34`, `psi10 90`, `Psi10 345`, and `Psi1000 172166601`.
+- `python3 Python3/Problem747.py`
+  - Output: `Found 681813395 in 49.11386585235596 seconds.`
+- Official Project Euler statement checked for Problem 748.
+- `python3 -m py_compile Python3/Problem748.py`
+- `python3 - <<'PY' ... upsideDownSolutionSum(...); fourthRootFloor(...) ... PY`
+  - Output included `S1e2 124`, `S1e3 1470`, `S1e5 2340084`, and `root1e16 62628449`.
+- `python3 Python3/Problem748.py`
+  - Output: `Found 276402862 in 6.374831914901733 seconds.`
+- Official Project Euler statement checked for Problem 749.
+- `python3 -m py_compile Python3/Problem749.py`
+- `python3 - <<'PY' ... nearPowerSumsByLength(...); nearPowerSumPrefix(...) ... PY`
+  - Output included `S2 110`, `S6 2562701`, `count6 6`, and `elapsed 0.014`.
+- `python3 Python3/Problem749.py`
+  - Output: `Found 13459471903176422 in 9.12941598892212 seconds.`
+- Official Project Euler statement checked for Problem 750.
+- `python3 -m py_compile Python3/Problem750.py`
+- `python3 - <<'PY' ... cardPositions(...); optimalStackingDistance(...) ... PY`
+  - Output included `positions6 [3, 2, 6, 4, 5, 1]`, `pos_by_card6 [6, 2, 1, 4, 5, 3]`, `G6 8`, and `G16 47`.
+- `python3 Python3/Problem750.py`
+  - Output: `Found 160640 in 8.819741010665894 seconds.`
+- Official Project Euler statement checked for Problem 751.
+- `python3 -m py_compile Python3/Problem751.py`
+- `python3 - <<'PY' ... generatedSequence(...); concatenationValue(...); roundedTheta() ... PY`
+  - Output included `fib_terms [2, 3, 5, 8, 13, 21, 34, 55, 89, 144]`, `fib_concat 2.3581321345589`, and `theta 2.223561019313554106173177`.
+- `python3 Python3/Problem751.py`
+  - Output: `Found 2.223561019313554106173177 in 0.0005190372467041016 seconds.`
+- Official Project Euler statement checked for Problem 752.
+- `python3 -m py_compile Python3/Problem752.py`
+- `python3 - <<'PY' ... smallestPrimeFactorSieve(...); primePowerOrders(...); powerOrder(...) ... PY`
+  - Output included `g3 0`, `g5 12`, `G100 28891`, and `G1000 13131583`.
+- `python3 Python3/Problem752.py`
+  - Output: `Found 5610899769745488 in 2.796718120574951 seconds.`
+- Official Project Euler statement checked for Problem 753.
+- `python3 -m py_compile Python3/Problem753.py`
+- `python3 - <<'PY' ... fermatSolutionCount(...); bruteFermatSolutionCount(...) ... PY`
+  - Output included `F5 12 12`, `F7 0 0`, `F11 90 90`, `F13 0 0`, `F17 240 240`, `F19 324 324`, `F37 648 648`, and `F43 1134 1134`.
+- `python3 Python3/Problem753.py`
+  - Output: `Found 4714126766770661630 in 0.3029510974884033 seconds.`
+- Official Project Euler statement checked for Problem 754.
+- `python3 -m py_compile Python3/Problem754.py`
+- `python3 - <<'PY' ... gaussFactorial(...); productGaussFactorials(...); productGaussFactorialsMod(...) ... PY`
+  - Output included `g10 189`, `G10 23044331520000`, `G10mod 331358692`, and `G100mod 777776709`.
+- `python3 Python3/Problem754.py`
+  - Output: `Found 785845900 in 22.22226309776306 seconds.`
+- Official Project Euler statement checked for Problem 755.
+- `python3 -m py_compile Python3/Problem755.py`
+- `python3 - <<'PY' ... fibonacciSubsetCount(...) ... PY`
+  - Output included `S100 415`, `S10000 312807`, and `S0 1`.
+- `python3 Python3/Problem755.py`
+  - Output: `Found 2877071595975576960 in 5.1021575927734375e-05 seconds.`
+- Official Project Euler statement checked for Problem 756.
+- `python3 -m py_compile Python3/Problem756.py`
+- `python3 - <<'PY' ... cutoffIndex(...); expectedErrorForLinear(...); expectedErrorForTotient(...) ... PY`
+  - Output included `cutoff 50944`, `linear_example 2525/1326`, `phi_example 5842.849907`, `target_eps_1e-8 607238.610661`, and `target_eps_1e-10 607238.610661`.
+- `python3 Python3/Problem756.py`
+  - Output: `Found 607238.610661 in 0.015957117080688477 seconds.`
+- Official Project Euler statement checked for Problem 757.
+- `python3 -m py_compile Python3/Problem757.py`
+- `python3 - <<'PY' ... isStealthy(...); bruteStealthyCount(...); stealthyCount(...) ... PY`
+  - Output included `is36 True`, `brute200 12`, `count200 12`, and `sample1e6 2851`.
+- `python3 Python3/Problem757.py`
+  - Output: `Found 75737353 in 34.22012519836426 seconds.`
+- Official Project Euler statement checked for Problem 758.
+- `python3 -m py_compile Python3/Problem758.py`
+- `python3 - <<'PY' ... minimalPourings(...); minimalPouringSearch(...); mersennePouringCountMod(...); primeSieve(...) ... PY`
+  - Output included `P3_5 4`, `P7_31 20`, `P1234_4321 2780`, `bfs_check_9_19 4 4`, `mersenne_3_5 20`, and `prime_count 168`.
+- `python3 Python3/Problem758.py`
+  - Output: `Found 331196954 in 0.6905479431152344 seconds.`
+- Official Project Euler statement checked for Problem 759.
+- `python3 -m py_compile Python3/Problem759.py`
+- `python3 - <<'PY' ... recurrenceValue(...); squaredRecurrenceSum(...); slowSquaredRecurrenceSum(...) ... PY`
+  - Output included `S10 1530`, `S100 4798445`, `S1000 98467357 98467357`, and `target 282771304`.
+- `python3 Python3/Problem759.py`
+  - Output: `Found 282771304 in 0.00021505355834960938 seconds.`
+- Official Project Euler statement checked for Problem 760.
+- `python3 -m py_compile Python3/Problem760.py`
+- `python3 - <<'PY' ... G(...); bruteG(...); countPairsWithSumAtMost(...); brutePairCount(...) ... PY`
+  - Output included `G10 754`, `G100 583766`, `G50_brute 75238 75238`, `count31_bit4 256 256`, and `target 172747503`.
+- `python3 Python3/Problem760.py`
+  - Output: `Found 172747503 in 0.01292276382446289 seconds.`
+- Official Project Euler statement checked for Problem 761.
+- `python3 -m py_compile Python3/Problem761.py`
+- `python3 - <<'PY' ... circularCriticalSpeed(...); criticalSpeedRegularPolygon(...); branchIndex(...) ... PY`
+  - Output included `circle 4.60333885`, `square 1 5.78859314`, and `hexagon 2 5.05505046`.
+- `python3 Python3/Problem761.py`
+  - Output: `Found 5.05505046 in 2.1457672119140625e-06 seconds.`
+- Official Project Euler statement checked for Problem 762.
+- `python3 -m py_compile Python3/Problem762.py`
+- `python3 - <<'PY' ... computeAll(...); bruteCounts(...) ... PY`
+  - Output included `brute7 [1, 1, 2, 4, 9, 20, 46, 105]`, `dp7 [1, 1, 2, 4, 9, 20, 46, 105]`, `C2 2`, `C10 1301`, `C20 5895236`, `C100 125923036`, and `target 285528863`.
+- `python3 Python3/Problem762.py`
+  - Output: `Found 285528863 in 0.7090878486633301 seconds.`
+- Official Project Euler statement checked for Problem 763.
+- `python3 -m py_compile Python3/Problem763.py`
+- `python3 - <<'PY' ... computeA2(...); bruteCounts(...) ... PY`
+  - Output included `brute7 [1, 1, 3, 9, 30, 99, 336, 1134]`, `exact7 [1, 1, 3, 9, 30, 99, 336, 1134]`, `D2 3`, `D10 44499`, `D20 9204559704`, and `D100mod 780166455`.
+- `python3 Python3/Problem763.py`
+  - Output: `Found 798443574 in 20.03261113166809 seconds.`
+- Official Project Euler statement checked for Problem 764.
+- `python3 -m py_compile Python3/Problem764.py`
+- `python3 - <<'PY' ... bruteSolutions(...); solutionSum(...) ... PY`
+  - Output included `brute100 [(3, 4, 20), (10, 3, 41)] 81`, `S100 (81, 2)`, `S1e4 (112851, 26)`, `S1e7 248876211`, and `target 255228881`.
+- `python3 Python3/Problem764.py`
+  - Output: `Found 255228881 in 0.06815695762634277 seconds.`
+- Official Project Euler statement checked for Problem 765.
+- `python3 -m py_compile Python3/Problem765.py`
+- `python3 - <<'PY' ... roundHalfUpDecimal(...); optimalSuccessProbability(...); solve() ... PY`
+  - Output included `round1_3 0.3333333333`, `guaranteed (3125, 3125)`, `impossible (0, 3125)`, `all_wins (243, 3125)`, `small_threshold (81, 125)`, and `target 0.2429251641`.
+- `python3 Python3/Problem765.py`
+  - Output: `Found 0.2429251641 in 0.0007140636444091797 seconds.`
+- Official Project Euler statement checked for Problem 766.
+- `python3 -m py_compile Python3/Problem766.py`
+- `python3 - <<'PY' ... examplePuzzle().countReachable() ... PY`
+  - Output: `example 208`.
+- `python3 Python3/Problem766.py`
+  - Output: `Found 2613742 in 27.072570085525513 seconds.`
+- Official Project Euler statement checked for Problem 767.
+- `python3 -m py_compile Python3/Problem767.py`
+- `python3 - <<'PY' ... B(...) ... PY`
+  - Output included `B1_1 2`, `B1_4 16`, `B2_4 65550`, and `B3_9 87273560`.
+- `python3 Python3/Problem767.py`
+  - Output: `Found 783976175 in 5.292948007583618 seconds.`
+- Official Project Euler statement checked for Problem 768.
+- `python3 -m py_compile Python3/Problem768.py`
+- `python3 - <<'PY' ... f(...) ... PY`
+  - Output included `f4_2 2`, `f12_4 15`, `f36_6 876`, and `target 14655308696436060`.
+- `python3 Python3/Problem768.py`
+  - Output: `Found 14655308696436060 in 0.0016410350799560547 seconds.`
+- Official Project Euler statement checked for Problem 769.
+- `python3 -m py_compile Python3/Problem769.py`
+- `python3 - <<'PY' ... bruteC(...); C(...); smallestPrimeFactorSieve(...) ... PY`
+  - Output included `brute1e3 142`, `C1e3 142`, and `C1e6 142463`.
+- `python3 Python3/Problem769.py`
+  - Output: `Found 14246712611506 in 30.047883987426758 seconds.`
+- Official Project Euler statement checked for Problem 770.
+- `python3 -m py_compile Python3/Problem770.py`
+- `python3 - <<'PY' ... reciprocalGuarantee(...); gForFraction(...) ... PY`
+  - Output included `guarantee10 524288/308333`, `g1_7 10`, and `target 127311223`.
+- `python3 Python3/Problem770.py`
+  - Output: `Found 127311223 in 8.821487426757812e-06 seconds.`
+- Official Project Euler statement checked for Problem 771.
+- `python3 -m py_compile Python3/Problem771.py`
+- `python3 - <<'PY' ... finiteExceptionMaxes(...); G(...); totientSieve(...) ... PY`
+  - Output included `G6 4`, `G10 26`, `G100 4710`, `G1000 496805`, and `target 398803409`.
+- `python3 Python3/Problem771.py`
+  - Output: `Found 398803409 in 0.0662238597869873 seconds.`
+- Official Project Euler statement checked for Problem 772.
+- `python3 -m py_compile Python3/Problem772.py`
+- `python3 - <<'PY' ... f(...); lcmRangeMod(...) ... PY`
+  - Output included `f3 12`, `f30 179092994`, and `target 83985379`.
+- `python3 Python3/Problem772.py`
+  - Output: `Found 83985379 in 0.9840209484100342 seconds.`
+- Official Project Euler statement checked for Problem 773.
+- `python3 -m py_compile Python3/Problem773.py`
+- `python3 - <<'PY' ... F(...); bruteF(...) ... PY`
+  - Output included `F 1 252 252`, `F 2 58072 58072`, `F 3 76101452 76101452`, and `target 556206950`.
+- `python3 Python3/Problem773.py`
+  - Output: `Found 556206950 in 0.00043392181396484375 seconds.`
+- Official Project Euler statement checked for Problem 774.
+- `python3 -m py_compile Python3/Problem774.py`
+- `python3 - <<'PY' ... c(...); bruteC(...) ... PY`
+  - Output included `c3_4 18`, `c4_5 161 161`, `c10_6 2496120`, and `c100_200 268159379`.
+- `python3 Python3/Problem774.py`
+  - Output: `Found 459155763 in 145.6831090450287 seconds.`
+- Official Project Euler statement checked for Problem 775.
+- `python3 -m py_compile Python3/Problem775.py`
+- `python3 - <<'PY' ... g(...); G(...) ... PY`
+  - Output included `g10 30`, `g18 66`, `G18 530`, `G1e6 951640919`, and `target 946791106`.
+- `python3 Python3/Problem775.py`
+  - Output: `Found 946791106 in 0.31586408615112305 seconds.`
+- Official Project Euler statement checked for Problem 776.
+- `python3 -m py_compile Python3/Problem776.py`
+- `python3 - <<'PY' ... FExact(...); FDecimal(...); formatScientific(...) ... PY`
+  - Output included `F10 19`, `F123 1.187764610390e3`, `F12345 4.855801996238e6`, and `target 9.627509725002e33`.
+- `python3 Python3/Problem776.py`
+  - Output: `Found 9.627509725002e33 in 0.001264810562133789 seconds.`
+- Official Project Euler statement checked for Problem 777.
+- `python3 -m py_compile Python3/Problem777.py`
+- `python3 - <<'PY' ... dNumeratorOver4(...); sNumeratorOver4(...); formatScientific(...) ... PY`
+  - Output included `d2_5 3`, `d2_3 18`, `d7_4 158`, `d7_5 208`, `d10_7 93`, `s10_num4 6410`, `s100_num4 97026020`, and `target 2.533018434e23`.
+- `python3 Python3/Problem777.py`
+  - Output: `Found 2.533018434e23 in 0.5003941059112549 seconds.`
+- Official Project Euler statement checked for Problem 778.
+- `python3 -m py_compile Python3/Problem778.py`
+- `python3 - <<'PY' ... freshmanProduct(...); F(...); bruteF(...) ... PY`
+  - Output included `sample_product 480`, `F2_7 204`, `F3_9 2865 2865`, `F23_76 5870548`, and `target 146133880`.
+- `python3 Python3/Problem778.py`
+  - Output: `Found 146133880 in 0.005908012390136719 seconds.`
+- Official Project Euler statement checked for Problem 779.
+- `python3 -m py_compile Python3/Problem779.py`
+- `python3 - <<'PY' ... tailBound(...); seriesSums(...) ... PY`
+  - Output included `tail 3.125e-14`, `f1 0.282419756159`, and `target 0.547326103833`.
+- `python3 Python3/Problem779.py`
+  - Output: `Found 0.547326103833 in 0.12690520286560059 seconds.`
+- Official Project Euler statement checked for Problem 780.
+- `python3 -m py_compile Python3/Problem780.py`
+- `python3 - <<'PY' ... floorSqrt3Mul(...); floorDivSqrt3(...); divisorSummatory(...); G(...) ... PY`
+  - Output included `sqrt3_10 17`, `divsqrt3_100 57`, `D10 27`, `G6 14`, `G100 8090`, and `G100000 645124048`.
+- `python3 Python3/Problem780.py`
+  - Output: `Found 613979935 in 7.3532350063323975 seconds.`
+- Official Project Euler statement checked for Problem 781.
+- `python3 -m py_compile Python3/Problem781.py`
+- `python3 - <<'PY' ... connectedDiagramCounts(8) ... PY`
+  - Output included `F4 5` and `F8 319`.
+- `python3 Python3/Problem781.py`
+  - Output: `Found 162450870 in 4.30204701423645 seconds.`
+- Official Project Euler statement checked for Problem 782.
+- `python3 -m py_compile Python3/Problem782.py`
+- `python3 - <<'PY' ... C(...) ... PY`
+  - Output included `C2 8`, `C5 64`, `C10 274`, and `C20 1150`.
+- `python3 Python3/Problem782.py`
+  - Output: `Found 318313204 in 9.610988140106201 seconds.`
+- Official Project Euler statement checked for Problem 783.
+- `python3 -m py_compile Python3/Problem783.py`
+- `python3 - <<'PY' ... expectedSumSquare(...); roundedExpectedSumSquare(...) ... PY`
+  - Output included `E2_2 9.600000000000000000000000000000000000000` and `rounded2_2 10`.
+- `python3 Python3/Problem783.py`
+  - Output: `Found 136666597 in 2.1602630615234375 seconds.`
+- Official Project Euler statement checked for Problem 784.
+- `python3 -m py_compile Python3/Problem784.py`
+- `python3 - <<'PY' ... F(...) ... PY`
+  - Output included `F5 59` and `F100 697317`.
+- `python3 Python3/Problem784.py`
+  - Output: `Found 5833303012576429231 in 23.235533714294434 seconds.`
+- Official Project Euler statement checked for Problem 785.
+- `python3 -m py_compile Python3/Problem785.py`
+- `python3 - <<'PY' ... S(...) ... PY`
+  - Output included `S100 184`.
+- `python3 Python3/Problem785.py`
+  - Output: `Found 29526986315080920 in 21.21368908882141 seconds.`
+- Official Project Euler statement checked for Problem 786.
+- `python3 -m py_compile Python3/Problem786.py`
+- `python3 - <<'PY' ... B(...) ... PY`
+  - Output included `B10 6`, `B100 478`, and `B1000 45790`.
+- `python3 Python3/Problem786.py`
+  - Output: `Found 45594532839912702 in 2.4555561542510986 seconds.`
+- Official Project Euler statement checked for Problem 787.
+- `python3 -m py_compile Python3/Problem787.py`
+- `python3 - <<'PY' ... H(...) ... PY`
+  - Output included `H4 5` and `H100 2043`.
+- `python3 Python3/Problem787.py`
+  - Output: `Found 202642367520564145 in 1.2749829292297363 seconds.`
+- Official Project Euler statement checked for Problem 788.
+- `python3 -m py_compile Python3/Problem788.py`
+- `python3 - <<'PY' ... isDominating(...); D(...) ... PY`
+  - Output included `dom2022 True`, `dom2021 False`, `D4 603`, and `D10 21893256`.
+- `python3 Python3/Problem788.py`
+  - Output: `Found 471745499 in 0.1825249195098877 seconds.`
+- Official Project Euler statement checked for Problem 789.
+- `python3 -m py_compile Python3/Problem789.py`
+- `python3 - <<'PY' ... solve(5) ... PY`
+  - Output included `solve5 4`.
+- `python3 Python3/Problem789.py`
+  - Output: `Found 13431419535872807040 in 2.104702949523926 seconds.`
+- Official Project Euler statement checked for Problem 790.
+- `python3 -m py_compile Python3/Problem790.py`
+- `python3 - <<'PY' ... C(...) ... PY`
+  - Output included `C0 30621295449583788`, `C1 30613048345941659`, `C10 21808930308198471`, and `C100 16190667393984172`.
+- `python3 Python3/Problem790.py`
+  - Output: `Found 16585056588495119 in 20.650130033493042 seconds.`
+- Official Project Euler statement checked for Problem 791.
+- `python3 -m py_compile Python3/Problem791.py`
+- `python3 - <<'PY' ... S(...) ... PY`
+  - Output included `S5 48` and `S1000 37048340`.
+- `python3 Python3/Problem791.py`
+  - Output: `Found 404890862 in 15.012319087982178 seconds.`
+- Official Project Euler statement checked for Problem 792.
+- `python3 -m py_compile Python3/Problem792.py`
+- `python3 - <<'PY' ... naiveS(...); u(...); U(...) ... PY`
+  - Output included `S4 980`, `u4 7`, `u20 24`, and `U5 241`.
+- `python3 Python3/Problem792.py`
+  - Output: `Found 2500500025183626 in 0.4922671318054199 seconds.`
+- Official Project Euler statement checked for Problem 793.
+- `python3 -m py_compile Python3/Problem793.py`
+- `python3 - <<'PY' ... medianProduct(...) ... PY`
+  - Output included `M3 3878983057768` and `M103 492700616748525`.
+- `python3 Python3/Problem793.py`
+  - Output: `Found 475808650131120 in 8.012588024139404 seconds.`
+- Official Project Euler statement checked for Problem 794.
+- `python3 -m py_compile Python3/Problem794.py`
+- `python3 - <<'PY' ... F(...); searchBestSum(...); formatScaled(...) ... PY`
+  - Output included `F4 3/2`, `F17 8.146681749623`, and `reaches18 False`.
+- `python3 Python3/Problem794.py`
+  - Output: `Found 8.146681749623 in 0.7758169174194336 seconds.`
+- Official Project Euler statement checked for Problem 795.
+- `python3 -m py_compile Python3/Problem795.py`
+- `python3 - <<'PY' ... naiveG(...); g(...); G(...) ... PY`
+  - Output included `g4naive 6`, `g4 6`, `g1234 1233`, and `G1234 2194708`.
+- `python3 Python3/Problem795.py`
+  - Output: `Found 955892601606483 in 2.5200507640838623 seconds.`
+- Official Project Euler statement checked for Problem 796.
+- `python3 -m py_compile Python3/Problem796.py`
+- `python3 - <<'PY' ... expectedAllRanksSingleDeck(...); expectedAllSuitsRanksDecks(...) ... PY`
+  - Output included `rank_check 29.05361725` and `target 43.20649061`.
+- `python3 Python3/Problem796.py`
+  - Output: `Found 43.20649061 in 0.013783931732177734 seconds.`
+- Official Project Euler statement checked for Problem 797.
+- `python3 -m py_compile Python3/Problem797.py`
+- `python3 - <<'PY' ... exampleChecks(); solve(10) ... PY`
+  - Output included `examples_ok` and `Q10 5598`.
+- `python3 Python3/Problem797.py`
+  - Output: `Found 47722272 in 40.59594774246216 seconds.`
+- Official Project Euler statement checked for Problem 798.
+- `python3 -m py_compile Python3/Problem798.py`
+- `python3 - <<'PY' ... C(...) ... PY`
+  - Output included `C3_2 26` and `C13_4 540318329`.
+- `python3 Python3/Problem798.py`
+  - Output: `Found 132996198 in 53.770405292510986 seconds.`
+- Official Project Euler statement checked for Problem 799.
+- `python3 -m py_compile Python3/Problem799.py`
+- `python3 - <<'PY' ... countPentagonalSumWays(...) ... PY`
+  - Output included `ways8 1`, `ways49 2`, and `ways268 3`.
+- `python3 Python3/Problem799.py`
+  - Output: `Found 1096910149053902 in 14.410180807113647 seconds.`
+- Official Project Euler statement checked for Problem 800.
+- `python3 -m py_compile Python3/Problem800.py`
+- `python3 - <<'PY' ... C(...) ... PY`
+  - Output included `C800 2` and `C800_800 10790`.
+- `python3 Python3/Problem800.py`
+  - Output: `Found 1412403576 in 0.43799281120300293 seconds.`
+- Official Project Euler statement checked for Problem 801.
+- `python3 -m py_compile Python3/Problem801.py`
+- `python3 - <<'PY' ... fOfPrime(...); S(...) ... PY`
+  - Output included `f5 104`, `f97 1614336`, `S100 7381000`, and `S100000mod 701331986`.
+- `python3 Python3/Problem801.py`
+  - Output: `Found 638129754 in 6.074680805206299 seconds.`
+- Official Project Euler statement checked for Problem 802.
+- `python3 -m py_compile Python3/Problem802.py`
+- `python3 - <<'PY' ... P(...) ... PY`
+  - Output included `P1 2`, `P2 2`, and `P3 4`.
+- `python3 Python3/Problem802.py`
+  - Output: `Found 973873727 in 1.6844511032104492 seconds.`
+- Official Project Euler statement checked for Problem 803.
+- `python3 -m py_compile Python3/Problem803.py`
+- `python3 - <<'PY' ... prefixFromSeed(...); firstOccurrenceBruteforce(...); findUniqueSeedForPrefix(...) ... PY`
+  - Output included `prefix bQYicNGCY`, `first_rxq 100`, and `euler_seed 78580612777175`.
+- `python3 Python3/Problem803.py`
+  - Output: `Found 9300900470636 in 10.488745927810669 seconds.`
+- Official Project Euler statement checked for Problem 804.
+- `python3 -m py_compile Python3/Problem804.py`
+- `python3 - <<'PY' ... g(...); T(...) ... PY`
+  - Output included `g53 4`, `T1e3 474`, and `T1e6 492128`.
+- `python3 Python3/Problem804.py`
+  - Output: `Found 4921370551019052 in 1.9949951171875 seconds.`
+- Official Project Euler statement checked for Problem 805.
+- `python3 -m py_compile Python3/Problem805.py`
+- `python3 -c 'import Python3.Problem805 as p; print("N3", p.exactNSmall(3, 1)); print("N1_10", p.exactNSmall(1, 10)); print("N2", p.NMod(2, 1)); print("T3", p.T(3))'`
+  - Output included `N3 142857`, `N1_10 10`, `N2 0`, and `T3 262429173`.
+- `python3 Python3/Problem805.py`
+  - Output: `Found 119719335 in 0.3107419013977051 seconds.`
+- Official Project Euler statement checked for Problem 806.
+- `python3 -m py_compile Python3/Problem806.py`
+- `python3 -c 'import Python3.Problem806 as p; print("f4", p.f(4)); print("f10", p.f(10)); print("triples4", sorted(p.xorZeroTriples(4)))'`
+  - Output included `f4 30`, `f10 67518`, and `triples4 [(0, 2, 2), (2, 0, 2), (2, 2, 0)]`.
+- `python3 Python3/Problem806.py`
+  - Output: `Found 94394343 in 2.701651096343994 seconds.`
+- Official Project Euler statement checked for Problem 807.
+- `python3 -m py_compile Python3/Problem807.py`
+- `python3 -c 'import Python3.Problem807 as p; print("P3", p.probabilityFraction(3)); print("P5", p.roundedProbability(5, 10))'`
+  - Output included `P3 11/20` and `P5 0.4304177690`.
+- `python3 Python3/Problem807.py`
+  - Output: `Found 0.1091523673 in 0.00011086463928222656 seconds.`
+- Official Project Euler statement checked for Problem 808.
+- `python3 -m py_compile Python3/Problem808.py`
+- `python3 -c 'import Python3.Problem808 as p; flags=p.primeSieve(1000); print("169", p.isReversiblePrimeSquare(169, flags)); print("961", p.isReversiblePrimeSquare(961, flags)); print("121", p.isReversiblePrimeSquare(121, flags)); print("first2", p.firstReversiblePrimeSquares(2, 100))'`
+  - Output included `169 True`, `961 True`, `121 False`, and `first2 [169, 961]`.
+- `python3 Python3/Problem808.py`
+  - Output: `Found 3807504276997394 in 2.255532741546631 seconds.`
+- Official Project Euler statement checked for Problem 809.
+- `python3 -m py_compile Python3/Problem809.py`
+- `python3 -c 'import Python3.Problem809 as p; print("f3_2", p.smallAckermann(1, 1)); print("f1_6", p.smallAckermann(5, 0)); print("f13_10", p.f13Over10Example())'`
+  - Output included `f3_2 3`, `f1_6 65533`, and `f13_10 7625597484985`.
+- `python3 Python3/Problem809.py`
+  - Output: `Found 75353432948733 in 6.67572021484375e-05 seconds.`
+- Official Project Euler statement checked for Problem 810.
+- `python3 -m py_compile Python3/Problem810.py`
+- `python3 -c 'import Python3.Problem810 as p; print("7x3", p.xorProduct(7, 3)); print("3x3", p.xorProduct(3, 3)); print("p10", p.nthXorPrime(10)); print("degree", p.degreeForRank(5000000))'`
+  - Output included `7x3 9`, `3x3 5`, `p10 41`, and `degree 26`.
+- `python3 Python3/Problem810.py`
+  - Output: `Found 124136381 in 10.495548963546753 seconds.`
+- Official Project Euler statement checked for Problem 811.
+- `python3 -m py_compile Python3/Problem811.py`
+- `python3 -c 'import Python3.Problem811 as p; print("b24", p.b(24)); print("H3_2", p.H(3, 2, None)); print("Aslow81", p.ASlow(81))'`
+  - Output included `b24 8`, `H3_2 636056`, and `Aslow81 636056`.
+- `python3 Python3/Problem811.py`
+  - Output: `Found 327287526 in 0.0006470680236816406 seconds.`
+- Official Project Euler statement checked for Problem 812.
+- `python3 -m py_compile Python3/Problem812.py`
+- `python3 -c 'import Python3.Problem812 as p; print("S2", p.S(2)); print("S5", p.S(5)); print("S20", p.S(20))'`
+  - Output included `S2 6`, `S5 58`, and `S20 122087`.
+- `python3 Python3/Problem812.py`
+  - Output: `Found 986262698 in 1.7383229732513428 seconds.`
+- Official Project Euler statement checked for Problem 813.
+- `python3 -m py_compile Python3/Problem813.py`
+- `python3 -c 'import Python3.Problem813 as p; print("xor", p.xorProduct(11, 11)); print("P2", p.xorPower(11, 2)); print("terms", len(p.degreesForPowerOfEleven(8**12 * 12**8)))'`
+  - Output included `xor 69`, `P2 69`, and `terms 441`.
+- `python3 Python3/Problem813.py`
+  - Output: `Found 14063639 in 0.0009720325469970703 seconds.`
+- Official Project Euler statement checked for Problem 814.
+- `python3 -m py_compile Python3/Problem814.py`
+- `python3 -c 'import Python3.Problem814 as p; print("S1", p.S(1)); print("S10", p.S(10)); print("groups", p.NORMAL_GROUPS[0])'`
+  - Output included `S1 48`, `S10 420121075`, and `groups [(0, 0, 3), (2, 0, 2), (1, 0, 2), (3, 0, 1), (0, 1, 1)]`.
+- `python3 Python3/Problem814.py`
+  - Output: `Found 307159326 in 14.648067712783813 seconds.`
+- Official Project Euler statement checked for Problem 815.
+- `python3 -m py_compile Python3/Problem815.py`
+- `python3 -c 'import Python3.Problem815 as p; print("E2", p.formattedExpectedMaximumPiles(2)); print("E3", p.formattedExpectedMaximumPiles(3))'`
+  - Output included `E2 1.97142857` and `E3 2.92623377`.
+- `python3 Python3/Problem815.py`
+  - Output: `Found 54.12691621 in 4.103894948959351 seconds.`
+- Official Project Euler statement checked for Problem 816.
+- `python3 -m py_compile Python3/Problem816.py`
+- `python3 -c 'import Python3.Problem816 as p; print("d14", p.formattedD(14)); print("first", p.generatePoints(4))'`
+  - Output included `d14 546446.466846479` and `first [(290797, 629527), (13339144, 15552512), (17939732, 3034546), (22608053, 23794117)]`.
+- `python3 Python3/Problem816.py`
+  - Output: `Found 20.880613018 in 2.8740949630737305 seconds.`
+- Official Project Euler statement checked for Problem 817.
+- `python3 -m py_compile Python3/Problem817.py`
+- `python3 -c 'import Python3.Problem817 as p; print("M10_7", p.MBruteforce(10, 7)); print("M11_10", p.MBruteforce(11, 10)); print("partial", p.solve(10))'`
+  - Output included `M10_7 24`, `M11_10 19`, and `partial 11884079670`.
+- `python3 Python3/Problem817.py`
+  - Output: `Found 93158936107011 in 0.16270112991333008 seconds.`
+- Official Project Euler statement checked for Problem 818.
+- `python3 -m py_compile Python3/Problem818.py`
+- `python3 -c 'import Python3.Problem818 as p; c=p.buildUnionCounts(); print("F3", p.FFromUnionCounts(c, 3)); print("F6", p.FFromUnionCounts(c, 6)); print("nonzero", [(i,v) for i,v in enumerate(c) if v])'`
+  - Output included `F3 1080`, `F6 159690960`, and nonzero union-size counts for 3, 5, 6, 7, 8, 9, 10, 11, and 12.
+- `python3 Python3/Problem818.py`
+  - Output: `Found 11871909492066000 in 0.2687718868255615 seconds.`
+- Official Project Euler statement checked for Problem 819.
+- `python3 -m py_compile Python3/Problem819.py`
+- `python3 -c 'import Python3.Problem819 as p; print("E3", p.expectedStepsExact(3)); print("E5", p.expectedStepsExact(5)); print("E5f", p.formattedExpectedSteps(5))'`
+  - Output included `E3 27/7`, `E5 468125/60701`, and `E5f 7.711982`.
+- `python3 Python3/Problem819.py`
+  - Output: `Found 1995.975556 in 0.04453611373901367 seconds.`
+- Official Project Euler statement checked for Problem 820.
+- `python3 -m py_compile Python3/Problem820.py`
+- `python3 -c 'import Python3.Problem820 as p; print("digits7", [p.nthDigitOfReciprocal(7,k) for k in range(1,8)]); print("S7", p.S(7)); print("S100", p.S(100))'`
+  - Output included `digits7 [0, 0, 3, 0, 0, 6, 1]`, `S7 10`, and `S100 418`.
+- `python3 Python3/Problem820.py`
+  - Output: `Found 44967734 in 5.891768217086792 seconds.`
+- Official Project Euler statement checked for Problem 821.
+- `python3 -m py_compile Python3/Problem821.py`
+- `python3 -c 'import Python3.Problem821 as p; print("F6", p.F(6)); print("F20", p.F(20)); print("holes", p.holesUpTo(1000))'`
+  - Output included `F6 5`, `F20 19`, and `holes [6, 24, 54, 243, 384]`.
+- `python3 Python3/Problem821.py`
+  - Output: `Found 9219661511328178 in 0.03397774696350098 seconds.`
+- Official Project Euler statement checked for Problem 822.
+- `python3 -m py_compile Python3/Problem822.py`
+- `python3 -c 'import Python3.Problem822 as p; print("S5_3", p.S(5, 3)); print("S10_100", p.S(10, 100))'`
+  - Output included `S5_3 34` and `S10_100 845339386`.
+- `python3 Python3/Problem822.py`
+  - Output: `Found 950591530 in 0.018850088119506836 seconds.`
+- Official Project Euler statement checked for Problem 823.
+- `python3 -m py_compile Python3/Problem823.py`
+- `python3 -c 'import Python3.Problem823 as p; print("S5_3", p.directSum(5, 3)); print("S10_100", p.directSum(10, 100))'`
+  - Output included `S5_3 21` and `S10_100 257`.
+- `python3 Python3/Problem823.py`
+  - Output: `Found 865849519 in 1.771752119064331 seconds.`
+- Official Project Euler statement checked for Problem 824.
+- `python3 -m py_compile Python3/Problem824.py`
+- `python3 -c 'import Python3.Problem824 as p; print("L2_2", p.LSmall(2, 2)); print("L6_12", p.LSmall(6, 12))'`
+  - Output included `L2_2 4` and `L6_12 4204761`.
+- `python3 Python3/Problem824.py`
+  - Output: `Found 26532152736197 in 7.381327152252197 seconds.`
+- Official Project Euler statement checked for Problem 825.
+- `python3 -m py_compile Python3/Problem825.py`
+- `python3 -c 'import Python3.Problem825 as p; print("S2", p.SFraction(2)); print("T10", float(sum(p.SFraction(n) for n in range(2, 11)))); print("fast10", sum(p.SFast(n) for n in range(2, 11)))'`
+  - Output included `S2 7/11`, `T10 2.382352822333936`, and `fast10 2.3823528223339374`.
+- `python3 Python3/Problem825.py`
+  - Output: `Found 32.34481054 in 0.0005691051483154297 seconds.`
+- Official Project Euler statement checked for Problem 826.
+- `python3 -m py_compile Python3/Problem826.py`
+- `python3 -c 'import Python3.Problem826 as p; print("F3", p.F(3)); print("avg10", p.formattedAverage(10))'`
+  - Output included `F3 0.5` and `avg10 0.4691358025`.
+- `python3 Python3/Problem826.py`
+  - Output: `Found 0.3889014797 in 0.014742612838745117 seconds.`
+- Official Project Euler statement checked for Problem 827.
+- `python3 -m py_compile Python3/Problem827.py`
+- `python3 -c 'import Python3.Problem827 as p; print("Q5", p.QExact(5)); print("Q10", p.QExact(10)); print("Q1000", p.QExact(10**3))'`
+  - Output included `Q5 15`, `Q10 48`, and `Q1000 8064000`.
+- `python3 Python3/Problem827.py`
+  - Output: `Found 397289979 in 0.0846099853515625 seconds.`
+- Official Project Euler statement checked for Problem 828.
+- Downloaded official input file to `Files/p828_number_challenges.txt`.
+- `python3 -m py_compile Python3/Problem828.py`
+- `python3 -c 'import Python3.Problem828 as p; print("score", p.minScore(211, [2,3,4,6,7,25])); print("count", len(p.parseChallenges())); print("first", p.parseChallenges()[0])'`
+  - Output included `score 40`, `count 200`, and `first (211, [2, 3, 4, 6, 7, 25])`.
+- `python3 Python3/Problem828.py`
+  - Output: `Found 148693670 in 1.2864859104156494 seconds.`
+- Official Project Euler statement checked for Problem 829.
+- `python3 -m py_compile Python3/Problem829.py`
+- `python3 -c 'import Python3.Problem829 as p; print("M9", p.M(9)); print("df9", p.doubleFactorial(9))'`
+  - Output included `M9 72` and `df9 945`.
+- `python3 Python3/Problem829.py`
+  - Output: `Found 41768797657018024 in 1.6354968547821045 seconds.`
+- Official Project Euler statement checked for Problem 830.
+- `python3 -m py_compile Python3/Problem830.py`
+- `python3 -c 'import Python3.Problem830 as p; print("S10", p.solve(10)); print("moduli", [q**p.POWER for q in p.PRIMES])'`
+  - Output included `S10 142469423360` and `moduli [571787, 704969, 912673]`.
+- `python3 Python3/Problem830.py`
+  - Output: `Found 254179446930484376 in 0.00516510009765625 seconds.`
+- Official Project Euler statement checked for Problem 831.
+- `python3 -m py_compile Python3/Problem831.py`
+- `python3 -c 'import Python3.Problem831 as p; print("direct10", p.directG(10)); print("g10", p.g(10)); print("first5", str(p.g(10))[:5])'`
+  - Output included `direct10 127278262644918`, `g10 127278262644918`, and `first5 12727`.
+- `python3 Python3/Problem831.py`
+  - Output: `Found 5226432553 in 0.00014901161193847656 seconds.`
+- Official Project Euler statement checked for Problem 832.
+- `python3 -m py_compile Python3/Problem832.py`
+- `python3 -c 'import Python3.Problem832 as p; print("brute10", p.bruteM(10)); print("M10", p.solve(10)); print("M1000", p.solve(1000))'`
+  - Output included `brute10 642`, `M10 642`, and `M1000 5432148`.
+- `python3 Python3/Problem832.py`
+  - Output: `Found 552839586 in 7.104873657226562e-05 seconds.`
+- Official Project Euler statement checked for Problem 833.
+- `python3 -m py_compile Python3/Problem833.py`
+- `python3 -c 'import Python3.Problem833 as p; print("S100", p.S(100)); print("S1e5", p.S(10**5)); print("S1e9", p.S(10**9))'`
+  - Output included `S100 155`, `S1e5 1479802`, and `S1e9 241614948794`.
+- `python3 Python3/Problem833.py`
+  - Output: `Found 43884302 in 0.029994964599609375 seconds.`
+- Official Project Euler statement checked for Problem 834.
+- `python3 -m py_compile Python3/Problem834.py`
+- `python3 -c 'import Python3.Problem834 as p; spf=p.buildSmallestPrimeFactor(100); print("S10", p.SSet(10)); print("T10", p.T(10, spf)); print("T100", p.T(100, spf)); print("U100", p.U(100))'`
+  - Output included `S10 [5, 8, 20, 35, 80]`, `T10 148`, `T100 21828`, and `U100 612572`.
+- `python3 Python3/Problem834.py`
+  - Output: `Found 1254404167198752370 in 2.9305171966552734 seconds.`
+- Official Project Euler statement checked for Problem 835.
+- `python3 -m py_compile Python3/Problem835.py`
+- `python3 -c 'import Python3.Problem835 as p; print("S100", p.bruteS(100)); print("S10000", p.bruteS(10000)); print("pellIndex", p.pellIndexForPowerOfTen(10**10))'`
+  - Output included `S100 258`, `S10000 172004`, and `pellIndex 13062480693`.
+- `python3 Python3/Problem835.py`
+  - Output: `Found 1050923942 in 0.00027871131896972656 seconds.`
+- Official Project Euler statement checked for Problem 836.
+- `python3 -m py_compile Python3/Problem836.py`
+- `python3 -c 'import Python3.Problem836 as p; print("phrases", p.boldedPhrases()); print("answer", p.solve())'`
+  - Output included `phrases ['affine plane', 'radically integral local field', 'open oriented line section', 'jacobian', 'orthogonal kernel embedding']` and `answer aprilfoolsjoke`.
+- `python3 Python3/Problem836.py`
+  - Output: `Found aprilfoolsjoke in 3.814697265625e-06 seconds.`
+- Official Project Euler statement checked for Problem 837.
+- `python3 -m py_compile Python3/Problem837.py`
+- `python3 -c 'import Python3.Problem837 as p; print("brute3_3", p.bruteAmidakujiCount(3,3)); print("a3_3", p.amidakujiCount(3,3)); print("a123_321", p.amidakujiCount(123,321))'`
+  - Output included `brute3_3 2`, `a3_3 2`, and `a123_321 172633303`.
+- `python3 Python3/Problem837.py`
+  - Output: `Found 428074856 in 92.2134997844696 seconds.`
+- Official Project Euler statement checked for Problem 838.
+- `python3 -m py_compile Python3/Problem838.py`
+- `python3 -c 'import math, Python3.Problem838 as p; ln40, primes=p.lnF(40, returnPrimes=True); print("prod40", math.prod(primes)); print("ln40", format(ln40, ".6f")); print("ln2800", format(p.lnF(2800), ".6f"))'`
+  - Output included `prod40 897`, `ln40 6.799056`, and `ln2800 715.019337`.
+- `python3 Python3/Problem838.py`
+  - Output: `Found 250591.442792 in 0.059561967849731445 seconds.`
+- Official Project Euler statement checked for Problem 839.
+- `python3 -m py_compile Python3/Problem839.py`
+- `python3 -c 'import Python3.Problem839 as p; print("B5", p.B(5)); print("B6", p.B(6)); print("B100", p.B(100))'`
+  - Output included `B5 0`, `B6 14263289`, and `B100 3284417556`.
+- `python3 Python3/Problem839.py`
+  - Output: `Found 150893234438294408 in 4.241931915283203 seconds.`
+- Official Project Euler statement checked for Problem 840.
+- `python3 -m py_compile Python3/Problem840.py`
+- `python3 -c 'import Python3.Problem840 as p; g=p.computeG(10); print("G10", g[10]); print("S10", sum(g[1:11]) % p.MOD)'`
+  - Output included `G10 164` and `S10 396`.
+- `python3 Python3/Problem840.py`
+  - Output: `Found 194396971 in 6.062509059906006 seconds.`
+- Official Project Euler statement checked for Problem 841.
+- `python3 -m py_compile Python3/Problem841.py`
+- `python3 -c 'import Python3.Problem841 as p; print("A8_3", format(p.A(8,3), ".10f")); print("Abig", format(p.A(130021,50008), ".10f"))'`
+  - Output included `A8_3 9.9411254970` and `Abig 10.9210371479`.
+- `python3 Python3/Problem841.py`
+  - Output: `Found 381.7860132854 in 1.1909828186035156 seconds.`
+- Official Project Euler statement checked for Problem 842.
+- `python3 -m py_compile Python3/Problem842.py`
+- `python3 -c 'import Python3.Problem842 as p; f=p.factorialsUpTo(8); print("T5", p.T(5,f)); print("T8", p.T(8,f))'`
+  - Output included `T5 20` and `T8 14640`.
+- `python3 Python3/Problem842.py`
+  - Output after adding the spatial-clustering fallback: `Found 885226002 in 3.4242701530456543 seconds.`
+- Official Project Euler statement checked for Problem 843.
+- `python3 -m py_compile Python3/Problem843.py`
+- `python3 -c 'import random, Python3.Problem843 as p; random.seed(0); periods=set(); vals={}; [vals.setdefault(n, sum(periods)) for n in range(3,31) if not periods.update(p.periodsForN(n)) and n in (6,30)]; print("S6", vals[6]); print("S30", vals[30])'`
+  - Output included `S6 6` and `S30 20381`.
+- `python3 Python3/Problem843.py`
+  - Output: `Found 2816775424692 in 0.05375170707702637 seconds.`
+- Official Project Euler statement checked for Problem 844.
+- `python3 -m py_compile Python3/Problem844.py`
+- `python3 -c 'import Python3.Problem844 as p; print("M3", p.Mk(3,10**3)); print("M8", p.Mk(8,10**8)); print("S4", p.SExactSmall(4,10**2)); print("S10", p.SExactSmall(10,10**8))'`
+  - Output included `M3 2797`, `M8 131493335`, `S4 229`, and `S10 2383369980`.
+- `python3 Python3/Problem844.py`
+  - Output: `Found 101805206 in 0.18631696701049805 seconds.`
+- Official Project Euler statement checked for Problem 845.
+- `python3 -m py_compile Python3/Problem845.py`
+- `python3 -c 'import Python3.Problem845 as p; print("D61", p.D(61)); print("D1e8", p.D(10**8))'`
+  - Output included `D61 157` and `D1e8 403539364`.
+- `python3 Python3/Problem845.py`
+  - Output: `Found 45009328011709400 in 0.001943826675415039 seconds.`
+- Official Project Euler statement checked for Problem 846.
+- `python3 -m py_compile Python3/Problem846.py`
+- `python3 -c 'import Python3.Problem846 as p; g=p.buildGraph(10**6); print("F20", p.FFromFullGraph(g,20)); print("F100", p.FFromFullGraph(g,100))'`
+  - Output included `F20 258` and `F100 538768`.
+- `python3 Python3/Problem846.py`
+  - Output: `Found 9851175623 in 6.664660215377808 seconds.`
+- Official Project Euler statement checked for Problem 847.
+- `python3 -m py_compile Python3/Problem847.py`
+- `python3 -c 'import Python3.Problem847 as p; print("h123", p.hBruteForce(1,2,3)); print("h233", p.hBruteForce(2,3,3)); print("H6", p.HExactSmall(6)); print("H20", p.HExactSmall(20)); print("H111", p.HExactSmall(p.repunit(3)))'`
+  - Output included `h123 3`, `h233 4`, `H6 203`, `H20 7718`, and `H111 1634144`.
+- `python3 Python3/Problem847.py`
+  - Output: `Found 381868244 in 0.00019311904907226562 seconds.`
+- Official Project Euler statement checked for Problem 848.
+- `python3 -m py_compile Python3/Problem848.py`
+- `python3 -c 'from fractions import Fraction; import Python3.Problem848 as p; print("p1_10", p.p(1,10)); print("p7_1", p.p(7,1)); print("p42_1", p.p(42,1)); print("p7_5", p.p(7,5), format(float(p.p(7,5)), ".8f"))'`
+  - Output included `p1_10 1`, `p7_1 1/7`, `p42_1 1/42`, and `p7_5 18/35 0.51428571`.
+- `python3 Python3/Problem848.py`
+  - Output: `Found 188.45503259 in 0.0012409687042236328 seconds.`
+- Official Project Euler statement checked for Problem 849.
+- `python3 -m py_compile Python3/Problem849.py`
+- `python3 -c 'import Python3.Problem849 as p; print("F2", p.F(2)); print("F7", p.F(7))'`
+  - Output included `F2 3` and `F7 32923`.
+- `python3 Python3/Problem849.py`
+  - Output: `Found 936203459 in 12.964890003204346 seconds.`
+- Official Project Euler statement checked for Problem 850.
+- `python3 -m py_compile Python3/Problem850.py`
+- `python3 -c 'import Python3.Problem850 as p; print("twoF5_10", p.twoF(5,10)); print("twoF7_1234", p.twoF(7,1234)); print("twoS10", p.computeTwoSMod(10,p.MOD2)); print("twoS1000", p.computeTwoSMod(10**3,p.MOD2))'`
+  - Output included `twoF5_10 9`, `twoF7_1234 1233`, `twoS10 201`, and `twoS1000 247375608`.
+- `python3 Python3/Problem850.py`
+  - Output: `Found 878255725 in 50.44023609161377 seconds.`
+- Official Project Euler statement checked for Problem 851.
+- `python3 -m py_compile Python3/Problem851.py`
+- `python3 -c 'import Python3.Problem851 as p; primes=p.primeSieve(10000); tau=p.tauUpTo(10000,p.MOD); p.runTests(primes,tau); print("tests", "ok"); ex=p.factorizeSmall(10,primes); np,s=p.prepareInput(ex); print("R1_10", p.RDimensionAtN(1,np,s,0)); ex=p.factorizeSmall(100,primes); np,s=p.prepareInput(ex); print("R2_100", p.RDimensionAtN(2,np,s,0))'`
+  - Output included `tests ok`, `R1_10 36`, and `R2_100 1873044`.
+- `python3 Python3/Problem851.py`
+  - Output: `Found 726358482 in 2.0397469997406006 seconds.`
+- Official Project Euler statement checked for Problem 852.
+- `python3 -m py_compile Python3/Problem852.py`
+- `python3 -c 'import Python3.Problem852 as p; print("S1", p.solve(1))'`
+  - Output included `S1 20.558591`.
+- `python3 Python3/Problem852.py`
+  - Output: `Found 130.313496 in 3.5800859928131104 seconds.`
+- Official Project Euler statement checked for Problem 853.
+- `python3 -m py_compile Python3/Problem853.py`
+- `python3 -c 'import Python3.Problem853 as p; print("sample", p.bruteSumWithPisanoPeriod(18,50)); print("F120_factors", sorted(p.primeFactors(p.fibonacci(120)).items()))'`
+  - Output included `sample 57` and the prime factorization of `F_120`.
+- `python3 Python3/Problem853.py`
+  - Output: `Found 44511058204 in 0.0008599758148193359 seconds.`
+- Official Project Euler statement checked for Problem 854.
+- `python3 -m py_compile Python3/Problem854.py`
+- `python3 -c 'import Python3.Problem854 as p; print("M18", p.M(18)); print("P10", p.PSmall(10))'`
+  - Output included `M18 76` and `P10 264`.
+- `python3 Python3/Problem854.py`
+  - Output: `Found 29894398 in 0.08750081062316895 seconds.`
+- Official Project Euler statement checked for Problem 855.
+- `python3 -m py_compile Python3/Problem855.py`
+- `python3 -c 'import Python3.Problem855 as p; print("S22", p.S(2,2)); print("S23", p.S(2,3)); print("target", p.solve())'`
+  - Output included `S22 1/36`, `S23 1/1800`, and `target 6.8827571976e-57`.
+- `python3 Python3/Problem855.py`
+  - Output: `Found 6.8827571976e-57 in 2.7894973754882812e-05 seconds.`
+- Official Project Euler statement checked for Problem 856.
+- `python3 -m py_compile Python3/Problem856.py`
+- `python3 -c 'import Python3.Problem856 as p; print("p2", p.firstTwoPairProbability()); print("answer", p.solve())'`
+  - Output included `p2 1/17` and `answer 17.09661501`.
+- `python3 Python3/Problem856.py`
+  - Output: `Found 17.09661501 in 0.05646085739135742 seconds.`
+- Official Project Euler statement checked for Problem 857.
+- `python3 -m py_compile Python3/Problem857.py`
+- `python3 -c 'import Python3.Problem857 as p; c=p.blockCounts(); print("counts", c); print("G3", p.GExact(3,c)); print("G4", p.GExact(4,c)); print("G15", p.GExact(15,c))'`
+  - Output included `counts [0, 1, 2, 6, 18, 12]`, `G3 24`, `G4 186`, and `G15 12472315010483328`.
+- `python3 Python3/Problem857.py`
+  - Output: `Found 966332096 in 1.7774507999420166 seconds.`
+- Official Project Euler statement checked for Problem 858.
+- `python3 -m py_compile Python3/Problem858.py`
+- `python3 -c 'import Python3.Problem858 as p; print("G5", p.bruteG(5)); print("G20", p.bruteG(20))'`
+  - Output included `G5 528` and `G20 8463108648960`.
+- `python3 Python3/Problem858.py`
+  - Output: `Found 973077199 in 0.17688322067260742 seconds.`
+- Official Project Euler statement checked for Problem 859.
+- `python3 -m py_compile Python3/Problem859.py`
+- `python3 -c 'import Python3.Problem859 as p; print("C5", p.C(5)); print("C16", p.C(16))'`
+  - Output included `C5 2` and `C16 64`.
+- `python3 Python3/Problem859.py`
+  - Output: `Found 1527162658488196 in 0.5960168838500977 seconds.`
+- Official Project Euler statement checked for Problem 860.
+- `python3 -m py_compile Python3/Problem860.py`
+- `python3 -c 'import Python3.Problem860 as p; print("F2_exact", p.fairArrangementsExact(2)); print("F10_exact", p.fairArrangementsExact(10)); print("F10_mod", p.fairArrangements(10))'`
+  - Output included `F2_exact 4`, `F10_exact 63594`, and `F10_mod 63594`.
+- `python3 Python3/Problem860.py`
+  - Output: `Found 958666903 in 0.6145460605621338 seconds.`
+- Official Project Euler statement checked for Problem 861.
+- `python3 -m py_compile Python3/Problem861.py`
+- `python3 -c 'import Python3.Problem861 as p; q100=p.computeQs(10**2); print("Q2_1e2", q100[2]); q1m=p.computeQs(10**6); print("Q6_1e6", q1m[6]); print("sum_1e6", sum(q1m[2:11]))'`
+  - Output included `Q2_1e2 51`, `Q6_1e6 6189`, and `sum_1e6 808398`.
+- `python3 Python3/Problem861.py`
+  - Output: `Found 672623540591 in 29.50436282157898 seconds.`
+- Official Project Euler statement checked for Problem 862.
+- `python3 -m py_compile Python3/Problem862.py`
+- `python3 -c 'import Python3.Problem862 as p; print("T2302", p.TBruteForce(2302)); print("S3", p.S(3)); print("valid_2302", p.validPermutationCount([1,0,2,1,0,0,0,0,0,0]))'`
+  - Output included `T2302 4`, `S3 1701`, and `valid_2302 9`.
+- `python3 Python3/Problem862.py`
+  - Output: `Found 6111397420935766740 in 0.24748015403747559 seconds.`
+- Official Project Euler statement checked for Problem 863.
+- `python3 -m py_compile Python3/Problem863.py`
+- `python3 -c 'import Python3.Problem863 as p; print("R8", p.R(8)); print("R28", p.R(28)); print("S30", format(p.S(30), ".6f"))'`
+  - Output included `R8 2.083333333333333`, `R28 2.1424761904761906`, and `S30 56.054622`.
+- `python3 Python3/Problem863.py`
+  - Output: `Found 3862.871397 in 1.9253268241882324 seconds.`
+- Official Project Euler statement checked for Problem 864.
+- `python3 -m py_compile Python3/Problem864.py`
+- `python3 -c 'import Python3.Problem864 as p; print("brute10", p.bruteC(10)); print("C10", p.C(10,10)); print("C1000", p.C(1000,1000))'`
+  - Output included `brute10 9`, `C10 9`, and `C1000 895`.
+- `python3 -c 'import Python3.Problem864 as p; cases=[(1000,100),(5000,200),(10000,500),(20000,1000)]; [print(n, split, p.bruteC(n), p.C(n, split)) for n, split in cases]'`
+  - Output included `1000 100 895 895`, `5000 200 4475 4475`, `10000 500 8952 8952`, and `20000 1000 17900 17900`.
+- `python3 Python3/Problem864.py`
+  - Output: `Found 110572936177 in 359.09016132354736 seconds.`
+- Official Project Euler statement checked for Problem 865.
+- `python3 -m py_compile Python3/Problem865.py`
+- `python3 -c 'import Python3.Problem865 as p; print("reduce_sample", p.reducesToEmpty([1,2,2,5,5,5,2,1,1])); print("bruteT6", p.bruteT(6)); print("T6", p.T(6)); print("T30", p.T(30))'`
+  - Output included `reduce_sample True`, `bruteT6 261`, `T6 261`, and `T30 229231010`.
+- `python3 Python3/Problem865.py`
+  - Output: `Found 761181918 in 0.711815357208252 seconds.`
+- Official Project Euler statement checked for Problem 866.
+- `python3 -m py_compile Python3/Problem866.py`
+- `python3 -c 'import Python3.Problem866 as p; print("H4", p.hexagonal(4)); print("E4_exact", p.expectedProductExact(4)); print("E4_mod", p.expectedProduct(4))'`
+  - Output included `H4 28`, `E4_exact 994`, and `E4_mod 994`.
+- `python3 Python3/Problem866.py`
+  - Output: `Found 492401720 in 0.0002570152282714844 seconds.`
+- Official Project Euler statement checked for Problem 867.
+- `python3 -m py_compile Python3/Problem867.py`
+- `python3 -c 'import Python3.Problem867 as p; print("H1", p.hexagonTilings(1)); print("T1", p.T(1)); print("T2", p.T(2)); print("corner22", p.cornerTilings(2,2))'`
+  - Output included `H1 2`, `T1 5`, `T2 48`, and `corner22 1`.
+- `python3 Python3/Problem867.py`
+  - Output: `Found 870557257 in 0.7375228404998779 seconds.`
+- Official Project Euler statement checked for Problem 868.
+- `python3 -m py_compile Python3/Problem868.py`
+- `python3 -c 'import Python3.Problem868 as p; print("CBA", p.johnsonTrotterRankRecursive(p.encodePermutation("CBA")), p.johnsonTrotterRank(p.encodePermutation("CBA"))); print("BELFRY", p.johnsonTrotterRankRecursive(p.encodePermutation("BELFRY")), p.johnsonTrotterRank(p.encodePermutation("BELFRY"))); print("target", p.solve())'`
+  - Output included `CBA 3 3`, `BELFRY 59 59`, and `target 3832914911887589`.
+- `python3 Python3/Problem868.py`
+  - Output: `Found 3832914911887589 in 6.9141387939453125e-06 seconds.`
+- Official Project Euler statement checked for Problem 869.
+- `python3 -m py_compile Python3/Problem869.py`
+- `python3 -c 'import Python3.Problem869 as p; print("E10", p.E(10), p.formatExpectation(*p.E(10), places=1)); print("E30", p.E(30), p.formatExpectation(*p.E(30), places=1)); print("pi100", len(p.primeSieve(100)))'`
+  - Output included `E10 (8, 4) 2.0`, `E30 (29, 10) 2.9`, and `pi100 25`.
+- `python3 Python3/Problem869.py`
+  - Output: `Found 14.97696693 in 20.534032106399536 seconds.`
+- Official Project Euler statement checked for Problem 870.
+- `python3 -m py_compile Python3/Problem870.py`
+- `python3 -c 'import Python3.Problem870 as p; print("L_half", p.losingSequence(__import__("fractions").Fraction(1,2),10)); print("L1", p.losingSequence(__import__("fractions").Fraction(1,1),6)); print("L2", p.losingSequence(__import__("fractions").Fraction(2,1),7)); print("T22", p.transitionValue(22,100), p.formatTransition(*p.transitionValue(22,100)))'`
+  - Output included `L_half [1]`, `L1 [1, 2, 4, 8, 16, 32]`, `L2 [1, 2, 3, 5, 8, 13, 21]`, and `T22 (145, 23) 6.3043478261`.
+- `python3 Python3/Problem870.py`
+  - Output: `Found 229.9129353234 in 409.5082037448883 seconds.`
+- Official Project Euler statement checked for Problem 871.
+- `python3 -m py_compile Python3/Problem871.py`
+- `python3 -c 'import Python3.Problem871 as p; print("D5", p.D(5)); print("D10", p.D(10)); print("small", [(n,p.D(n),p.bruteD(n)) for n in range(1,13)])'`
+  - Output included `D5 1`, `D10 3`, and matching `D(n)`/`bruteD(n)` pairs for `n=1..12`.
+- `python3 Python3/Problem871.py`
+  - Output: `Found 2848790 in 4.850949287414551 seconds.`
+- Official Project Euler statement checked for Problem 872.
+- `python3 -m py_compile Python3/Problem872.py`
+- `python3 -c 'import Python3.Problem872 as p; print("f6_1", p.f(6,1)); print("f10_3", p.f(10,3)); print("parent20_13", p.parentInTree(20,13)); print("brute20_5", p.f(20,5), p.bruteF(20,5))'`
+  - Output included `f6_1 12`, `f10_3 29`, `parent20_13 17`, and `brute20_5 74 74`.
+- `python3 Python3/Problem872.py`
+  - Output: `Found 2903144925319290239 in 5.245208740234375e-06 seconds.`
+- Official Project Euler statement checked for Problem 873.
+- `python3 -m py_compile Python3/Problem873.py`
+- `python3 -c 'import Python3.Problem873 as p; print("W224_exact", p.WExact(2,2,4)); print("W224_mod", p.WMod(2,2,4)); print("W4444_exact", p.WExact(4,4,44)); print("W4444_mod", p.WMod(4,4,44))'`
+  - Output included `W224_exact 32`, `W224_mod 32`, `W4444_exact 13908607644`, and `W4444_mod 908607553`.
+- `python3 Python3/Problem873.py`
+  - Output: `Found 735131856 in 4.507933139801025 seconds.`
+- Official Project Euler statement checked for Problem 874.
+- `python3 -m py_compile Python3/Problem874.py`
+- `python3 -c 'from itertools import product; import Python3.Problem874 as p; brute=lambda k,n: max(sum(p.firstPrimes(k)[a] for a in arr) for arr in product(range(k), repeat=n) if sum(arr)%k==0); [print(k,n,p.M(k,n),brute(k,n)) for k,n in [(2,5),(3,4),(4,4),(5,3)]]'`
+  - Output included `2 5 14 14`, `3 4 17 17`, `4 4 28 28`, and `5 3 27 27`.
+- `python3 Python3/Problem874.py`
+  - Output: `Found 4992775389 in 8.808372020721436 seconds.`
+- Official Project Euler statement checked for Problem 875.
+- `python3 -m py_compile Python3/Problem875.py`
+- `python3 -c 'import Python3.Problem875 as p; print("q3", p.qPrime(3)); print("Q4", p.Q(4)); print("Q10", p.Q(10))'`
+  - Output included `q3 2241`, `Q4 20802`, and `Q10 18573381`.
+- `python3 Python3/Problem875.py`
+  - Output: `Found 79645946 in 4.6862897872924805 seconds.`
+- Official Project Euler statement checked for Problem 876.
+- `python3 -m py_compile Python3/Problem876.py`
+- `python3 -c 'import Python3.Problem876 as p; print("f_6_10_35", p.fForPower(1,35)); print("f_6_10_36", p.fForPower(1,36)); print("F1", p.FForPower(1)); print("F2", p.FForPower(2)); print("F3", p.FForPower(3)); print("target", p.solve())'`
+  - Output included `f_6_10_35 3`, `f_6_10_36 0`, `F1 17`, `F2 179`, `F3 1051`, and `target 457019806569269`.
+- `python3 Python3/Problem876.py`
+  - Output: `Found 457019806569269 in 0.5858108997344971 seconds.`
+- Official Project Euler statement checked for Problem 877.
+- `python3 -m py_compile Python3/Problem877.py`
+- `python3 -c 'import Python3.Problem877 as p; print("mul7_3", p.xorProduct(7,3)); print("sol3_6", p.isSolution(3,6)); print("vals100", p.solutionBValues(100)); print("X10", p.X(10)); print("X100", p.X(100), p.bruteX(100)); print("target", p.solve())'`
+  - Output included `mul7_3 9`, `sol3_6 True`, `vals100 [3, 6, 15, 24, 63]`, `X10 5`, `X100 45 45`, and `target 336785000760344621`.
+- `python3 Python3/Problem877.py`
+  - Output: `Found 336785000760344621 in 7.152557373046875e-06 seconds.`
+- Official Project Euler statement checked for Problem 878.
+- `python3 -m py_compile Python3/Problem878.py`
+- `python3 -c 'import Python3.Problem878 as p; print("mul7_3", p.xorProduct(7,3)); print("norm3_6", p.xorNorm(3,6)); print("G20_100", p.G(20,100), p.bruteG(20,100)); print("G100_100", p.G(100,100), p.bruteG(100,100)); print("G1000_100", p.G(1000,100)); print("target", p.solve())'`
+  - Output included `mul7_3 9`, `norm3_6 5`, `G20_100 105 105`, `G100_100 223 223`, `G1000_100 398`, and `target 23707109`.
+- `python3 Python3/Problem878.py`
+  - Output: `Found 23707109 in 3.1531152725219727 seconds.`
+- Official Project Euler statement checked for Problem 879.
+- `python3 -m py_compile Python3/Problem879.py`
+- `python3 -c 'import Python3.Problem879 as p; print("P1x2", p.countPasswords(1,2)); print("P2x2", p.countPasswords(2,2)); print("P3x3", p.countPasswords(3,3)); print("target", p.solve())'`
+  - Output included `P1x2 2`, `P2x2 60`, `P3x3 389488`, and `target 4350069824940`.
+- `python3 Python3/Problem879.py`
+  - Output: `Found 4350069824940 in 0.4751780033111572 seconds.`
+- Official Project Euler statement checked for Problem 880.
+- `python3 -m py_compile Python3/Problem880.py`
+- `python3 -c 'import Python3.Problem880 as p; print("pair1_1", p.primitivePair(1,1)); print("pair2_5", p.primitivePair(2,5)); print("H1000", p.H(10**3)); print("H10000", p.H(10**4)); print("target", p.solve())'`
+  - Output included `pair1_1 (-4, 125)`, `pair2_5 (5, 5324)`, `H1000 2535`, `H10000 192635`, and `target 522095328`.
+- `python3 Python3/Problem880.py`
+  - Output: `Found 522095328 in 6.171397924423218 seconds.`
+- Official Project Euler statement checked for Problem 881.
+- `python3 -m py_compile Python3/Problem881.py`
+- `python3 -c 'import Python3.Problem881 as p; ans, exps = p.smallestNumberForWidth(10_000); print("g45", p.gFromExponents([2,1])); print("g5040", p.gFromExponents([4,2,1,1])); print("exps", exps); print("width", p.gFromExponents(exps)); print("target", ans)'`
+  - Output included `g45 2`, `g5040 12`, `exps [4, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1]`, `width 10130`, and `target 205702861096933200`.
+- `python3 Python3/Problem881.py`
+  - Output: `Found 205702861096933200 in 0.06288003921508789 seconds.`
+- Official Project Euler statement checked for Problem 882.
+- `python3 -m py_compile Python3/Problem882.py`
+- `python3 -c 'from fractions import Fraction; import Python3.Problem882 as p; values=p.gameValues(10); print("v2", values[2]); print("v5", values[5]); print("v10", values[10]); print("S2", p.S(2)); print("S5", p.S(5)); print("S10", p.S(10)); print("target", p.solve())'`
+  - Output included `v2 1/2`, `v5 3/2`, `v10 3/4`, `S2 2`, `S5 17`, `S10 64`, and `target 15800662276`.
+- `python3 Python3/Problem882.py`
+  - Output: `Found 15800662276 in 1.2537658214569092 seconds.`
+- Official Project Euler statement checked for Problem 883.
+- `python3 -m py_compile Python3/Problem883.py`
+- `python3 -c 'import Python3.Problem883 as p; print("T_half", p.T(1,2)); print("T2", p.T(2)); print("T10", p.T(10)); print("target", p.solve())'`
+  - Output included `T_half 2`, `T2 44`, `T10 1302`, and `target 14854003484704`.
+- `python3 Python3/Problem883.py`
+  - Output: `Found 14854003484704 in 6.309762001037598 seconds.`
+- Official Project Euler statement checked for Problem 884.
+- `python3 -m py_compile Python3/Problem884.py`
+- `python3 -c 'import Python3.Problem884 as p; print("D100", p.D(100)); print("S100", p.S(100)); print("S1000", p.S(1000)); print("target", p.solve())'`
+  - Output included `D100 4`, `S100 512`, `S1000 6432`, and `target 1105985795684653500`.
+- `python3 Python3/Problem884.py`
+  - Output: `Found 1105985795684653500 in 2.3811099529266357 seconds.`
+- Official Project Euler statement checked for Problem 885.
+- `python3 -m py_compile Python3/Problem885.py`
+- `python3 -c 'import Python3.Problem885 as p; print("S1", p.S(1)); print("S5", p.S(5)); print("target", p.solve())'`
+  - Output included `S1 45`, `S5 1543545675`, and `target 827850196`.
+- `python3 Python3/Problem885.py`
+  - Output: `Found 827850196 in 3.57558012008667 seconds.`
+- Official Project Euler statement checked for Problem 886.
+- `python3 -m py_compile Python3/Problem886.py`
+- `python3 -c 'import Python3.Problem886 as p; print("P4", p.P(4)); print("P10", p.P(10))'`
+  - Output included `P4 2` and `P10 576`.
+- `python3 Python3/Problem886.py`
+  - Output: `Found 5570163 in 47.28264093399048 seconds.`
+- Official Project Euler statement checked for Problem 887.
+- `python3 -m py_compile Python3/Problem887.py`
+- `python3 -c 'import Python3.Problem887 as p; print("Q1_0", p.Q(1,0)); print("Q7_1", p.Q(7,1)); print("Q777_2", p.Q(777,2)); print("target", p.solve())'`
+  - Output included `Q1_0 0`, `Q7_1 3`, `Q777_2 10`, and `target 39896187138661629`.
+- `python3 Python3/Problem887.py`
+  - Output: `Found 39896187138661629 in 2.7894973754882812e-05 seconds.`
+- Official Project Euler statement checked for Problem 888.
+- `python3 -m py_compile Python3/Problem888.py`
+- `python3 -c 'import Python3.Problem888 as p; print("S12_4", p.SExact(12,4)); print("S124_9", p.SExact(124,9)); print("target", p.solve())'`
+  - Output included `S12_4 204`, `S124_9 2259208528408`, and `target 227429102`.
+- `python3 Python3/Problem888.py`
+  - Output: `Found 227429102 in 5.307114839553833 seconds.`
+- Official Project Euler statement checked for Problem 889.
+- `python3 -m py_compile Python3/Problem889.py`
+- `python3 -c 'import Python3.Problem889 as p; print("F3_1_1", p.FMod(3,1,1)); print("F13_3_3", p.FMod(13,3,3)); print("F103_13_6", p.FMod(103,13,6)); print("target", p.solve())'`
+  - Output included `F3_1_1 42`, `F13_3_3 23093880`, `F103_13_6 878922518`, and `target 424315113`.
+- `python3 Python3/Problem889.py`
+  - Output: `Found 424315113 in 0.002499818801879883 seconds.`
+- Official Project Euler statement checked for Problem 890.
+- `python3 -m py_compile Python3/Problem890.py`
+- `python3 -c 'import Python3.Problem890 as p; print("p7", p.pBinaryPartitions(7)); print("p7pow7", p.pBinaryPartitions(7**7)); print("target", p.solve())'`
+  - Output included `p7 6`, `p7pow7 144548435`, and `target 820442179`.
+- `python3 Python3/Problem890.py`
+  - Output: `Found 820442179 in 4.224944114685059 seconds.`
+- Official Project Euler statement checked for Problem 891.
+- `python3 -m py_compile Python3/Problem891.py`
+- `python3 -c 'import Python3.Problem891 as p; times=p.ambiguousTimes(); print("one_thirty", p.isAmbiguous(1,8,times)); print("seven_thirty", p.isAmbiguous(5,8,times)); print("noon", p.isAmbiguous(0,1,times)); print("three", p.isAmbiguous(1,4,times)); print("nine", p.isAmbiguous(3,4,times)); print("target", len(times))'`
+  - Output included `one_thirty True`, `seven_thirty True`, `noon False`, `three False`, `nine False`, and `target 1541414`.
+- `python3 Python3/Problem891.py`
+  - Output: `Found 1541414 in 0.9613430500030518 seconds.`
+- Official Project Euler statement checked for Problem 892.
+- `python3 -m py_compile Python3/Problem892.py`
+- `python3 -c 'import Python3.Problem892 as p; print("D3", p.D(3)); print("D100", p.D(100)); print("target", p.solve())'`
+  - Output included `D3 4`, `D100 1172122931`, and `target 469137427`.
+- `python3 Python3/Problem892.py`
+  - Output: `Found 469137427 in 3.6844639778137207 seconds.`
+- Official Project Euler statement checked for Problem 893.
+- `python3 -m py_compile Python3/Problem893.py`
+- `python3 -c 'import Python3.Problem893 as p; small=p.minimumCosts(100); print("M28", small[28]); print("T100", sum(small[1:])); print("small_exact", small[1:] == p.exactSmallCosts(100)[1:]); print("target", p.solve())'`
+  - Output included `M28 9`, `T100 916`, `small_exact True`, and `target 26688208`.
+- `python3 Python3/Problem893.py`
+  - Output: `Found 26688208 in 13.373122215270996 seconds.`
+- Official Project Euler statement checked for Problem 894.
+- `python3 -m py_compile Python3/Problem894.py`
+- `python3 -c 'import Python3.Problem894 as p; s,t=p.solveTangencyParameters(); r=p.residuals(s,t); print("scale", round(s,12)); print("theta", round(t,12)); print("residuals", r); print("target", p.solve())'`
+  - Output included `scale 0.906331406149`, `theta 0.826729539414`, residuals `(0.0, 2.7755575615628914e-17)`, and `target 0.7718678168`.
+- `python3 Python3/Problem894.py`
+  - Output: `Found 0.7718678168 in 0.019608020782470703 seconds.`
+- Official Project Euler statement checked for Problem 895.
+- `python3 -m py_compile Python3/Problem895.py`
+- `python3 -c 'import Python3.Problem895 as p; print("G2", p.GExact(2)); print("G5", p.GExact(5)); print("G20", p.GExact(20)); print("G20mod", p.GMod(20, p.MODULUS)); print("target", p.solve())'`
+  - Output included `G2 6`, `G5 348`, `G20 125825982708`, `G20mod 108811105`, and `target 670785433`.
+- `python3 Python3/Problem895.py`
+  - Output: `Found 670785433 in 6.57747220993042 seconds.`
+- Official Project Euler statement checked for Problem 896.
+- `python3 -m py_compile Python3/Problem896.py`
+- `python3 -c 'import Python3.Problem896 as p; print("L4", [p.nthDivisibleRangeStart(4,i) for i in range(1,5)]); print("sample", p.isDivisibleRange(6,4)); print("target_valid", p.isDivisibleRange(274229635640,36)); print("target", p.solve())'`
+  - Output included `L4 [1, 2, 3, 6]`, `sample True`, `target_valid True`, and `target 274229635640`.
+- `python3 Python3/Problem896.py`
+  - Output: `Found 274229635640 in 0.2516670227050781 seconds.`
+- Official Project Euler statement checked for Problem 897.
+- `python3 -m py_compile Python3/Problem897.py`
+- `python3 -c 'import Python3.Problem897 as p; print("G3", p.G(3)); print("G5", format(p.G(5), ".9f")); print("target", p.solve())'`
+  - Output included `G3 1.0`, `G5 1.477309771`, and `target 1.599827123`.
+- `python3 Python3/Problem897.py`
+  - Output: `Found 1.599827123 in 0.0010700225830078125 seconds.`
+- Official Project Euler statement checked for Problem 898.
+- `python3 -m py_compile Python3/Problem898.py`
+- `python3 -c 'import Python3.Problem898 as p; print("sample", format(p.optimalSuccessProbability([20,40,60,80]), ".3f")); print("target", p.solve())'`
+  - Output included `sample 0.832` and `target 0.9861343531`.
+- `python3 Python3/Problem898.py`
+  - Output: `Found 0.9861343531 in 2.023223876953125 seconds.`
+- Official Project Euler statement checked for Problem 899.
+- `python3 -m py_compile Python3/Problem899.py`
+- `python3 -c 'import Python3.Problem899 as p; print("brute7", p.bruteL(7)); print("L7", p.L(7)); print("L49", p.L(7**2)); print("pattern_small", all(p.bruteIsLosing(a,b)==p.isLosingByPattern(a,b) for a in range(1,16) for b in range(1,16))); print("target", p.solve())'`
+  - Output included `brute7 21`, `L7 21`, `L49 221`, `pattern_small True`, and `target 10784223938983273`.
+- `python3 Python3/Problem899.py`
+  - Output: `Found 10784223938983273 in 1.7881393432617188e-05 seconds.`
+- Official Project Euler statement checked for Problem 900.
+- `python3 -m py_compile Python3/Problem900.py`
+- `python3 -c 'import Python3.Problem900 as p; print("t1", p.t(1)); print("t2", p.t(2)); print("t3", p.t(3)); print("S10", p.exactSValues(10)[10]); print("target", p.solve())'`
+  - Output included `t1 0`, `t2 0`, `t3 2`, `S10 361522`, and `target 646900900`.
+- `python3 Python3/Problem900.py`
+  - Output: `Found 646900900 in 0.004893064498901367 seconds.`
+- Official Project Euler statement checked for Problem 901.
+- `python3 -m py_compile Python3/Problem901.py`
+- `python3 -c 'import Python3.Problem901 as p; print("coarse", tuple(round(x,6) for x in p.coarseBracket())); print("target", p.solve())'`
+  - Output included `coarse (0.7416, 0.7516)` and `target 2.364497769`.
+- `python3 Python3/Problem901.py`
+  - Output: `Found 2.364497769 in 0.30506205558776855 seconds.`
+- Official Project Euler statement checked for Problem 902.
+- `python3 -m py_compile Python3/Problem902.py`
+- `python3 -c 'import Python3.Problem902 as p; print("rank", p.rankSmall([2,1,3])); print("P2", p.P(2)); print("P3", p.P(3)); print("P4", p.P(4)); print("target", p.solve())'`
+  - Output included `rank 3`, `P2 4`, `P3 780`, `P4 38810300`, and `target 343557869`.
+- `python3 Python3/Problem902.py`
+  - Output: `Found 343557869 in 1.7614531517028809 seconds.`
+- Official Project Euler statement checked for Problem 903.
+- `python3 -m py_compile Python3/Problem903.py`
+- `python3 -c 'import Python3.Problem903 as p; print("Q2", p.computeQ(2)); print("Q3", p.computeQ(3)); print("Q6", p.computeQ(6)); print("Q10", p.computeQ(10)); print("target", p.solve())'`
+  - Output included `Q2 5`, `Q3 88`, `Q6 133103808`, `Q10 468421536`, and `target 128553191`.
+- `python3 Python3/Problem903.py`
+  - Output: `Found 128553191 in 1.3357248306274414 seconds.`
+- Official Project Euler statement checked for Problem 904.
+- `python3 -m py_compile Python3/Problem904.py`
+- `python3 -c 'import Python3.Problem904 as p; print("ratio30", p.legRatioFromAngle(30)); print("f30", p.f(30, 10**2)); print("f10", p.f(10, 10**6)); print("F10", p.F(10, 10**6))'`
+  - Output included `ratio30 0.46988190808780783`, `f30 198`, `f10 1600158`, and `F10 16684370`.
+- `python3 Python3/Problem904.py`
+  - Output: `Found 880652522278760 in 1.115516185760498 seconds.`
+- Official Project Euler statement checked for Problem 905.
+- `python3 -m py_compile Python3/Problem905.py`
+- `python3 -c 'import Python3.Problem905 as p; print("ex1", p.turnsUntilKnown((2,1,1))); print("ex2", p.turnsUntilKnown((2,7,5))); print("target", p.solve())'`
+  - Output included `ex1 1`, `ex2 5`, and `target 70228218`.
+- `python3 Python3/Problem905.py`
+  - Output: `Found 70228218 in 0.0006000995635986328 seconds.`
+- Official Project Euler statement checked for Problem 906.
+- `python3 -m py_compile Python3/Problem906.py`
+- `python3 -c 'import Python3.Problem906 as p; print("P3", p.agreementProbability(3)); print("P10", format(p.agreementProbability(10), ".10f")); print("target", p.solve())'`
+  - Output included `P3 0.9444444444444444`, `P10 0.6760292265`, and `target 0.0195868911`.
+- `python3 Python3/Problem906.py`
+  - Output: `Found 0.0195868911 in 1.0000567436218262 seconds.`
+- Official Project Euler statement checked for Problem 907.
+- `python3 -m py_compile Python3/Problem907.py`
+- `python3 -c 'import Python3.Problem907 as p; print("S4", p.recurrenceValue(4)); print("S8", p.recurrenceValue(8)); print("S20", p.recurrenceValue(20)); print("target", p.solve())'`
+  - Output included `S4 12`, `S8 58`, `S20 5560`, and `target 196808901`.
+- `python3 Python3/Problem907.py`
+  - Output: `Found 196808901 in 0.00028586387634277344 seconds.`
+- Official Project Euler statement checked for Problem 908.
+- `python3 -m py_compile Python3/Problem908.py`
+- `python3 -c 'import Python3.Problem908 as p; print("C3", p.primitiveClockCount(3, processes=1)); print("C4", p.primitiveClockCount(4, processes=1)); print("C10", p.primitiveClockCount(10, processes=1)); print("target", p.solve())'`
+  - Output included `C3 3`, `C4 7`, `C10 561`, and `target 451822602`.
+- `python3 Python3/Problem908.py`
+  - Output: `Found 451822602 in 19.173321962356567 seconds.`
+- Official Project Euler statement checked for Problem 909.
+- `python3 -m py_compile Python3/Problem909.py`
+- `python3 -c 'import Python3.Problem909 as p; print("example1", p.s(p.z)(p.a)(0)); print("example2", p.s(p.s)(p.s(p.s))(p.s(p.z))(p.a)(0)); print("mid", p.bTransform(p.fTransform(1))); print("target", str(p.solve()).zfill(9))'`
+  - Output included `example1 1`, `example2 6`, `mid 42`, and `target 399885292`.
+- `python3 Python3/Problem909.py`
+  - Output: `Found 399885292 in 9.5367431640625e-07 seconds.`
+- Official Project Euler statement checked for Problem 910.
+- `python3 -m py_compile Python3/Problem910.py`
+- `python3 -c 'import Python3.Problem910 as p; print("sample", p.F(1,1,1,1,0))'`
+  - Output: `sample 399885292`.
+- `python3 Python3/Problem910.py`
+  - Output: `Found 547480666 in 24.033421754837036 seconds.`
+- Official Project Euler statement checked for Problem 911.
+- `python3 -m py_compile Python3/Problem911.py`
+- `python3 -c 'import Python3.Problem911 as p; print("rho2", f"{p.estimateSingleKhinchin(2, 10, 13):.6f}")'`
+  - Output: `rho2 2.059767`.
+- `python3 Python3/Problem911.py`
+  - Output: `Found 5679.934966 in 262.1115198135376 seconds.`
+- Official Project Euler statement checked for Problem 912.
+- `python3 -m py_compile Python3/Problem912.py`
+- `python3 -c 'import Python3.Problem912 as p; print("F10", p.F(10)); print("F100", p.F(100)); print("brute100", p.bruteF(100)); print("target", p.solve())'`
+  - Output included `F10 199`, `F100 155134`, `brute100 155134`, and `target 674045136`.
+- `python3 Python3/Problem912.py`
+  - Output: `Found 674045136 in 1.9073486328125e-05 seconds.`
+- Official Project Euler statement checked for Problem 913.
+- `python3 -m py_compile Python3/Problem913.py`
+- `python3 -c 'import Python3.Problem913 as p; print("S34", p.minimalSwaps(3,4)); print("sample", p.sampleSum(100)); print("target", p.solve())'`
+  - Output included `S34 8`, `sample 12578833`, and `target 2101925115560555020`.
+- `python3 Python3/Problem913.py`
+  - Output: `Found 2101925115560555020 in 9.155799627304077 seconds.`
+- Official Project Euler statement checked for Problem 914.
+- `python3 -m py_compile Python3/Problem914.py`
+- `python3 -c 'import Python3.Problem914 as p; print("F100", p.F(100)); print("F1000", p.F(1000)); print("F1e6", p.F(10**6)); print("target", p.solve())'`
+  - Output included `F100 36`, `F1000 400`, `F1e6 414180`, and `target 414213562371805310`.
+- `python3 Python3/Problem914.py`
+  - Output: `Found 414213562371805310 in 0.007082939147949219 seconds.`
+- Official Project Euler statement checked for Problem 915.
+- `python3 -m py_compile Python3/Problem915.py`
+- `python3 -c 'import Python3.Problem915 as p; print("T3", p.T(3)); print("T4", p.T(4)); print("T100", p.T(100)); print("T1000", p.T(1000)); print("target", p.solve())'`
+  - Output included `T3 12`, `T4 24881925`, `T100 14416749`, `T1000 92580397`, and `target 26953925`.
+- `python3 Python3/Problem915.py`
+  - Output: `Found 26953925 in 0.8863837718963623 seconds.`
+- Official Project Euler statement checked for Problem 916.
+- `python3 -m py_compile Python3/Problem916.py`
+- `python3 -c 'import Python3.Problem916 as p; print("P2", p.P(2)); print("P10", p.P(10)); print("target", p.solve())'`
+  - Output included `P2 13`, `P10 45265702`, and `target 877789135`.
+- `python3 Python3/Problem916.py`
+  - Output: `Found 877789135 in 6.408570051193237 seconds.`
+- Official Project Euler statement checked for Problem 917.
+- `python3 -m py_compile Python3/Problem917.py`
+- `python3 -c 'import Python3.Problem917 as p; print("A1", p.A(1)); print("A2", p.A(2)); print("A10", p.A(10)); print("target", p.solve())'`
+  - Output included `A1 966774091`, `A2 2388327490`, `A10 13389278727`, and `target 9986212680734636`.
+- `python3 Python3/Problem917.py`
+  - Output: `Found 9986212680734636 in 6.503999948501587 seconds.`
+- Official Project Euler statement checked for Problem 918.
+- `python3 -m py_compile Python3/Problem918.py`
+- `python3 -c 'import Python3.Problem918 as p; print("first10", [p.a(n) for n in range(1,11)]); print("S10", p.S(10)); print("target", p.solve())'`
+  - Output included `first10 [1, 2, -5, 4, 17, -10, -17, 8, -47, 34]`, `S10 -13`, and `target -6999033352333308`.
+- `python3 Python3/Problem918.py`
+  - Output: `Found -6999033352333308 in 1.1920928955078125e-06 seconds.`
+- Official Project Euler statement checked for Problem 919.
+- `python3 -m py_compile Python3/Problem919.py`
+- `python3 -c 'import Python3.Problem919 as p; print("S10", p.S(10)); print("brute10", p.bruteS(10)); print("S100", p.S(100)); print("brute100", p.bruteS(100)); print("target", p.solve())'`
+  - Output included `S10 24`, `brute10 24`, `S100 3331`, `brute100 3331`, and `target 134222859969633`.
+- `python3 Python3/Problem919.py`
+  - Output: `Found 134222859969633 in 6.700128078460693 seconds.`
+- Official Project Euler statement checked for Problem 920.
+- `python3 -m py_compile Python3/Problem920.py`
+- `python3 -c 'import Python3.Problem920 as p; values=p.minimalTauNumbers(1000); print("m8", values[8]); print("m12", values[12]); print("m16", values[16]); print("bruteM3", p.bruteM(3)); print("M3", p.M(3)); print("target", p.solve())'`
+  - Output included `m8 24`, `m12 60`, `m16 384`, `bruteM3 3189`, `M3 3189`, and `target 1154027691000533893`.
+- `python3 Python3/Problem920.py`
+  - Output: `Found 1154027691000533893 in 1.1152210235595703 seconds.`
+- Official Project Euler statement checked for Problem 921.
+- `python3 -m py_compile Python3/Problem921.py`
+- `python3 -c 'import Python3.Problem921 as p; print("sqrt5", p.SQRT5 * p.SQRT5 % p.MODULUS); print("s0", p.s(0)); print("direct2", p.directS(2)); print("S2", p.S(2)); print("S3", p.S(3)); print("target", p.solve())'`
+  - Output included `sqrt5 5`, `s0 33`, `direct2 26500067`, `S2 257933744`, `S3 284433811`, and `target 378401935`.
+- `python3 Python3/Problem921.py`
+  - Output: `Found 378401935 in 2.444995880126953 seconds.`
+- Official Project Euler statement checked for Problem 922.
+- `python3 -m py_compile Python3/Problem922.py`
+- `python3 -c 'import Python3.Problem922 as p; print("R24", p.R(2,4)); print("R39", p.R(3,9)); print("target", p.solve())'`
+  - Output included `R24 7`, `R39 314104`, and `target 858945298`.
+- `python3 Python3/Problem922.py`
+  - Output: `Found 858945298 in 0.7298369407653809 seconds.`
+- Official Project Euler statement checked for Problem 923.
+- `python3 -m py_compile Python3/Problem923.py`
+- `python3 -c 'import Python3.Problem923 as p; print("hook112", p.reducedHook(1,1,2)); print("class112", p.classifyStaircase(1,1,2)); print("S24", p.S(2,4)); print("S39", p.S(3,9)); print("target", p.solve())'`
+  - Output included `hook112 (2, 2)`, `class112 ('hot', (0, 0))`, `S24 7`, `S39 315319`, and `target 740759929`.
+- `python3 Python3/Problem923.py`
+  - Output: `Found 740759929 in 0.8146929740905762 seconds.`
+- Official Project Euler statement checked for Problem 924.
+- `python3 -m py_compile Python3/Problem924.py`
+- `python3 -c 'import Python3.Problem924 as p; print("B245", p.nextPermutationValue(245)); print("B542", p.nextPermutationValue(542)); print("exactU10", p.exactU(10)); print("U10", p.U(10)); print("target", p.solve())'`
+  - Output included `B245 254`, `B542 0`, `exactU10 543870437`, `U10 543870437`, and `target 811141860`.
+- `python3 Python3/Problem924.py`
+  - Output: `Found 811141860 in 10.442232847213745 seconds.`
+- Official Project Euler statement checked for Problem 925.
+- `python3 -m py_compile Python3/Problem925.py`
+- `python3 -c 'import Python3.Problem925 as p; print("B245", p.B(245)); print("B542", p.B(542)); print("bruteT10", p.bruteT(10)); print("bruteT100", p.bruteT(100)); print("T10", p.T(10)); print("T100", p.T(100))'`
+  - Output included `B245 254`, `B542 0`, `bruteT10 270`, `bruteT100 335316`, `T10 270`, and `T100 335316`.
+- `python3 Python3/Problem925.py`
+  - Output: `Found 400034379 in 102.45066809654236 seconds.`
+- Official Project Euler statement checked for Problem 926.
+- `python3 -m py_compile Python3/Problem926.py`
+- `python3 -c 'import Python3.Problem926 as p; print("R20", p.totalRoundness(20)); print("R10fact", p.factorialTotalRoundness(10)); print("target", p.solve())'`
+  - Output included `R20 6`, `R10fact 312`, and `target 40410219`.
+- `python3 Python3/Problem926.py`
+  - Output: `Found 40410219 in 3.4825360774993896 seconds.`
+- Official Project Euler statement checked for Problem 927.
+- `python3 -m py_compile Python3/Problem927.py`
+- `python3 -c 'import Python3.Problem927 as p; print("good20", p.goodPrimeDivisors(20)); print("R20", p.R(20)); print("R1000", p.R(1000))'`
+  - Output included `good20 [2, 5]`, `R20 18`, and `R1000 2089`.
+- `python3 Python3/Problem927.py`
+  - Output: `Found 207282955 in 126.00569176673889 seconds.`
+- Official Project Euler statement checked for Problem 928.
+- `python3 -m py_compile Python3/Problem928.py`
+- `python3 -c 'import Python3.Problem928 as p; c=[0]*13; c[4]=3; c[12]=1; print("crib1", p.cribbageScore(c)); c=[0]*13; c[0]=2; c[1]=c[2]=c[3]=c[4]=1; print("hand2", p.handScore(c)); print("crib2", p.cribbageScore(c))'`
+  - Output included `crib1 14`, `hand2 16`, and `crib2 16`.
+- `python3 Python3/Problem928.py`
+  - Output: `Found 81108001093 in 15.961196184158325 seconds.`
+- Official Project Euler statement checked for Problem 929.
+- `python3 -m py_compile Python3/Problem929.py`
+- `python3 -c 'import Python3.Problem929 as p; print("F5", p.F(5)); print("brute", [p.bruteF(n) for n in range(1,10)]); print("fast", [p.F(n) for n in range(1,10)])'`
+  - Output included `F5 10`, `brute [1, 1, 4, 4, 10, 19, 33, 59, 113]`, and `fast [1, 1, 4, 4, 10, 19, 33, 59, 113]`.
+- `python3 Python3/Problem929.py`
+  - Output: `Found 57322484 in 14.950677871704102 seconds.`
+- Official Project Euler statement checked for Problem 930.
+- `python3 -m py_compile Python3/Problem930.py`
+- `python3 -c 'import Python3.Problem930 as p; print("F22", p.F(2,2)); print("F32", p.F(3,2)); print("F23", p.F(2,3)); print("F45", p.F(4,5)); print("G33", p.G(3,3)); print("G45", p.G(4,5)); print("G66", p.scientificFormat(p.G(6,6))); print("target", p.solve())'`
+  - Output included `F22 0.5`, `F32 1.3333333333333333`, `F23 2.25`, `F45 286.4583333333333`, `G33 11.416666666666666`, `G45 523.0833333333333`, `G66 1.681521567954e4`, and `target 1.345679959251e12`.
+- `python3 Python3/Problem930.py`
+  - Output: `Found 1.345679959251e12 in 1.5273420810699463 seconds.`
+- Official Project Euler statements checked for Problems 701-710.
+- `python3 -m py_compile Python3/Problem701.py ... Python3/Problem710.py`
+- Official Project Euler statements checked for Problems 711-720.
+- `python3 -m py_compile Python3/Problem711.py ... Python3/Problem720.py`
+- Official Project Euler statements checked for Problems 721-730.
+- `python3 -m py_compile Python3/Problem721.py ... Python3/Problem730.py`
+- Official Project Euler statements checked for Problems 731-742.
+- `python3 -m py_compile Python3/Problem731.py ... Python3/Problem742.py`
+
+## Verified Answers
+
+Problems 1-974 printed the values currently recorded in `answers.csv`.
+
+## Known Needs Rewrite From Static Scan
+
+No files remain in this section after the current audit pass for represented Problems 1-974; those are verified and recorded in `answers.csv`.
+
+Problem 975 is represented by an in-progress script but is not yet target-run or recorded in `answers.csv`.
+
+## Current Missing Problems
+
+- `in-progress`: Problem 975 is present locally as `Python3/Problem975.py`, but its target answer is not recorded yet.
+- `missing`: Problems 976-996 as of the live Project Euler recent page checked on 2026-05-13.
+
+## Continuation Verification Log
+
+- Official Project Euler statement checked for Problem 931.
+- `python3 -m py_compile Python3/Problem931.py`
+- `python3 Python3/Problem931.py`
+  - Output: `Found 128856311 in 83.51873898506165 seconds.`
+- Official Project Euler statement checked for Problem 932.
+- `python3 -m py_compile Python3/Problem932.py`
+- `python3 Python3/Problem932.py`
+  - Output: `Found 72673459417881349 in 0.0010199546813964844 seconds.`
+- Official Project Euler statement checked for Problem 933.
+- `python3 -m py_compile Python3/Problem933.py`
+- `python3 -c 'import Python3.Problem933 as p; print("numpy", p.np is not None); p.runTests(); print("C53", p.C(5,3)); print("D12_123", p.D(12,123))'`
+  - Output included `numpy True`, `C53 4`, and `D12_123 327398`.
+- `python3 Python3/Problem933.py`
+  - Output: `Found 5707485980743099 in 47.29163098335266 seconds.`
+- Official Project Euler statement checked for Problem 934.
+- `python3 -m py_compile Python3/Problem934.py`
+- `python3 -c 'import Python3.Problem934 as p; p.runTests(); print("u14", p.unluckyPrime(14)); print("u147", p.unluckyPrime(147)); print("u1470", p.unluckyPrime(1470)); print("U1470", p.U(1470))'`
+  - Output included `u14 3`, `u147 2`, `u1470 13`, and `U1470 4293`.
+- `python3 Python3/Problem934.py`
+  - Output: `Found 292137809490441370 in 1.6876780986785889 seconds.`
+- Official Project Euler statement checked for Problem 935.
+- `python3 -m py_compile Python3/Problem935.py`
+- `python3 -c 'import Python3.Problem935 as p; p.runTests(); print("F6", p.F(6)); print("F100", p.F(100)); print("F1000", p.F(1000))'`
+  - Output included `F6 4`, `F100 805`, and `F1000 76433`.
+- `python3 Python3/Problem935.py`
+  - Output: `Found 759908921637225 in 0.14549779891967773 seconds.`
+- Official Project Euler statement checked for Problem 936.
+- `python3 -m py_compile Python3/Problem936.py`
+- `python3 -c 'import Python3.Problem936 as p; p.runTests(); print("P7", p.P(7)); print("S10", p.S(10)); print("P1to10", p.peerlessCounts(10)[1:11])'`
+  - Output included `P7 6`, `S10 74`, and `P1to10 [1, 0, 1, 1, 2, 3, 6, 9, 19, 33]`.
+- `python3 Python3/Problem936.py`
+  - Output: `Found 12144907797522336 in 1.551102876663208 seconds.`
+- Official Project Euler statement checked for Problem 937.
+- `python3 -m py_compile Python3/Problem937.py`
+- `python3 -c 'import Python3.Problem937 as p; p.runTests(); print("G4", p.G(4)); print("G7", p.G(7)); print("G100", p.G(100)); print("G1000", p.G(1000))'`
+  - Output included `G4 25`, `G7 745`, `G100 709772949`, and `G1000 536758123`.
+- `python3 Python3/Problem937.py`
+  - Output: `Found 792169346 in 25.4513680934906 seconds.`
+- Official Project Euler statement checked for Problem 938.
+- `python3 -m py_compile Python3/Problem938.py`
+- `python3 -c 'import Python3.Problem938 as p; p.runTests(); print("P22", f"{p.P(2,2):.10f}"); print("P109", f"{p.P(10,9):.10f}"); print("P3425", f"{p.P(34,25):.10f}"); print("target", p.solve())'`
+  - Output included `P22 0.4666666667`, `P109 0.4118903397`, `P3425 0.3665688069`, and `target 0.2928967987`.
+- `python3 Python3/Problem938.py`
+  - Output: `Found 0.2928967987 in 1.9073486328125e-06 seconds.`
+- Official Project Euler statement checked for Problem 939.
+- `python3 -m py_compile Python3/Problem939.py`
+- `python3 -c 'import Python3.Problem939 as p; p.runTests(); print("E4", p.E(4)); print("brute4", p.bruteE(4)); print("E10", p.E(10)); print("brute10", p.bruteE(10))'`
+  - Output included `E4 9`, `brute4 9`, `E10 486`, and `brute10 486`.
+- `python3 Python3/Problem939.py`
+  - Output: `Found 246776732 in 3.7662460803985596 seconds.`
+- Official Project Euler statement checked for Problem 940.
+- `python3 -m py_compile Python3/Problem940.py`
+- `python3 -c 'import Python3.Problem940 as p; p.runTests(); print("A11", p.A(1,1)); print("A12", p.A(1,2)); print("A21", p.A(2,1)); print("A22", p.A(2,2)); print("S3", p.S(3)); print("S5", p.S(5)); print("target", p.solve())'`
+  - Output included `A11 2`, `A12 5`, `A21 7`, `A22 16`, `S3 30`, `S5 10396`, and `target 969134784`.
+- `python3 Python3/Problem940.py`
+  - Output: `Found 969134784 in 0.0014202594757080078 seconds.`
+- Official Project Euler statement checked for Problem 941.
+- `python3 -m py_compile Python3/Problem941.py`
+- `python3 -c 'import Python3.Problem941 as p; p.runTests(); print("F2", p.F(2)); print("F10", p.F(10))'`
+  - Output included `F2 2194210461325` and `F10 32698850376317`.
+- `python3 Python3/Problem941.py 10`
+  - Output: `Found 85215291 in 0.004413127899169922 seconds.`
+- `python3 Python3/Problem941.py`
+  - Output: `Found 1068765750 in 337.6138479709625 seconds.`
+- Official Project Euler statement checked for Problem 942.
+- `python3 -m py_compile Python3/Problem942.py`
+- `python3 -c 'import Python3.Problem942 as p; p.runTests(); print("R5", p.R(5, 31)); print("R17", p.R(17, 131071))'`
+  - Output included `R5 6` and `R17 47569`.
+- `python3 Python3/Problem942.py`
+  - Output: `Found 557539756 in 5.478914976119995 seconds.`
+- Official Project Euler statement checked for Problem 943.
+- `python3 -m py_compile Python3/Problem943.py`
+- `python3 -c 'import Python3.Problem943 as p; p.runTests(); print("T23_10", p.T(2,3,10)); print("T42_1e4", p.T(4,2,10_000)); print("T58_1e6", p.T(5,8,1_000_000))'`
+  - Output included `T23_10 25`, `T42_1e4 30004`, and `T58_1e6 6499871`.
+- `python3 Python3/Problem943.py`
+  - Output: `Found 1038733707 in 42.68373680114746 seconds.`
+- Official Project Euler statement checked for Problem 944.
+- `python3 -m py_compile Python3/Problem944.py`
+- `python3 -c 'import Python3.Problem944 as p; p.runTests(); print("S10", p.S(10))'`
+  - Output: `S10 4927`.
+- Additional brute-force subset comparison matched `S(n)` for `n = 1..8`.
+- `python3 Python3/Problem944.py`
+  - Output: `Found 1228599511 in 27.06088924407959 seconds.`
+- Official Project Euler statement checked for Problem 945.
+- `python3 -m py_compile Python3/Problem945.py`
+- `python3 -c 'import Python3.Problem945 as p; p.runTests(); print("xor", p.xorProduct(7,3)); print("F10", p.F(10)); print("F17", p.F(17), p.bruteF(17))'`
+  - Output included `xor 9`, `F10 21`, and `F17 37 37`.
+- `python3 Python3/Problem945.py`
+  - Output: `Found 83357132 in 13.383310079574585 seconds.`
+- Official Project Euler statement checked for Problem 946.
+- `python3 -m py_compile Python3/Problem946.py`
+- `python3 -c 'import Python3.Problem946 as p; p.runTests(); print("first10", p.betaCoefficients(10)); print("sum10", p.coefficientSum(10)); print("sum1e6", p.coefficientSum(1_000_000))'`
+  - Output included `first10 [0, 1, 5, 6, 16, 9, 1, 10, 16, 11]`, `sum10 75`, and `sum1e6 6318511`.
+- `python3 Python3/Problem946.py`
+  - Output: `Found 585787007 in 29.558480978012085 seconds.`
+- Official Project Euler statement checked for Problem 947.
+- `python3 -m py_compile Python3/Problem947.py`
+- `python3 -c 'import Python3.Problem947 as p; p.runTests(); print("s3", p.s(3)); print("s10", p.s(10)); print("S3", p.S(3)); print("S10", p.S(10)); print("S1000mod", p.S(1000, p.MODULUS))'`
+  - Output included `s3 513`, `s10 225820`, `S3 542`, `S10 310897`, and `S1000mod 161820546`.
+- `python3 Python3/Problem947.py`
+  - Output: `Found 213731313 in 8.004999876022339 seconds.`
+- Official Project Euler statement checked for Problem 948.
+- `python3 -m py_compile Python3/Problem948.py`
+- `python3 -c 'import Python3.Problem948 as p; p.runTests(); print("F3", p.F(3)); print("F8", p.F(8)); print("F60", p.solve())'`
+  - Output included `F3 4`, `F8 181`, and `F60 1033654680825334184`.
+- `python3 Python3/Problem948.py`
+  - Output: `Found 1033654680825334184 in 1.9073486328125e-06 seconds.`
+- Official Project Euler statement checked for Problem 949.
+- `python3 -m py_compile Python3/Problem949.py`
+- `python3 -c 'import Python3.Problem949 as p; p.runTests(); print("G23", p.G(2,3,2**64)); print("G43", p.G(4,3,2**64)); print("G85", p.G(8,5,2**64))'`
+  - Output included `G23 14`, `G43 496`, and `G85 26359197010`.
+- `python3 Python3/Problem949.py`
+  - Output: `Found 726010935 in 6.883049249649048 seconds.`
+- Official Project Euler statement checked for Problem 950.
+- `python3 -m py_compile Python3/Problem950.py`
+- `python3 -c 'import Python3.Problem950 as p; p.runTests(); print("T30", p.T(30,3,3)); print("T50", p.T(50,3,31)); print("T1000", p.T(10**3,101,101)); print("target", p.solve())'`
+  - Output included `T30 190`, `T50 385`, `T1000 142427`, and `target 429162542`.
+- `python3 Python3/Problem950.py`
+  - Output: `Found 429162542 in 0.03451895713806152 seconds.`
+- Official Project Euler statement checked for Problem 951.
+- `python3 -m py_compile Python3/Problem951.py`
+- `python3 -c 'import Python3.Problem951 as p; p.runTests(); print("F2", p.F(2)); print("F8", p.F(8)); print("F26", p.solve())'`
+  - Output included `F2 4`, `F8 11892`, and `F26 495568995495726`.
+- `python3 Python3/Problem951.py`
+  - Output: `Found 495568995495726 in 2.4774813652038574 seconds.`
+- Official Project Euler statement checked for Problem 952.
+- `python3 -m py_compile Python3/Problem952.py`
+- `python3 -c 'import Python3.Problem952 as p; p.runTests(); print("R7_4", p.R(7,4)); print("Rbase_12", p.R(p.BASE,12)); print("target", p.solve())'`
+  - Output included `R7_4 2`, `Rbase_12 17280`, and `target 794394453`.
+- `python3 Python3/Problem952.py`
+  - Output: `Found 794394453 in 3.4169881343841553 seconds.`
+- Official Project Euler statement checked for Problem 953.
+- `python3 -m py_compile Python3/Problem953.py`
+- `python3 -c 'import Python3.Problem953 as p; p.runTests(); print("S10", p.S(10)); print("S100", p.S(100)); print("S1e14", p.solve())'`
+  - Output included `S10 14`, `S100 455`, and `S1e14 176907658`.
+- `python3 Python3/Problem953.py`
+  - Output: `Found 176907658 in 7.4431679248809814 seconds.`
+- Official Project Euler statement checked for Problem 954.
+- `python3 -m py_compile Python3/Problem954.py`
+- `python3 -c 'import Python3.Problem954 as p; p.runTests(); print("C2", p.CPower10(2)); print("C4", p.CPower10(4)); print("C13", p.solve())'`
+  - Output included `C2 74`, `C4 3737`, and `C13 736463823`.
+- `python3 Python3/Problem954.py`
+  - Output: `Found 736463823 in 86.94947814941406 seconds.`
+- Official Project Euler statement checked for Problem 955.
+- `python3 -m py_compile Python3/Problem955.py`
+- `python3 -c 'import Python3.Problem955 as p; p.runTests(); print("hit10", p.triangleHits(10)[-1]); print("answer", p.solve())'`
+  - Output included `hit10 (2964, 1696, 1439056)` and `answer 6795261671274`.
+- `python3 Python3/Problem955.py`
+  - Output: `Found 6795261671274 in 0.0741879940032959 seconds.`
+- Official Project Euler statement checked for Problem 956.
+- `python3 -m py_compile Python3/Problem956.py`
+- `python3 -c 'import Python3.Problem956 as p; p.runTests(); print("D6", p.exactD(6,6)); print("target", p.solve())'`
+  - Output included `D6 6368195719791280` and `target 882086212`.
+- `python3 Python3/Problem956.py`
+  - Output: `Found 882086212 in 0.14605498313903809 seconds.`
+- Official Project Euler statement checked for Problem 957.
+- `python3 -m py_compile Python3/Problem957.py`
+- `python3 -c 'import Python3.Problem957 as p; p.runTests(); print("g1", p.g(1)); print("g2", p.g(2)); print("g16", p.solve())'`
+  - Output included `g1 8`, `g2 28`, and `g16 234897386493229284`.
+- `python3 Python3/Problem957.py`
+  - Output: `Found 234897386493229284 in 9.5367431640625e-07 seconds.`
+- Official Project Euler statement checked for Problem 958.
+- `python3 -m py_compile Python3/Problem958.py`
+- `python3 -c 'import Python3.Problem958 as p; p.runTests(); print("f7", p.f(7)); print("f89", p.f(89)); print("f8191", p.f(8191)); print("target", p.solve())'`
+  - Output included `f7 2`, `f89 34`, `f8191 1856`, and `target 367554579311`.
+- `python3 Python3/Problem958.py`
+  - Output: `Found 367554579311 in 1.7310352325439453 seconds.`
+- Official Project Euler statement checked for Problem 959.
+- `python3 -m py_compile Python3/Problem959.py`
+- `python3 -c 'import Python3.Problem959 as p; p.runTests(); print("f11", format(p.f(1,1), ".9f")); print("f12", format(p.f(1,2), ".9f")); print("target", format(p.solve(), ".9f"))'`
+  - Output included `f11 0.000000000`, `f12 0.427050983`, and `target 0.857162085`.
+- `python3 Python3/Problem959.py`
+  - Output: `Found 0.857162085 in 6.508827209472656e-05 seconds.`
+- Official Project Euler statement checked for Problem 960.
+- `python3 -m py_compile Python3/Problem960.py`
+- `python3 -c 'import Python3.Problem960 as p; p.runTests(); print("F3", p.F(3)); print("F4", p.F(4)); print("F8", p.F(8)); print("target", p.solve())'`
+  - Output included `F3 12`, `F4 360`, `F8 16785941760`, and `target 243559751`.
+- `python3 Python3/Problem960.py`
+  - Output: `Found 243559751 in 4.100799560546875e-05 seconds.`
+- Official Project Euler statement checked for Problem 961.
+- `python3 -m py_compile Python3/Problem961.py`
+- `python3 -c 'import Python3.Problem961 as p; p.runTests(); print("W100", p.WPower10(2)); print("W1e4", p.WPower10(4)); print("target", p.solve())'`
+  - Output included `W100 18`, `W1e4 1656`, and `target 166666666689036288`.
+- `python3 Python3/Problem961.py`
+  - Output: `Found 166666666689036288 in 3.814697265625e-06 seconds.`
+- Official Project Euler statement checked for Problem 962.
+- `python3 -m py_compile Python3/Problem962.py`
+- `python3 -c 'import Python3.Problem962 as p; p.runTests(); print("C200", p.countTriangles(200)); print("target", p.solve())'`
+  - Output included `C200 71` and `target 7259046`.
+- `python3 Python3/Problem962.py`
+  - Output: `Found 7259046 in 195.0701162815094 seconds.`
+- Official Project Euler statement checked for Problem 963.
+- `python3 -m py_compile Python3/Problem963.py`
+- `python3 -c 'import Python3.Problem963 as p; p.runTests(); print("F5", p.F(5)); print("brute5", p.bruteF(5)); print("target", p.solve())'`
+  - Output included `F5 21`, `brute5 21`, and `target 55129975871328418`.
+- `python3 Python3/Problem963.py`
+  - Output: `Found 55129975871328418 in 4.0633299350738525 seconds.`
+- Official Project Euler statement checked for Problem 964.
+- `python3 -m py_compile Python3/Problem964.py`
+- `python3 -c 'import Python3.Problem964 as p; p.runTests(); print("P3", format(float(p.probability(3)), ".10e")); print("P7", format(float(p.solve()), ".10e"))'`
+  - Output included `P3 1.3888888889e-02` and `P7 4.7126135532e-29`.
+- `python3 Python3/Problem964.py`
+  - Output: `Found 4.7126135532e-29 in 0.03870511054992676 seconds.`
+- Official Project Euler statement checked for Problem 965.
+- `python3 -m py_compile Python3/Problem965.py`
+- `python3 -c 'import Python3.Problem965 as p; p.runTests(); print("F4", format(p.F(4), ".13f")); print("F10", format(p.F(10), ".13f"))'`
+  - Output included `F4 0.2500000000000` and `F10 0.1319444444444`.
+- `python3 -c 'import Python3.Problem965 as p; p.runTests(); print("target", format(p.solve(), ".13f"))'`
+  - Output: `target 0.0003452201133`
+- `python3 Python3/Problem965.py`
+  - Output: `Found 0.0003452201133 in 4.139081954956055 seconds.`
+- Official Project Euler statement checked for Problem 966.
+- `python3 -m py_compile Python3/Problem966.py`
+- `python3 -c 'import Python3.Problem966 as p; p.runTests(); print("I345", format(p.I(3,4,5), ".6f")); print("I346", format(p.I(3,4,6), ".6f"))'`
+  - Output included `I345 4.593049` and `I346 3.552564`.
+- `python3 -c 'import Python3.Problem966 as p; p.runTests(); print("target", format(p.solve(), ".2f"))'`
+  - Output: `target 29337152.09`
+- `python3 Python3/Problem966.py`
+  - Output: `Found 29337152.09 in 12.370751142501831 seconds.`
+- Official Project Euler statement checked for Problem 967.
+- `python3 -m py_compile Python3/Problem967.py`
+- `python3 -c 'import Python3.Problem967 as p; p.runTests(); print("F10_4", p.F(10,4)); print("F10_10", p.F(10,10)); print("F100_10", p.F(100,10))'`
+  - Output included `F10_4 5`, `F10_10 3`, and `F100_10 41`.
+- `python3 -c 'import Python3.Problem967 as p; p.runTests(); print("target", p.solve())'`
+  - Output: `target 357591131712034236`
+- `python3 Python3/Problem967.py`
+  - Output: `Found 357591131712034236 in 0.15010714530944824 seconds.`
+- Official Project Euler statement checked for Problem 968.
+- `python3 -m py_compile Python3/Problem968.py`
+- `python3 -c 'import Python3.Problem968 as p; p.runTests(); print("P2", p.P([2]*10)); print("P123", p.P(list(range(1,11))))'`
+  - Output included `P2 7120` and `P123 799809376`.
+- `python3 -c 'import Python3.Problem968 as p; p.runTests(); print("target", p.solve())'`
+  - Output: `target 885362394`
+- `python3 Python3/Problem968.py`
+  - Output: `Found 885362394 in 0.5184471607208252 seconds.`
+- Official Project Euler statement checked for Problem 969.
+- `python3 -m py_compile Python3/Problem969.py`
+- `python3 -c 'import Python3.Problem969 as p; p.runTests(); print("S1", p.S(1)); print("S3", p.S(3)); print("sum10", p.sumSUpTo(10))'`
+  - Output included `S1 1`, `S3 -1`, and `sum10 43`.
+- `python3 -c 'import Python3.Problem969 as p; p.runTests(); print("target", p.solve())'`
+  - Output: `target 412543690`
+- `python3 Python3/Problem969.py`
+  - Output: `Found 412543690 in 0.00185394287109375 seconds.`
+- Official Project Euler statement checked for Problem 970.
+- `python3 -m py_compile Python3/Problem970.py`
+- `python3 -c 'import Python3.Problem970 as p; p.runTests(); print("H2", p.firstEightNonSixDigits(p.expectedHSmall(2))); print("H3", p.firstEightNonSixDigits(p.expectedHSmall(3))); print("target", p.solve())'`
+  - Output included `H2 70774270`, `H3 55395558`, and `target 44754029`.
+- `python3 Python3/Problem970.py`
+  - Output: `Found 44754029 in 1.4066696166992188e-05 seconds.`
+- Official Project Euler statement checked for Problem 971.
+- `python3 -m py_compile Python3/Problem971.py`
+- `python3 -c 'import Python3.Problem971 as p; p.runTests(); print("C11", p.C(11)); print("S100", p.S(100))'`
+  - Output included `C11 7` and `S100 127`.
+- `python3 -c 'import Python3.Problem971 as p; p.runTests(); print("target", p.solve())'`
+  - Output: `target 33626723890930`
+- `python3 Python3/Problem971.py`
+  - Output: `Found 33626723890930 in 8.493431806564331 seconds.`
+- Official Project Euler statement checked for Problem 972.
+- `python3 -m py_compile Python3/Problem972.py`
+- `python3 -c 'import Python3.Problem972 as p; p.runTests(); print("T2", p.T(2)); print("T3", p.T(3))'`
+  - Output included `T2 24` and `T3 1296`.
+- `python3 -c 'import Python3.Problem972 as p; p.runTests(); print("target", p.solve())'`
+  - Output: `target 3575508`
+- `python3 Python3/Problem972.py`
+  - Output: `Found 3575508 in 30.90750479698181 seconds.`
+- Official Project Euler statement checked for Problem 973.
+- `python3 -m py_compile Python3/Problem973.py`
+- `python3 -c 'import Python3.Problem973 as p; p.runTests(); print("X2", p.X(2)); print("X4", p.X(4)); print("X10", p.X(10)); print("target", p.solve())'`
+  - Output included `X2 2`, `X4 14`, `X10 1418`, and `target 427278142`.
+- `python3 Python3/Problem973.py`
+  - Output: `Found 427278142 in 5.8012001514434814 seconds.`
+- Official Project Euler statement checked for Problem 974.
+- `python3 -m py_compile Python3/Problem974.py`
+- `python3 -c 'import Python3.Problem974 as p; p.runTests(); print("theta1", p.theta(1)); print("theta1000", p.theta(10**3)); print("target", p.solve())'`
+  - Output included `theta1 1117935`, `theta1000 11137955115`, and `target 13313751171933973557517973175`.
+- `python3 Python3/Problem974.py`
+  - Output: `Found 13313751171933973557517973175 in 0.06456494331359863 seconds.`
+- Problem 975 cloud handoff state:
+  - `Python3/Problem975.py` is present and syntax-checks with the rest of Problems 933-975.
+  - No target run or `answers.csv` row has been recorded yet.
